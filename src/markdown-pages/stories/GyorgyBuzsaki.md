@@ -2,7 +2,7 @@
 slug: "/stories/gyorgybuzsaki"
 date: "2020-01-10"
 title: "György Buzsáki"
-tags: ["story", "event"]
+tags: ["story", "event", "nyu"]
 ---
 ### Official Story
 György Buzsáki obtained an MD degree from University of Pécs in 1974, Hungary and a PhD in Neurobiology from the Hungarian Academy of Sciences in 1984. He is Biggs Professor of Neuroscience at New York University. His main focus is "neural syntax", i.e., how segmentation of neural information is organized by the numerous brain rhythms to support cognitive functions. He identified the cellular-synaptic basis of hippocampal theta, gamma oscillations and "sharp wave ripples", their relationship to each other and to behavior and sleep. He has shown that neuronal oscillations span several orders of magnitude in time and form a hierarchical system so that the phase of the slower oscillation modulates the amplitude of the faster one and so on. Within this general framework, his laboratory focuses on the mechanisms of memory and associated diseases, in particular how sleep affects experienced events. His most influential work is the two-stage model of memory trace consolidation. Buzsáki is among the top 1% most-cited neuroscientists, member of the National Academy of Sciences USA, member of the European Academy, Hungarian Academy of Sciences, Fellow of AAAS, and he sits on the editorial boards of several leading neuroscience journals, including Science and Neuron, honoris causa at Université Aix-Marseille, France, University of Pécs and University of Kaposvár, Hungary. He is a co-recipient of the 2011 Brain Prize. (Books: G. Buzsáki , Rhythms of the Brain, Oxford University Press, 2006; The Brain from Inside Out, OUP 2019)

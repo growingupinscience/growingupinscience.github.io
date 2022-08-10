@@ -2,7 +2,7 @@
 slug: "/stories/adamcarter"
 date: "2019-12-06"
 title: "Adam Carter"
-tags: ["story", "event"]
+tags: ["story", "event", "nyu"]
 ---
 ### Official Story
 Adam Carter is a Professor in the Center for Neural Science at New York University. He received a BA in Natural Sciences from Cambridge University in 1997, specializing in neuroscience. He obtained a PhD from Harvard University in 2002, studying synaptic transmission in the cerebellum with Wade Regehr. He then did a postdoc at Harvard Medical School, working with Bernardo Sabatini on dendritic Ca2+ signaling in the striatum. Adam joined NYU as an Assistant Professor in 2007, with his new lab focused on synaptic physiology and modulation in the prefrontal cortex (PFC). He was promoted to Associate Professor in 2013, around when his lab started to explore circuits in the PFC and striatum. He became a full Professor in 2019, and his lab now studies the organization, function and plasticity of multiple brain regions involved in motivated behavior. In addition to his federal funding, Adam has received awards from NARSAD, Klingenstein, Whitehall, Dana and McKnight. He is also very involved in teaching neuroscience to both undergraduate and graduate students at NYU. He has trained nine PhD students and several postdoctoral fellows, including three who have started their own labs.

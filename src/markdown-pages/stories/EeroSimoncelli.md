@@ -2,7 +2,7 @@
 slug: "/stories/eerosimoncelli"
 date: "2018-01-12"
 title: "Eero Simoncelli"
-tags: ["story", "event"]
+tags: ["story", "event", "nyu"]
 ---
 ### Official Story
 Eero received a BA in Physics from Harvard (1984), a Certificate of Advanced study in Math(s) from University of Cambridge (1986), and a MS and PhD in Electrical Engineering and Computer Science from MIT (1988/1993). He was an assistant professor in the Computer and Information Science Department at the University of Pennsylvania from 1993 to 1996, and then moved to NYU as an assistant professor of Neural Science and Mathematics (later adding Psychology, and most recently, Data Science). Eero received an NSF CAREER award in 1996, an Alfred P. Sloan Research Fellowship in 1998, and became an Investigator of the Howard Hughes Medical Institute in 2000. He was elected a Fellow of the IEEE in 2008, and an associate member of the Canadian institute for Advanced Research in 2010. He has received two Outstanding Faculty awards from the NYU GSAS Graduate Student Council (2003/2011), two IEEE Best Journal Article awards (2009/2010) and a Sustained Impact Paper award (2016), an Emmy Award from the Academy of Television Arts and Sciences for a method of measuring the perceptual quality of images (2015), and the Golden Brain Award from the Minerva Foundation, for fundamental contributions to visual neuroscience (2017). His group studies the representation and analysis of visual images in biological and machine systems.

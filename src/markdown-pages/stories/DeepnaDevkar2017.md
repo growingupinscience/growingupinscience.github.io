@@ -2,7 +2,7 @@
 slug: "/stories/deepnadevkar2017"
 date: "2017-07-21"
 title: "Deepna Devkar"
-tags: ["story", "event"]
+tags: ["story", "event", "nyu"]
 ---
 ### Official Story
 Deepna received her Ph.D. in Neuroscience from the University of Texas Health Science Center in Houston, Texas in 2014. A month later, she joined Clayton Curtis' lab in NYU's Center for Neural Science and Psychology for a postdoctoral fellowship. Seven months into the fellowship, she decided to leave academia to pursue a career in Data Science. She was accepted into the 8-week Insight Data Science Fellowship in Data Science. A week later, she received her first job as a Data Scientist at Viacom, a media beast that owns 16 network brands, including Comedy Central, MTV, VH1, Spike, BET, and Nickelodeon. While at Viacom, she enjoyed working with fun data and informing the business decisions of chief media executives. She is now the Director of Data Science at Dotdash (formerly About.com), working across many teams on a variety of interesting problems, managing a team of 3 data scientists, and (shameless plug) looking to hire two more.

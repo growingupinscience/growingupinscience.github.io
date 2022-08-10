@@ -2,7 +2,7 @@
 slug: "/stories/staciegrossmanbloom"
 date: "2019-06-07"
 title: "Stacie Grossman Bloom"
-tags: ["story", "event"]
+tags: ["story", "event", "nyu"]
 ---
 ### Official Story
 Stacie Grossman Bloom earned her Ph.D. in cell biology from Georgetown University and her B.A. in Psychology from the University of Delaware. A molecular neurobiologist by training, she completed her postdoctoral training at the Rockefeller University in the lab of Nobel laureate Paul Greengard studying the neurological basis for disease. Dr. Bloom was an associate editor at Nature Medicine, then Vice President and Scientific Director of The New York Academy of Sciences. She was awarded a Society for Neuroscience prize for outstanding dedication to mentorship, and held fellowships at the National Institutes of Health, National Institutes of Mental Health, National Alliance for Research on Schizophrenia and Depression, and the Rockefeller University's Women in Science Program. A prolific author and speaker, she was featured most recently in Forbes, on SiriusXM radio, the BBC, at the National Academy of Sciences, and at The Women in the World summit. Stacie joined NYU Langone Medical Center in 2011 as inaugural Executive Director for the Neuroscience Institute and then became Assistant Vice President for Policy and Administration. Now she serves as Vice Provost of Research at NYU, working closely with the president, provost, deans, faculty, and senior administrators to facilitate, energize, and grow the University's research enterprise and its impact.

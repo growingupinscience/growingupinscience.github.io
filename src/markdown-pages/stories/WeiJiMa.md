@@ -1,0 +1,11 @@
+---
+slug: "/stories/weijima"
+date: "2017-03-03"
+title: "Wei Ji Ma"
+tags: ["story", "event", "nyu"]
+---
+### Official Story
+Weiji received his Ph.D. in Physics from the University of Groningen, the Netherlands. He went on to do postdocs in computational neuroscience with Christof Koch at Caltech and with Alex Pouget at the University of Rochester. He was Assistant Professor of Neuroscience at Baylor College of Medicine from 2008 to 2013, and has been Associate Professor of Neural Science and Psychology at NYU since. His research focuses on perceptual and cognitive decision-making under uncertainty.
+
+### Unofficial Story
+Weiji is a third-generation Dutch whose mom was simultaneously a stereotypical Chinese "tiger parent" and a former 1960s student activist in Amsterdam. Weiji had a bizarre childhood, graduating from high school at age 14 and from college at 17, along the way picking up media appearances, deficits in social skills, and an inflated self-image. His confidence came crashing down in his PhD, which was initially misguided (poor advisor) and eventually simply too hard (string theory). He was leaning heavily on a fellow grad student and his PhD never felt his own. Weiji was also very distracted, often spending more time being active in organizations than on research. He never ever thought he would make it to faculty. He considered alternative careers but decided to give science one more chance. Starting as a postdoc offered new opportunities for delusions of grandeur: he claimed he would solve consciousness using statistical physics. Back on Earth, Weiji published only one book chapter with Christof Koch, and in 2004, Christof had no choice but to kick him out of his lab. Only in his second postdoc, under Alex Pouget's whip, did he start to get his act together, but this was also a time when, working besides a talented fellow postdoc, impostor complex hit hard. Weiji got his faculty job thanks to just enough people seeing promise in the absence of accomplishments. His procrastination is still alive and kicking to this day, but since his students and postdocs now do the actual work, he can get away with it.

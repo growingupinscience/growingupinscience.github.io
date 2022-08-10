@@ -2,7 +2,7 @@
 slug: "/stories/liinapylkkanen"
 date: "2021-11-10"
 title: "Liina Pylkkänen"
-tags: ["story", "event"]
+tags: ["story", "event", "nyu"]
 ---
 ### Official Story
 Liina Pylkkänen is a Professor of Linguistics and Psychology at New York University. She is the director of the NYU Neurolinguistics Laboratory and a co-director of the Neuroscience of Language Laboratory at NYUNYC and NYU Abu Dhabi. She also directs the magnetoencephalography (MEG) facility in the Psychology Department of New York University. Prof. Pylkkänen received her Ph.D. in Linguistics at the Massachusetts Institute of Technology and conducted her post-doctoral work at New York University. Her research addresses the brain bases of language processing, with a focus on semantic cognition. Starting in the late 1990's, she and a handful of other researchers began to pioneer the use of MEG to characterize the brain mechanisms of language. Today, she has generated a systematic body of MEG research on multiple linguistic processing levels. This year, she was elected as president of the Society of the Neurobiology of Language and has in recent years spent significant effort on science communication, for example by starting a public YouTube channel on the neurobiology of language and a lab podcast.

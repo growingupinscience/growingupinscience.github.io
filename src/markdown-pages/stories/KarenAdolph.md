@@ -2,7 +2,7 @@
 slug: "/stories/karenadolph"
 date: "2019-03-03"
 title: "Karen Adolph"
-tags: ["story", "event"]
+tags: ["story", "event", "nyu"]
 ---
 ### Official Story
 Karen E. Adolph is Professor of Psychology, Applied Psychology, and Neural Science at New York University. She uses observable motor behaviors and a variety of technologies (video, motion tracking, instrumented floor, head-mounted eye tracking, EEG, etc.) to study developmental processes. Adolph is Director of the Databrary video library and the PLAY project, and she developed and maintains the Datavyu video-coding tool. Adolph received a B.A. from Sarah Lawrence College and Ph.D. from Emory University, and completed a postdoctoral fellowship at Albert Einstein College of Medicine. She is a Fellow of the American Psychological Association and Association for Psychological Science and is Past-President of the International Congress on Infant Studies. She received the Kurt Koffka Medal for "worldwide outstanding work on infants' perception/action development", a Cattell Sabbatical Award, the APF Fantz Memorial Award, the APA Boyd McCandless Award, the ICIS Young Investigator Award, FIRST and MERIT awards from NICHD, and five teaching awards from NYU. She chaired the NIH study section on Motor Function and Speech Rehabilitation and serves on the McDonnell Foundation advisory board and editorial boards of Developmental Psychobiology and Motor Learning and Development. Adolph has published 165+ articles and chapters. Her research on perceptual-motor learning and development has been continually funded by NIH since 1991. She currently holds 12 grants.

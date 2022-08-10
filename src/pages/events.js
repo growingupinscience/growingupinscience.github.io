@@ -16,10 +16,15 @@ class Events extends Component {
     };
 
     this.showNYU = this.showNYU.bind(this);
+    this.showStory = this.showStory.bind(this);
     this.reset = this.reset.bind(this);
   }
 
   showNYU(){
+    this.setState({events: this.state.events.filter(p => p.node.frontmatter.tags.includes("nyu"))})
+  }
+
+  showStory(){
     this.setState({events: this.state.events.filter(p => p.node.frontmatter.tags.includes("nyu"))})
   }
 

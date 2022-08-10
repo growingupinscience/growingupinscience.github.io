@@ -2,7 +2,7 @@
 slug: "/stories/emilybalcetis"
 date: "2017-12-08"
 title: "Emily Balcetis"
-tags: ["story", "event"]
+tags: ["story", "event", "nyu"]
 ---
 ### Official Story
 Emily holds a BA in Psychology and a BFA in Music Performance from University of Nebraska. She received her PhD in Social and Personality Psychology from Cornell University, working with David Dunning. She joined the faculty at Ohio University in 2006 and then New York University in 2009. Her research examines how motivations influence visual experience, in the service of self-regulation. She applies this approach to the investigation of health behavior, legal decision-making, relationships, and underrepresentation in leadership among other social problems. Emily has received prestigious early-career awards including the Federation of Association of Behavioral and Brain Sciences Early Career Impact Award, Society for Experimental and Social Psychology Dissertation of the Year Award, Sage Young Scholars Award, and the International Society for Self and Identity Early Career Award. She has received multiple grants from NSF to support her research, and she has been recognized for her teaching with NYU's Golden Dozen Teaching Award and Cornell's Clark Distinguished Teaching Award.

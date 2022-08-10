@@ -2,7 +2,7 @@
 slug: "/stories/deepnadevkar"
 date: "2021-01-07"
 title: "Deepna Devkar"
-tags: ["story", "event"]
+tags: ["story", "event", "nyu"]
 ---
 ### Official Story
 Deepna Devkar is Vice President of Data Science & Engineering and heads up the Data Intelligence team at CNN. She works to understand the CNN audience across devices and build recommendation systems that increase user engagement across all CNN brands.

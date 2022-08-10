@@ -2,7 +2,7 @@
 slug: "/stories/davidpoeppel"
 date: "2014-12-19"
 title: "David Poeppel"
-tags: ["story", "event"]
+tags: ["story", "event", "nyu"]
 ---
 ### Official Story
 David is the Director of the Department of Neuroscience at the Max-Planck-Institute (MPIEA) in Frankfurt, Germany and a Professor of Psychology and Neural Science at NYU. Trained at MIT in cognitive science, linguistics, and neuroscience, he did his post-doctoral training at the University of California San Francisco, where he focused on functional brain imaging. Until 2008, he was a professor at the University of Maryland College Park, where he ran the Cognitive Neuroscience of Language laboratory. He has been a Fellow at the Wissenschaftskolleg (Institute for Advanced Studies Berlin), the American Academy Berlin, and a guest professor at numerous institutions. He is a Fellow of the American Association for the Advancement of Science. His research focuses on the brain basis of hearing, speech, language, and music, using a range of experimental approaches. He has published over 200 papers and chapters and lectures frequently on topics ranging from hearing to language processing to the conceptual foundations of cognition and neurobiology.

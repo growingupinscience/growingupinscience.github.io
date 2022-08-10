@@ -2,7 +2,7 @@
 slug: "/stories/chiyeaoki"
 date: "2016-04-29"
 title: "Chiye Aoki"
-tags: ["story", "event"]
+tags: ["story", "event", "nyu"]
 ---
 ### Official Story
 Chiye majored in biology at Barnard College, the women's college of Columbia University. During the summer of her junior and senior year, she volunteered in the lab of Jonathan Winson at Rockefeller University, where she was introduced to physiological recordings of the hippocampus of awake and sleeping animals. A week after graduation, she began working as the sole research technician to Jonathan Winson. The next year, she was admitted to Rockefeller's PhD program. It took six years to earn a PhD, working in Phil Siekevitz's laboratory of cell biology and investigating the neurochemical basis of the critical period for visual cortical plasticity. She did a 3-year post-doctoral training in the laboratory of Virginia Pickel at Cornell University Medical College, where she learned electron microscopy and, paradoxically, about non-synaptic modes of neuronal communication. She became a research assistant professor there, and after two years, got the job at the CNS. It was the only place to which she applied for a faculty job. She was promoted to full professor in 2004.

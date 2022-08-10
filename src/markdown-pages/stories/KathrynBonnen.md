@@ -2,7 +2,7 @@
 slug: "/stories/kathrynbonnen"
 date: "2020-03-06"
 title: "Kathryn Bonnen"
-tags: ["story", "event"]
+tags: ["story", "event", "nyu"]
 ---
 ### Official Story
 Kathryn Bonnen is a Simons Foundation postdoctoral research fellow in the Center for Neural Science at New York University (NYU), working with Dr. Eero Simoncelli and Dr. Michael Landy. She received a B.S. in Computer Science and a B.S. in Psychology from Michigan State University and earned her PhD in Neuroscience from the University of Texas at Austin. Her doctoral research was supported by an NSF Graduate Research Fellowship and a Harrington fellowship. Working with Dr. Alexander Huk and Dr. Lawrence Cormack, her research focused on the neural mechanisms of 3D motion perception and the development of novel paradigms for studying visual perception. After graduate school, Bonnen worked as an ARVO/VSS fellow and visiting scholar in the Optometry School, at the University of California, Berkeley, where she studied the effect of certain types of visual impairment on sensorimotor tasks like walking. Bonnen's current research at NYU focuses on understanding neural information processing in mammalian visual systems. By measuring the statistical properties of the natural world and combining that knowledge with models of neural processing and behavior, she aims to better understand the neural representations that inform visually guided behavior.

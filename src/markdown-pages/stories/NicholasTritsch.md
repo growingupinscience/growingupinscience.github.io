@@ -2,7 +2,7 @@
 slug: "/stories/nicholastritsch"
 date: "2019-05-17"
 title: "Nicolas Tritsch"
-tags: ["story", "event"]
+tags: ["story", "event", "nyu"]
 ---
 ### Official Story
 Nicolas Tritsch is an Assistant Professor in the Department of Neuroscience and Physiology at NYU Langone Health. He graduated from McGill University with a B.S. in Immunology and a M.S. in Neuroscience, and obtained a Ph.D. in Neuroscience from Johns Hopkins University. As a postdoctoral fellow with Dr. Bernardo Sabatini at Harvard Medical School, he explored how dopaminergic neurons modulate the activity of brain circuits that control voluntary movements. His laboratory currently focuses on understanding how these circuits orchestrate the initiation, execution and reinforcement of motor actions using a variety of optical, genetic and physiological approaches. He is the recipient of several awards, including the National Institutes of Health Pathway to Independence and New Innovator Awards, the Society for Neuroscience Peter and Patricia Gruber International Research Award and the Alfred P. Sloan Research fellowship in Neuroscience.

@@ -2,7 +2,7 @@
 slug: "/stories/catehartley"
 date: "2017-11-17"
 title: "Cate Hartley"
-tags: ["story", "event"]
+tags: ["story", "event", "nyu"]
 ---
 ### Official Story
 Cate holds a BS in Symbolic Systems from Stanford University, where she did research in John Gabrieli's lab, working with Noam Sobel. She received her PhD in Psychology from New York University, working with Liz Phelps, and completed a postdoctoral fellowship with BJ Casey at the Sackler Institute for Developmental Psychobiology at Weill Cornell Medical College. She joined the faculty at Weill Cornell in 2014 and recently returned to NYU as an Assistant Professor. Her research examines how emotional learning and decision-making change as the brain develops from childhood to adulthood. Cate has received prestigious early-career awards including the NARSAD Young Investigator Award, the NSF CAREER Award, the APS Rising Stars Award, and the Klingenstein-Simons Neuroscience Fellowship.

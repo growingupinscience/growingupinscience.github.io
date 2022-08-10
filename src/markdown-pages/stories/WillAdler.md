@@ -2,7 +2,7 @@
 slug: "/stories/willadler"
 date: "2022-01-31"
 title: "Will Adler"
-tags: ["story", "event"]
+tags: ["story", "event", "nyu"]
 ---
 ### Official Story
 Will is the Senior Technologist in Elections and Democracy at the Center for Democracy and Technology, where he works to ensure that American elections are fair, accessible, and secure. Before joining CDT, Will worked on tech issues in the office of U.S. Senator Elizabeth Warren. He also worked at the Princeton Gerrymandering Project at Princeton University, advancing the causes of redistricting reform and open election data. He has published pieces in numerous peer-reviewed journals and popular press outlets, including the New York Times, FiveThirtyEight, and Scientific American. Will holds a BA in Psychology from Carleton College and a PhD in Neuroscience from New York University.
