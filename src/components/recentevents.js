@@ -32,6 +32,10 @@ const Layout = ({ pageTitle, children }) => {
 
     const { edges: posts } = data.allMarkdownRemark
     console.log(posts)
+    const filterposts = posts.filter(({node: post}) => {
+      return new Date(post.frontmatter.date) > new Date()
+    })
+    console.log("filter posts", filterposts)
     const recentevents = posts
     // .slice(0, n) to get only the first n items
     .map(({node: post}) => {

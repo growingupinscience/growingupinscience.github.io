@@ -26,6 +26,7 @@ font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     margin: 10px;
     background-color: rgba(52, 124, 224, 0.3);
     border: none;
+    color: rgba(0, 0, 0, 0.7);
 }
 
 .page .btn:hover{
@@ -57,7 +58,7 @@ font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
 }
 
 .dark{
-    color: rgba(255, 255, 255, 0.7);
+    background-color: rgb(230, 236, 240);
     color: rgba(0, 0, 0, 0.7);
 }
 
@@ -150,7 +151,6 @@ font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
   
 .sidenav a:active{
     font-size: 22px;
-    color: rgba(255, 255, 255, 0.9);
 }
 
 
