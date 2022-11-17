@@ -30,7 +30,7 @@ class Stories extends Component {
   render() {
     return (
       <Layout>
-      <div className = "page" style = {{backgroundColor: "#021024"}}>
+      <div className = "page">
       <div className = "section dark" style = {{paddingRight: "5vw"}}>
           <h1><span className="highlight">Unofficial Stories</span></h1>
           <br/>

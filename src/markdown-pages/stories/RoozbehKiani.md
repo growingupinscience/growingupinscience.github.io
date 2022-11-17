@@ -5,6 +5,7 @@ title: "Roozbeh Kiani"
 tags: ["story", "event", "nyu"]
 location: Meyer 636
 time: 13:00 Eastern
+video: kzW_aRneDYM
 ---
 [[snippet]]
 | This event is part of the Growing up in Science "unofficial stories" series. <br/>

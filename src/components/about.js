@@ -10,7 +10,7 @@ export default function About({children, style}) {
       <Parallax>
         <div className = "light section" style = {style}>
           <Parallax translateY={["200px", "-200px"]}>
-          <h1><span className="highlight">ABOUT</span></h1>
+          <h1><span className="">ABOUT</span></h1>
           <p>
           <br/>
           <b><i>Have you ever wondered what your advisor struggled with as a graduate student? 

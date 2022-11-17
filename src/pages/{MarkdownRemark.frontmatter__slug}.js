@@ -2,6 +2,7 @@ import React from "react"
 import { graphql } from "gatsby"
 import Layout from "../components/layout.js";
 import {Parallax, ParallaxProvider} from "react-scroll-parallax";
+import YoutubeEmbed from "../components/youtubeembed.js";
 import "../css/style.css"
 import "../css/mobile.css"
 
@@ -23,10 +24,15 @@ export default function Template({
     mode = "dark section"
   }
 
+  var video = null;
+  if (frontmatter.video){
+    video = <YoutubeEmbed embedId={frontmatter.video}/>
+  }
+
   return (
     <Layout>
       <ParallaxProvider>
-      <div className = "page" style = {{"backgroundColor": "#021024"}}>
+      <div className = "page">
       <div className = {mode} style = {{minHeight: "100vh"}}>
         <div>
         <h1>
@@ -36,6 +42,7 @@ export default function Template({
           </h1>
         <h3>{date}</h3>
         </div>
+          {video}
 
           <div
             className="blog-post-content"
@@ -57,6 +64,7 @@ export const pageQuery = graphql`
         date(formatString: "MMMM DD, YYYY")
         title
         tags
+        video
       }
     }
   }
