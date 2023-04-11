@@ -30,9 +30,9 @@ class Events extends Component {
   render() {
     return (
       <Layout>
-      <div className = "page" style = {{backgroundColor: "#021024"}}>
-      <div className = "section dark" style = {{paddingRight: "5vw"}}>
-          <h1><span className="highlight">GUIS Events</span></h1>
+      <div className = "page">
+      <div className = "section" style = {{paddingRight: "5vw"}}>
+          <h1><span>GUIS Events</span></h1>
           <br/>
           <p style={{paddingRight:"15vw"}}>
           NYU events are held in Meyer Hall (4 Washington Place), Room 636, 

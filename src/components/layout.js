@@ -6,7 +6,7 @@ import Menu from "../components/menu";
 export default function Layout({children, style}) {
   return (
     <div style = {style}>
-      <Menu/>
+      <Menu/> 
       {children}
     </div>
   )

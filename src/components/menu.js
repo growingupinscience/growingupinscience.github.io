@@ -1,10 +1,17 @@
 import React, { Component } from 'react';
 import {
   Nav, 
+  Navbar,
+  NavLink,
   NavItem, 
   UncontrolledDropdown, 
   DropdownToggle,
   DropdownMenu,
+  NavbarToggler,
+  NavbarBrand,
+  DropdownItem,
+  NavbarText,
+  Collapse,
 } from 'reactstrap';
 import {Link, withPrefix} from "gatsby"
 import { StaticImage } from 'gatsby-plugin-image'
@@ -30,7 +37,7 @@ class Menu extends Component {
   
 
   render() {
-    var menuitems = <Nav vertical>
+    var menuitems = <Nav>
           <NavItem>
             <Link to={"/"}>Welcome</Link>
           </NavItem>
@@ -63,8 +70,10 @@ class Menu extends Component {
                 </DropdownMenu>
           </UncontrolledDropdown>
       </div>
-      <div className = "sidenav desktop-only">
-        {menuitems}
+      <div className = "desktop-only topnav">
+        <Navbar light>
+          {menuitems}
+        </Navbar>
       </div>
       </div>
     );

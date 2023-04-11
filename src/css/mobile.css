@@ -8,14 +8,14 @@
     }
 
     .topnav{
-        font-family: 'Archivo', sans-serif;
+        font-family: 'Poppins', sans-serif;
         position: fixed;
         z-index: 1;
         padding-top: 10px;
         padding-bottom: 10px;
         width: 100%;
         text-decoration: "none" !important;
-        list-style-type: none;
+        list-style-type: none !important;
     }
 
     .dropdown-menu.dropdown-menu-end.show{

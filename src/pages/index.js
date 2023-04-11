@@ -20,10 +20,11 @@ class Index extends Component {
                   <div className = "namecard">
                     <Parallax translateY={['500px', '-500px']}>
                       <div className="desktop-only">
-                        <h1>growing up</h1>
-                        <h1>
-                          &emsp;&emsp;&emsp;&emsp;&emsp;&nbsp;&nbsp;&nbsp;in science
-                          </h1><br/>
+                        <h1>Growing<br/>up in<br/>Science</h1>
+                        <br/><br/>
+                        <h2>
+                          Sharing the unofficial, untold, and<br/>unconventional stories of people<br/>in science.
+                        </h2>
                       </div>
                       <div className="mobile-only">
                         <h1>growing up</h1>
