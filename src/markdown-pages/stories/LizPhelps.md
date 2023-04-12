@@ -2,7 +2,7 @@
 slug: "/stories/lizphelps"
 date: "2017-06-23"
 title: "Liz Phelps"
-tags: ["story", "event"]
+tags: ["story", "event", "nyu"]
 ---
 ### Official Story
 Liz earned her BA in Psychology and Philosophy from Ohio Wesleyan University in 1984, where she was also a 3-time All-American in the Heptathalon. She chose Princeton for graduate school in Cognitive Psychology, but the summer prior to graduate school she got an internship to study brain-injured patients, which inspired her to also study neuroscience. This internship was arranged by the late George Miller, who is credited with founding the field of Cognitive Science, and later with Mike Gazzaniga, the field of Cognitive Neuroscience. At Princeton, Liz studied memory in amnesic patients with Bill Hirst and Marcia Johnson, combining her interests in cognitive psychology and neuroscience. After graduating in 1989, she did a post-doctoral fellowship with Mike Gazzaniga at Dartmouth, followed by one with Joe LeDoux at NYU, which marked the beginning of her studies of emotion and memory. In 1992, Liz accepted a position as an Assistant Professor at Yale University, and in 1999 she returned to NYU as an Associate Professor of Psychology. Today, Liz is the Julius Silver Professor of Psychology and Neural Science at NYU.

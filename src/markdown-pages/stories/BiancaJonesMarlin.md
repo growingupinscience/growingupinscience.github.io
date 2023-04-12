@@ -2,7 +2,7 @@
 slug: "/stories/biancajonesmarlin"
 date: "2019-07-19"
 title: "Bianca Jones Marlin"
-tags: ["story", "event"]
+tags: ["story", "event", "nyu"]
 ---
 ### Official Story
 Bianca Jones Marlin is a neuroscientist and postdoctoral researcher at Columbia University. She holds a PhD in neuroscience from New York University, and dual bachelor degrees from St. John's University, in biology and adolescent education. Bianca is currently mentored by Nobel Laureate Dr. Richard Axel, and investigates transgenerational epigenetic inheritance, or how traumatic experiences in parents affect the brain structure of their offspring. As a graduate student with Dr. Robert Froemke, she examined how the brain adapts to care for a newborn and how a baby's cry can control adult behavior. Her graduate research has been featured in Los Angeles Times, The Guardian, Scientific America and Discover Magazine's "100 Top Stories of 2015". She is the recipient of the 2016 Society for Neuroscience Donald B. Lindsley Award, which recognizes the most outstanding PhD thesis in the general area of behavioral neuroscience and was named a STAT Wunderkind in 2017. She is currently a Junior Fellow in the prestigious Simons Society of Fellows. A native New Yorker, Dr. Marlin lives in Manhattan with her scientist husband, Joseph, their daughter, Sage, and their cat Santiago Ramon y Cajal, who is named after the famed neuroanatomist. Dr. Marlin's research program aims to utilize neurobiology and the science of learning to better inform both the scientific and educational community on how positive experiences dictate brain health, academic performance, and social well-being.

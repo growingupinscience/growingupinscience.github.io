@@ -2,7 +2,7 @@
 slug: "/stories/michaellong"
 date: "2018-04-06"
 title: "Michael Long"
-tags: ["story", "event"]
+tags: ["story", "event", "nyu"]
 ---
 ### Official Story
 Michael Long received his PhD from Brown University, where he worked in the laboratory of Barry Connors examining the role of electrical synapses in the mammalian brain. He then shifted his focus to the songbird model system during his postdoctoral years working with Michale Fee at MIT. Michael moved to the NYU School of Medicine in 2010, where he is currently an Associate Professor in the Neuroscience Institute with a clinical affiliation in the Department of Otolaryngology. He was won numerous early career awards, including the NYSCF Robertson Investigator award, a Klingenstein Fellowship and the Rita Allen Foundation scholars award. Although the Long laboratory primarily investigates the neural circuitry that gives rise to vocal production in the songbird as well as a nontraditional rodent species, the scope of research within the lab has recently expanded into the clinical realm, with an emphasis on the brain processes underlying speech perception and production. In addition to his research accomplishments, Michael also serves as the Associate Director for Research of the NYU Neuroscience Institute and was appointed to the editorial board for Current Opinion in Neurobiology and the development chair for the Cosyne meeting. A few years ago, he founded the SPiNES seminar series that has given external postdocs an opportunity to share their research with the greater NYU Neuroscience community.

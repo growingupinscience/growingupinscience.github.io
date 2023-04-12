@@ -2,7 +2,7 @@
 slug: "/stories/megancarey"
 date: "2021-05-05"
 title: "Megan Carey"
-tags: ["story", "event"]
+tags: ["story", "event", "nyu"]
 ---
 ### Official Story
 Megan R. Carey is a Group Leader in the Neuroscience Program at the Champalimaud Center for the Unknown in Lisbon, Portugal. She received her PhD in 2005 from the University of California, San Francisco, where her thesis was awarded UCSF's Krevans Distinguished Dissertation Award. After a Helen Hay Whitney Postdoctoral Fellowship at Harvard Medical School, Dr. Carey started her independent laboratory at the Champalimaud. Her lab combines quantitative behavioral analysis, genetics, and physiology to understand how the brain controls learned and coordinated movements. Megan has chaired a number of scientific conferences, including Cosyne and the Cerebellum Gordon Conference, and she serves on the Board of the Society for the Neural Control of Movement and the Board of Reviewing Editors for the journal eLife. She is a member (and former Chair) of the FENS-Kavli Network of Excellence and the Chair-Elect of the ALBA Network for Equity and Diversity in Brain Sciences.

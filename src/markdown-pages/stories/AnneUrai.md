@@ -2,7 +2,7 @@
 slug: "/stories/anneurai"
 date: "2022-05-03"
 title: "Anne Urai"
-tags: ["story", "event"]
+tags: ["story", "event", "nyu"]
 ---
 ### Official Story
 Anne Urai received her undergraduate degree in cognitive neuroscience and philosophy at University College Utrecht in 2010, followed by a masters in brain and mind sciences at University College London and Ecole Normale Superieure in Paris. She then pursued her doctoral research with Tobias Donner at the Universitätsklinikum Hamburg-Eppendorf and University of Amsterdam, investigating how our previous choices bias the way we interpret later information, and how this process is affected by the confidence in our decisions. Her PhD was awarded the NVP brain and cognition thesis prize, specifically for its combination of interdisciplinary methodology and open science approaches. As a postdoctoral fellow in Anne Churchland's lab at Cold Spring Harbor in New York, she studied the neurophysiology of decision-making using high-density neural recordings in the mouse brain. During this time she was a core member of the International Brain Laboratory, working with a global team of systems and computational neuroscientists to assess the reproducibility of systems neuroscience. She joined Leiden University in The Netherlands as an Assistant Professor in 2020, and was awarded tenure in 2022. Anne Urai's research focuses on the neural basis of decision-making across mammalian species, and the interaction between learning and perception. A current focus of her work, funded by an NWO Veni grant, is on changes in neural and behavioral noise across the lifespan.

@@ -2,7 +2,7 @@
 slug: "/stories/ashleyjuavinett"
 date: "2021-02-02"
 title: "Ashley Juavinett - GUIS Oxford University"
-tags: ["story", "event", "oxford"]
+tags: ["story", "event", "oxford", "global"]
 ---
 ### Official Story
 Ashley received her B.S. degree in Neuroscience from Lafayette College in 2011. With just enough research experience under her belt, she went on to pursue a Ph.D. in neuroscience at UC San Diego with Ed Callaway. During her PhD, Ashley used various imaging techniques to understand different cell types and circuits in the mouse visual cortex. In 2016, Ashley moved to Cold Spring Harbor Laboratory to work with Anne Churchland on innate behaviors in freely moving mice. She became an Assistant Teaching Professor in Neurobiology at UC San Diego in 2018, where she teaches, writes, and co-directs the BS/MS and STARTneuro programs. In 2020, she published her first book, So You Want to be a Neuroscientist?, meant to be a guide for aspiring scientists who are curious about our field.

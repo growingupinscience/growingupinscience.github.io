@@ -2,7 +2,7 @@
 slug: "/stories/stephonalexander"
 date: "2022-02-28"
 title: "Stephon Alexander"
-tags: ["story", "event"]
+tags: ["story", "event", "nyu"]
 ---
 ### Official Story
 I am a professor of physics at Brown University. I am a theoretical physicists whose research is at the interface of early universe cosmology, particle physics, quantum gravity and computational physics. I also engage in interdisciplinary research in the mathematics of music and physics. I did my B.S in physics and a minor in sociology at Haverford College. I also hold two Masters degrees in Electrical Engineering and Physics and my Ph.D in Physics from Brown University. I did my first Posdoctoral work at Imperial College, London and the second one at the Stanford University Linear Accelerator Center. I previously held faculty positions at Penn State, Haverford College, Dartmouth College. I am currently the president of the National Society of Black Physicists.

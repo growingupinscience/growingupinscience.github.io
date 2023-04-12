@@ -2,7 +2,7 @@
 slug: "/stories/jonathanpillow"
 date: "2018-04-27"
 title: "Jonathan Pillow"
-tags: ["story", "event"]
+tags: ["story", "event", "nyu"]
 ---
 ### Official Story
 Jonathan Pillow received his Ph.D. from NYU, where he worked in the laboratory of Eero Simoncelli on statistical modeling of spike trains in the early visual system. He then moved to London for a postdoctoral fellowship at the Gatsby Computational Neuroscience Unit at UCL, and in 2009 became an assistant professor at the University of Texas at Austin in the department of Psychology. In 2014, Jonathan moved to Princeton University, where he is currently an associate professor in the Princeton Neuroscience Institute, Psychology department, and the Center for Statistics and Machine Learning. Jonathan's current research sits at the border between neuroscience and statistical machine learning, focusing on computational and statistical methods for understanding how large populations of neurons transmit and process information.

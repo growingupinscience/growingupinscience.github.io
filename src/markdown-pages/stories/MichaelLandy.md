@@ -2,7 +2,7 @@
 slug: "/stories/michaellandy"
 date: "2016-10-04"
 title: "Michael Landy"
-tags: ["story", "event"]
+tags: ["story", "event", "nyu"]
 ---
 ### Official Story
 Michael Landy received a B.S. in Computer Science from Columbia in 1974 and a Ph.D. in Computer and Communication Sciences from Michigan in 1981. At Michigan he worked with John Holland, the great popularizer of genetic algorithms. Holland was also a co-author on one of the earliest simulations of a neural net (Rochester, Holland, Haibt and Duda, 1956) that attempted to simulate the cell-assembly theory of Donald Hebb. Michael was also inspired by Hebb's book, and his dissertation was an updated attempt to simulate cell-assembly theory in response to visual stimuli. Landy then moved to NYU as a programmer and then postdoc, becoming a faculty member in 1984, where he has remained ever since. Since 1996 he has been the Coordinator of the Program in Cognition & Perception (except during the occasional sabbatical).

@@ -2,7 +2,7 @@
 slug: "/stories/clintoncave"
 date: "2021-08-18"
 title: "Clinton Cave"
-tags: ["story", "event"]
+tags: ["story", "event", "nyu"]
 ---
 ### Official Story
 Clinton Cave is an Assistant Professor of Neuroscience at Middlebury College. He arrived at Middlebury in 2018 after completing his Ph.D. in Neuroscience and post-doctoral fellowship at Johns Hopkins University. Clinton conducted post-baccalaureate research atthe University of Colorado and holds a B.A. in Psychology from Yale University. As a graduate student in the laboratory of Shanthini Sockanathan, his research efforts expanded the known roles of GDE2, a cell-surface enzyme expressed in the nervous system. Using functional genetic approaches in mice, his work demonstrated that GDE2 also plays a crucial role for neuronal survival in the postnatal nervous system, heralding a new research direction for the lab. As an independent investigator, Clinton runs a laboratory at Middlebury College mentoring undergraduate researchers. His group examines the molecular mechanisms regulating embryonic progenitor patterning, neurogenesis, and cell fate decisions through the lens of GDE signaling. Clinton is a published author in Neuron, Development, MolecularNeurodegenration, and his laboratory is supported by grants from the NSF and NIH. In 2020, Clinton was selected as a Next Generation Leader by the Allen Institute for Brain Science, highlighting his research accomplishments and his work to integrate open access datasets into the classroom.

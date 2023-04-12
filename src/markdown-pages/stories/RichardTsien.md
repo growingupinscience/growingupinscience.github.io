@@ -2,7 +2,7 @@
 slug: "/stories/richardtsien"
 date: "2017-03-24"
 title: "Richard Tsien"
-tags: ["story", "event"]
+tags: ["story", "event", "nyu"]
 ---
 ### Official Story
 Richard Tsien was born in China, came to the U.S. before he was 2, grew up in the NYC area during the Sputnik era and graduated from MIT with a bachelor's and master's degree in Electrical Engineering. He spent 4 years in Oxford as a Rhodes Scholar and junior research fellow, graduating with a D.Phil. in Biophysics and focusing on the ionic basis of cardiac action potentials. Skipping the postdoc stage to avoid the Vietnam war draft, he joined the faculty at Yale where he rose to full Professor. He switched from cardiac electrophysiology to neuronal biophysics in 1985-1988 and from Yale to Stanford, where he founded a new Department of Molecular and Cellular Physiology from the ground up. He spent 23 yr at Stanford, co-directing a pan-Neuroscience organization, before moving to NYU in 2011 to start the Neuroscience Institute with colleagues at the Med Center. He is a member of the National Academy of Sciences and was awarded the Axelrod and Gerard Prizes of SfN.

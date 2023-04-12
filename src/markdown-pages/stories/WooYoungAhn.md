@@ -2,7 +2,7 @@
 slug: "/stories/wooyoungahn"
 date: "2021-07-07"
 title: "Woo-Young Ahn"
-tags: ["story", "event"]
+tags: ["story", "event", "nyu"]
 ---
 ### Official Story
 Woo-Young (Young) Ahn is an Associate Professor in the Department of Psychology at Seoul National University (September 2019 - Present; Assistant Professor from September 2017 to August 2019). He was previously an Assistant Professor in the Department of Psychology and an affiliated faculty at Translational Data Analytics at The Ohio State University (August 2015 â€“ August 2017). He earned his B.S. in materials science & engineering in 2002 from Seoul National University and then went to Harvard University as a doctoral candidate for applied physics and received his S.M. in applied physics in 2003. Due to his interests in the human mind, he decided to change his major to clinical psychology so that he could study the human mind from multiple perspectives. He continued on to receive his M.A. in clinical psychology from Seoul National University in 2006, and his Ph.D. in clinical psychology from Indiana University, Bloomington in August 2012 co-advised by Jerome Busemeyer and Brian O'Donnell. He completed his (APA accredited) clinical psychology internship at the University of Illinois at Chicago (UIC) in June 2012. He worked then as a postdoc with Read Montague and Peter Dayan for two years at Virginia Tech Carilion Research Institute (VTCRI) and for a year at Virginia Commonwealth University Institute for Drug and Alcohol Studies.

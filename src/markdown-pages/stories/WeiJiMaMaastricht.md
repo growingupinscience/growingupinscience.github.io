@@ -2,7 +2,7 @@
 slug: "/stories/weijimamaastricht"
 date: "2021-03-11"
 title: "Wei Ji Ma - GUIS Maastricht University"
-tags: ["story", "event", "maastricht"]
+tags: ["story", "event", "global"]
 ---
 ### Official Story
 Weiji received his Ph.D. in Physics from the University of Groningen, the Netherlands. He went on to do postdocs in computational neuroscience with Christof Koch at Caltech and with Alex Pouget at the University of Rochester. He became Assistant Professor of Neuroscience at Baylor College of Medicine in 2008 and moved to New York University in 2013, where he is now Professor of Neuroscience and Psychology. His research focuses on perceptual and cognitive decision-making under uncertainty, with a recent focus on complex planning.

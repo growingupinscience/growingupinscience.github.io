@@ -13,7 +13,7 @@ export default function About({children, style}) {
           <Parallax translateY={["-100px", "-200px"]}>
           <h1><span className="">ABOUT</span></h1>
           <Row>
-          <Col md={6}>
+          <Col lg={6}>
           <h3>
             We highlight the human stories behind the science.
           </h3>
@@ -40,24 +40,24 @@ export default function About({children, style}) {
           too often remain unspoken.
           </p>
           </Col>
-          <Col md = {1}/>
-          <Col md = {5} style= {{textAlign: "center"}}>
-            <Row style= {{paddingTop: "30px"}}>
-              <Col md = {6}>
+          <Col lg = {1}/>
+          <Col lg = {5} style= {{textAlign: "center"}}>
+            <Row>
+              <Col xl={6}>
                 <h1>18</h1>
-                <h2>Chapters</h2>
+                <h3>Chapters</h3>
               </Col>
-              <Col md = {6}>
+              <Col xl={6}>
                 <h1>50+</h1>
-                <h2>Stories</h2>
+                <h3>Stories</h3>
               </Col>
             </Row>  
-            <Row style= {{paddingTop: "80px"}}>
-            <Col md = {6}>
+            <Row>
+              <Col xl={6}>
                 <h1>5</h1>
-                <h2>Years</h2>
+                <h3>Years</h3>
               </Col>
-              <Col md = {6}>
+              <Col xl={6}>
 
             </Col>
             </Row>

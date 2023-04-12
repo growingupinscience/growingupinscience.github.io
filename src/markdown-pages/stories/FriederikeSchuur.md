@@ -2,7 +2,7 @@
 slug: "/stories/friederikeschuur"
 date: "2017-07-21"
 title: "Friederike Schuur"
-tags: ["story", "event"]
+tags: ["story", "event", "nyu"]
 ---
 ### Official Story
 Friederike started a PhD degree in 2008 in Cognitive Neurosience at the ICN (UCL), with degrees in cognitive science and philosophy, researching free will. Inevitably, she concluded that neuroscience is not well suited to solve philosophical questions. She turned to neurophysiology and studied motor preparation under risk and uncertainty using TMS alongside TMS' (+EEG, +fMRI) early pioneers (she still finished within three years). She decided to forgo the 2nd PhD degree in philosophy she was offered (twice, at LSE and Groningen University) and came to NYU as a postdoc. While in NYC, she volunteered for data science nonprofit DataKind and, eager to help change people's lives for the better, left academia, was an early Insight Data Science Fellow, and one of the first data scientist at Oscar Health Insurance, a startup born out of the Afforcable Healthcare Act (ACA). She was one of the first to model the consequences of the ACA, and enjoyed being part of a quickly growing billion $ valuation unicorn startup with Karlie Kloss and Ashton Kutcher stopping by. She went on to join a boutique machine learning research and advising company founded by Hilary Mason, a former machine learning professor of data science fame. She now works on applied machine learning problems and advises technical teams at Fortune 1000 companies, from data strategy to technical implementation. She is a frequent public speaker and writer, she continues to volunteer for DataKind and advises the digital innovation unit of the US division of UNRefugees.

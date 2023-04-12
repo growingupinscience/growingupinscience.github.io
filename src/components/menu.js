@@ -34,8 +34,6 @@ class Menu extends Component {
     });
   }
 
-  
-
   render() {
     var menuitems = <Nav>
           <NavItem>
@@ -52,9 +50,6 @@ class Menu extends Component {
           </NavItem>
           <NavItem>
             <Link to={"/chapters/"}>Chapters</Link>
-          </NavItem>
-          <NavItem>
-            <Link to={"/stories/"}>Stories</Link>
           </NavItem>
           <NavItem>
             <Link to={"/participate/"}>Participate</Link>

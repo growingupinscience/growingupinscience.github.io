@@ -29,8 +29,12 @@
         color: rgba(0, 0, 0, 0.5);
     }
 
+    .namecard{
+        top: 10vh;
+    }
+
     .namecard h1{
-        font-size: 40px;
+        font-size: 80px;
     }
 
     .title{
@@ -62,6 +66,10 @@
         background-color: rgba(52, 124, 224, 0.1) !important;
         padding: 10px;
         margin-top: 10px;
+    }
+
+    .post-preview{
+        text-align: center;
     }
 
     .event-outerlink{

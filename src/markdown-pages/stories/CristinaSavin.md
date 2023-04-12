@@ -2,7 +2,7 @@
 slug: "/stories/cristinasavin"
 date: "2019-01-11"
 title: "Cristina Savin"
-tags: ["story", "event"]
+tags: ["story", "event", "nyu"]
 ---
 ### Official Story
 Cristina Savin received her PhD from Goethe University in Frankfurt, Germany, after doing theoretical work on the computational roles of different forms of plasticity in the group of Jochen Triesch at the Frankfurt Institute for Advanced Studies. She then moved to Cambridge University for a postdoc with Mate Lengyel, followed by a short research visit at Ecole Normale Superiore in Paris in the group of Sophie Deneve, and an independent research fellowship at IST Austria, working in collaboration with Gasper Tkacik and Joszef Csicsvari. Since 2017 she has been an Assistant Professor in the Center for Neural Science and the Center for Data Science at NYU. Her research sits at the intersection between neuroscience and machine learning, with a focus on learning at the level of circuits. Her group develops both theory and new data analysis tools, in collaboration with several experimental partners. Cristina has also recently started an industry collaboration centered on nervous system computer interfaces for medical applications.

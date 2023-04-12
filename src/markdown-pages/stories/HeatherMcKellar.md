@@ -2,7 +2,7 @@
 slug: "/stories/heathermckellar"
 date: "2019-09-20"
 title: "Heather McKellar"
-tags: ["story", "event"]
+tags: ["story", "event", "nyu"]
 ---
 ### Official Story
 Heather McKellar earned her Ph.D. in Cellular, Molecular, and Biophysical Studies from Columbia University and her B.A. in Biology from Boston University. During her graduate training she helped start the Columbia University Neuroscience Outreach Group, which led to the 2011 Next Generation Award from the Society for Neuroscience. She joined the Neuroscience Institute in September 2011, about a month after its official start date, as an admin assistant supporting two labs. Heather founded the Neuroscience Outreach Group at NYU (NOGN) in 2011 and hosted the first NYU Community Brain Fair during Brain Awareness Week 2012. Her interest in outreach also led her to serve as the President of the Greater New York Chapter of the Society for Neuroscience (braiNY) from 2015-2018 and continue as a member of its executive board. When Nina Gray became the Administrative Director in 2013, Heather took over the management of the graduate program and numerous projects in the areas of community engagement. This past June she was promoted to be the third Executive Director of the Neuroscience Institute, working closely with Dick Tsien and overseeing a team of 12 staff members.

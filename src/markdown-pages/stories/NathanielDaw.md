@@ -2,7 +2,7 @@
 slug: "/stories/nathanieldaw"
 date: "2016-02-19"
 title: "Nathaniel Daw"
-tags: ["story", "event"]
+tags: ["story", "event", "nyu"]
 ---
 ### Official Story
 In 1992, Nathaniel Daw received a BA summa cum laude from Columbia University. In 2003, he received his PhD in computer science from Carnegie Mellon University working with David Touretzky on computational models of the dopamine system. He joined NYU's Center for Neural Science and Department of Psychology as an assistant professor in 2007, following a postdoc at the Gatbsy Computational Neuroscience with Peter Dayan. He received tenure in 2012 and moved to Princeton University's psychology department and the Princeton Neuroscience Institute as a full professor in 2015.

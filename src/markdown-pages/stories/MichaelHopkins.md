@@ -2,7 +2,7 @@
 slug: "/stories/michaelhopkins"
 date: "2020-10-21"
 title: "Michael Hopkins"
-tags: ["story", "event"]
+tags: ["story", "event", "nyu"]
 ---
 ### Official Story
 Michael Hopkins is a 3rd year graduate student in the lab of Seth Margolis at the Johns Hopkins School of Medicine where he is an NSF GRFP and HHMI Gilliam fellowship awardee. His thesis research focuses on the molecular mechanisms underlying the formation and function of a novel neuronal membrane proteasome (NMP) complex and its role in synaptic transmission. Prior to starting graduate school Michael received his B.S. in pharmaceutical science from North Carolina Central University. Michael is also the founder of Black Scientists Matter a nonprofit organization working to improve Diversity, Equity, and Inclusion for people of African descent in STEM. In the future Michael hopes to combine his passion for scientific research, education, and policy in an academic science career.

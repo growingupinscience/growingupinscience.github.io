@@ -2,7 +2,7 @@
 slug: "/stories/nancykanwisher"
 date: "2021-10-07"
 title: "Nancy Kanwisher"
-tags: ["story", "event"]
+tags: ["story", "event", "nyu"]
 ---
 ### Official Story
 Nancy Kanwisher received her B.S. and Ph.D. from MIT, working with Professor Molly Potter. After a postdoc as a MacArthur Fellow in Peace and International Security, and a second postdoc in the lab of Anne Treisman at UC Berkeley, she held faculty positions at UCLA and then Harvard, before returning to MIT in 1997, where she is now an Investigator at the McGovern Institute for Brain Research, a faculty member in the Department of Brain & Cognitive Sciences, and a member of the Center for Minds, Brains, and Machines. Kanwisher uses brain imaging and other methods to discover the functional organization of the human brain as a window into the architecture of the mind. Kanwisher has received the Troland Award, the Golden Brain Award, the Carvalho-Heineken Prize, and a MacVicar Faculty Fellow teaching Award from MIT, and she is a member of the National Academy of Sciences and the American Academy of Arts and Sciences. You can view her short lectures about human cognitive neuroscience for lay audiences and newcomers to the field here: www.nancysbraintalks.mit.edu.

@@ -2,7 +2,7 @@
 slug: "/stories/michaelpurugganan"
 date: "2017-09-15"
 title: "Michael Purugganan"
-tags: ["story", "event"]
+tags: ["story", "event", "nyu"]
 ---
 ### Official Story
 Michael did his undergraduate studies at the University of the Philippines, graduating with a degree in Chemistry in 1985. He moved to the United States, earning an M.A. in Chemistry at Columbia, and then a Ph.D. in Botany with a minor in Global Policy at the University of Georgia in 1993 at the laboratory of Susan Wessler. He was awarded an Alfred Sloan Postdoctoral Fellowship in Molecular Evolution, which he used to further his postdoctoral training at the University of California in San Diego. In 1996, he joined the faculty of Genetics at North Carolina State University, where he obtained tenure in 2001 and was named William Neal Reynolds Distinguished Professor in Genetics in 2005. In 2006, he moved to the NYU Center for Genomics and Systems Biology (CGSB) as the Dorothy Schiff Professor of Genomics. He was director of CGSB from 2010-2012, and in 2012 was named Dean for Science of the Faculty of Arts and Science. In 2015 he was named as a Silver Professor at NYU. Michael has won numerous awards, including being named a fellow of the American Association for the Advancement of Science in 2005 and a Guggenheim Fellow in 2006. In 2016, he was named a Global Chair Professor at the University of Bath in the UK. He is a member of the editorial boards of the journals Molecular Biology and Evolution, Genome Biology and Evolution, and Trends in Plant Sciences. He is also a Trustee of the Alfred Sloan Foundation, and was a past member of the Council of Scientists of the Human Frontiers Science Program and the Biological Sciences Advisory Committee of the National Science Foundation.

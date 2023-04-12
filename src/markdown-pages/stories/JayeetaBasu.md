@@ -2,7 +2,7 @@
 slug: "/stories/jayeetabasu"
 date: "2016-05-20"
 title: "Jayeeta Basu"
-tags: ["story", "event"]
+tags: ["story", "event", "nyu"]
 ---
 ### Official Story
 Between 1999-2002, Jayeeta went to Presidency College, Calcutta one of the country's oldest institutions of western education, to earn her bachelors degree in Physiology. In 2004, she got a Masters in Neuroscience at Georg August University, GÃ¶ttingen, Germany under the guidance of Nobel Laureate Dr. Erwin Neher and Dr. Christian Rosenmund. Jayeeta's PhD from Baylor College of Medicine, Houston with Christian Rosenmund focused on molecular mechanisms of synaptic vesicle release. In 2007, Jayeeta started her postdoc with Dr. Steven Siegelbaum at Columbia University and worked on inhibitory circuitry and their role in plasticity, learning and memory. She has been running her lab at the NYU Neuroscience Institute since January 2015.

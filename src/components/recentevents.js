@@ -8,44 +8,54 @@ import YoutubeEmbed from "../components/youtubeembed.js";
 import { getDayofWeek, getMonthDayFormat } from "../utils/utils.js";
 
 
-function formatEvents(posts){
+function formatEvents(posts, upcoming){
     return posts
     // .slice(0, 3) //to get only the first n items
     .map(({node: post}) => {
       var youtubevid = ""
       if (post.frontmatter.video){
-        youtubevid = <Col md={6}>
+        youtubevid = <Col lg={5}>
           <YoutubeEmbed embedId={post.frontmatter.video}/>
         </Col>
       }
       console.log(post.frontmatter.date)
       return (
-        <Row>
-          <Col md={2} style={{paddingTop: "2px", textAlign: "center"}}>
-            <h2>
-              {getDayofWeek(post.frontmatter.date)}
-            </h2>
-            <h3>
-            {getMonthDayFormat(post.frontmatter.date)}<br/>
-            </h3>
-            <h4>
-            {post.frontmatter.time}
-            </h4>
+        <Row style={{paddingTop: "30px"}}>
+          <Col lg={7}>
+            <Row>
+              <Col sm={4} className="event-monthday" style={{paddingTop: "2px"}}>
+                <h2>
+                  {getDayofWeek(post.frontmatter.date)}
+                </h2>
+                <h3>
+                {getMonthDayFormat(post.frontmatter.date)}<br/>
+                </h3>
+                { upcoming ?
+                  <h4>
+                  {post.frontmatter.time}
+                  </h4> :
+                  <div/>
+                }
+              </Col>
 
+              <Col sm={8}>
+              <div className="post-preview" key={post.id} style={{paddingBottom:"10px"}}>
+              <h2>
+                  <Link to={post.frontmatter.slug}>{post.frontmatter.title}</Link>
+              </h2>
+              { upcoming ? 
+                <h4>
+                <i>{post.frontmatter.location}</i>
+                </h4> : <div/>
+              }
+
+              <div className="recent" dangerouslySetInnerHTML={{ __html: post.excerpt}} />
+
+              </div>
+              </Col>
+            </Row>
           </Col>
-          <Col md={4}>
-          <div className="post-preview" key={post.id} style={{paddingBottom:"10px"}}>
-          <h2>
-              <Link to={post.frontmatter.slug}>{post.frontmatter.title}</Link>
-          </h2>
-          <h4>
-          <i>{post.frontmatter.location}</i>
-          </h4>
 
-          <div className="recent" dangerouslySetInnerHTML={{ __html: post.excerpt}} />
-
-          </div>
-          </Col>
           {youtubevid}
         </Row>
         
@@ -64,7 +74,7 @@ const Layout = ({ pageTitle, children }) => {
         ){
         edges {
           node {
-            excerpt(pruneLength: 350 format:HTML)
+            excerpt(pruneLength: 400 format:HTML)
             frontmatter {
               slug
               title
@@ -92,8 +102,8 @@ const Layout = ({ pageTitle, children }) => {
       return new Date(post.frontmatter.date) < new Date()
     })
 
-    const upcomingevents = formatEvents(futureposts)
-    const recentevents = formatEvents(pastposts)
+    const upcomingevents = formatEvents(futureposts, true)
+    const recentevents = formatEvents(pastposts, false)
 
     return (
       <section id="recent-events" style={{marginTop: "-30vh"}}>

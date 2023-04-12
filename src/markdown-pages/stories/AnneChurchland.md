@@ -2,7 +2,7 @@
 slug: "/stories/annechurchland"
 date: "2020-05-26"
 title: "Anne Churchland"
-tags: ["story", "event"]
+tags: ["story", "event", "nyu"]
 ---
 ### Official Story
 Anne Churchland received a PhD in Neuroscience from UCSF based on her work studying motion processing and eye movements in macaque monkeys. She worked under the supervision of Steve Lisberger. She was subsequently a postdoctoral fellow with Mike Shadlen, then at the University of Washington, studying decision-making in nonhuman primates. Next, she became an Assistant Professor at Cold Spring Harbor laboratory in New York, and started a research group focussing on multisensory decision-making in rodents. Her research in this topic has implicated both cortical and subcortical circuits in the computations that support these decisions. She also discovered that even the brains of expert decision-makers are often donated by signals unrelated to the decision at hand, such as idiosyncratic fidgets. She is now an Associate Professor and the Neuroscience Chair at Cold Spring Harbor. She has also co-organized many conferences including Cosyne and Canonical Computations in Brains and Machines and she is the founder of anneslist.net.

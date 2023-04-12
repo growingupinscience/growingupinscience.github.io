@@ -11,58 +11,75 @@ class Events extends Component {
   constructor (data, props) {
     super(data, props);
     const { edges: eventdata } = data.allMarkdownRemark
+    this.filters = ["story", "nyu", "oxford", "global"]
+    this.filtermap = {
+      "nyu": "NYU", 
+      "story": "Story",
+      "global": "Global",
+      "oxford": "Oxford"
+    }
+
     this.state = {
       show_nyu: false, 
       show_global: false, 
       events: eventdata, 
       eventdata: eventdata
     };
-    this.resetFilter = this.resetFilter.bind(this)
-    this.showNYU = this.showNYU.bind(this);
-    this.showGlobal = this.showGlobal.bind(this)
+    this.filters.forEach(e => this.state[e] = false)
+
     this.reset = this.reset.bind(this);
+    this.refresh = this.refresh.bind(this)
+    this.filterby = this.filterby.bind(this)
   }
 
-  resetFilter(){
+  refresh(){
     this.setState(
-      {events:
-      this.state.eventdata.filter(e =>
-        {
-        if (!this.state.show_nyu && !this.state.show_global){
-          return true
-        }
-        else{
-            if (this.state.show_nyu && e.node.frontmatter.tags.includes("nyu")){
-              return true
-            }
-            else if (this.state.show_global && e.node.frontmatter.tags.includes("global")){
-              return true
-            }
-            return false
+      {events: 
+        // for each element in the event data
+        this.state.eventdata.filter(e=> {
+
+          // if all the filters are off, return true
+          var allFalse = true
+          this.filters.forEach(j => 
+            allFalse = allFalse && !this.state[j]
+          )
+          var someTrue = false
+          // filter by each filter listed in this.filters
+          this.filters.forEach(j => 
+            {someTrue = someTrue || (this.state[j] && e.node.frontmatter.tags.includes(j))}
+          )
+
+          if (allFalse || someTrue){
+            return true
           }
+          return false
         }
-    )}
-    ) 
-    console.log(this.state)
+        )
+      }
+    )
   }
 
-  showNYU(){
-    this.state.show_nyu = !this.state.show_nyu
-    this.resetFilter()
-  }
-
-  showGlobal(){
-    this.state.show_global = !this.state.show_global
-    this.resetFilter()
+  filterby(f){
+    this.state[f] = !this.state[f]
+    this.refresh()
   }
 
   reset(){
-    this.state.show_global = false
-    this.state.show_nyu = false
-    this.resetFilter()
+    this.filters.forEach(f => 
+      this.state[f] = false
+    )
+    this.refresh()
   }
 
   render() {
+    console.log(this.filters)
+    var filterButtons = this.filters.map(e => {
+      return <Button onClick={() => this.filterby(e)}
+      style = {{backgroundColor: this.state[e] ? "var(--btn-select)" : "var(--btn)"}}
+      >{this.filtermap[e]}</Button>
+    })
+
+
     return (
       <Layout>
       <div className = "page">
@@ -77,14 +94,8 @@ class Events extends Component {
           welcome (visitors need to be added to a security check list).  
           For questions please contact weijima dot nyu dot edu.
           </p>
-          <h4>Filter by: 
-            <Button id="shownyu" size="lg" onClick={(e) => this.showNYU(e)}
-            style = {{backgroundColor: this.state.show_nyu ? "var(--btn-select)" : "var(--btn)"}}
-            >NYU</Button>
-
-            <Button id="showglobal" size="lg" onClick={(e) => this.showGlobal(e)}
-            style = {{backgroundColor: this.state.show_global ? "var(--btn-select)" : "var(--btn)"}}
-            >Global</Button>
+          <h4>Filter by:
+            {filterButtons}
             <Button size="lg" onClick={() => this.reset()}>Reset</Button>
           </h4>
           <div className="desktop-only">
@@ -104,17 +115,24 @@ class Events extends Component {
                 )
               }
               else{
+                // filter by tags
+                var tags = post.frontmatter.tags.filter(e => this.filters.includes(e)).map(
+                  e =>{
+                    return <Button className="tagbtn" onClick={() => this.filterby(e)}
+                    style = {{backgroundColor: this.state[e] ? "var(--btn-select)" : "var(--btn)"}}
+                    >{this.filtermap[e]}</Button>
+                  }
+                )
                 return (
                   <div>
                     <div>
-                    <Link className = "event-outerlink" to={post.frontmatter.slug}>
                     <Card className = "event" style={{backgroundColor: "rgba(0, 0, 0, 0)", border: "none"}}>
                     <Row>
                       <Col lg={2} xs={12}><h4>{getDateFormat(post.frontmatter.date)}</h4></Col>
-                      <Col lg={6} xs={12}><h4><Link className="event-link" to={post.frontmatter.slug}>{post.frontmatter.title}</Link></h4></Col>
+                      <Col lg={4} xs={12}><h4><Link className="event-link" href={post.frontmatter.slug}>{post.frontmatter.title}</Link></h4></Col>
+                      <Col lg={6}>{tags}</Col>
                     </Row>
                     </Card>
-                    </Link>
                     </div>
                   </div>
                 )

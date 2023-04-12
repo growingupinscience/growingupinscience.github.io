@@ -2,7 +2,7 @@
 slug: "/stories/davidschneider"
 date: "2019-11-08"
 title: "David Schneider"
-tags: ["story", "event"]
+tags: ["story", "event", "nyu"]
 ---
 ### Official Story
 David earned a bachelor's degree in electrical engineering with a focus on control systems and prosthetics. During his undergraduate years, he spent two summers as an intern at a medical device company, where he holds a patent for the software and hardware he developed for building intelligent pacemakers. David then earned a master's degree in biomedical engineering, where he used electrophysiology, behavior, and computational modeling to study how barn owls hunt their prey. After finishing his M.S., David spent 11 months as a research assistant at Columbia University. During that short time he performed experiments leading to 3 manuscripts on primate behavior, vision and attention. The following year David continued at Columbia as a graduate student, rotating through three labs, one of which resulted in a first author paper. David joined the lab of Sarah Woolley as its first graduate student, where he published 8 more papers (3 first author) and received multiple fellowships and awards, including an NRSA. David moved to Duke University for a postdoc in 2012 and published his first 2 papers within 24 months. As a postdoc he was the recipient of a Helen Hay Whitney Foundation postdoctoral fellowship and an Allison Doupe Fellowship from the McKnight Foundation. David does not have a K99/R00, but only because he declined it (after receiving a perfect score of 10) to accept a Career Award from the Burroughs Wellcome Fund. David started his lab at NYU in January of 2018 and was recently named a Searle Scholar.

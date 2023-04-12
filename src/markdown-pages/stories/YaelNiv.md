@@ -2,7 +2,7 @@
 slug: "/stories/yaelniv"
 date: "2021-04-19"
 title: "Yael Niv"
-tags: ["story", "event"]
+tags: ["story", "event", "nyu"]
 ---
 ### Official Story
 Yael Niv received her MA in Psychobiology from Tel Aviv University and her PhD in Computational Neuroscience from the Hebrew University in Jerusalem, having conducted a major part of her thesis research at the Gatsby Computational Neuroscience Unit in UCL. She is currently a professor at Princeton University, at the Psychology Department and the Princeton Neuroscience Institute. Her lab studies the neural and computational processes underlying reinforcement learning and decision making, with a particular focus on how the cognitive processes of attention, memory and learning interact in constructing task representations that allow efficient learning and decision making. She is co-founder and co-director of the Rutgers-Princeton Center for Computational Cognitive Neuropsychiatry, where she is applying ideas from reinforcement learning to questions pertaining to psychiatric disorders within the new field of computational psychiatry.

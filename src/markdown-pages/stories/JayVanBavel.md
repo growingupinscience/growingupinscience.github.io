@@ -2,7 +2,7 @@
 slug: "/stories/jayvanbavel"
 date: "2015-11-20"
 title: "Jay Van Bavel"
-tags: ["story", "event"]
+tags: ["story", "event", "nyu"]
 ---
 ### Official Story
 In 2002, Jay Van Bavel received his B.A. in psychology from the University of Alberta. In 2008, Jay received his Ph.D. in psychology from the University of Toronto, working with Wil Cunningham. He studied as a postdoctoral fellow with Julian Thayer at The Ohio State University. In 2010, Jay began work as an assistant professor in the Department of Psychology at NYU. Jay has received a number of awards, including the Young Investigator Award from the Society for Social Neuroscience, the SAGE Young Scholars Award, and the Janet Taylor Spence Early Career Award from the Association for Psychological Science.
