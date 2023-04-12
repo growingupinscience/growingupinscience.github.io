@@ -42,13 +42,16 @@ class Menu extends Component {
             <Link to={"/"}>Welcome</Link>
           </NavItem>
           <NavItem>
-            <Link to={"/#recent-events"}>Events</Link>
+            <Link to={"/#recent-events"}>Recent</Link>
+          </NavItem>
+          <NavItem>
+            <Link to={"/events/"}>Events</Link>
           </NavItem>
           <NavItem>
             <Link to={"/#about"}>About</Link>
           </NavItem>
           <NavItem>
-            <Link to={"/global/"}>Global</Link>
+            <Link to={"/chapters/"}>Chapters</Link>
           </NavItem>
           <NavItem>
             <Link to={"/stories/"}>Stories</Link>

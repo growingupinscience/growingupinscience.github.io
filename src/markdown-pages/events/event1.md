@@ -1,6 +1,6 @@
 ---
 slug: "/events/event1"
-date: "2023-01-07"
+date: "2023-06-07"
 title: "Upcoming Event Placeholder"
 tags: ["event"]
 location: "Meyer 636"

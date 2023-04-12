@@ -4,7 +4,7 @@ date: "2022-05-31"
 title: "Roozbeh Kiani"
 tags: ["story", "event", "nyu"]
 location: Meyer 636
-time: 13:00 Eastern
+time: 13:00 ET
 video: kzW_aRneDYM
 ---
 [[snippet]]

@@ -1,6 +1,7 @@
 import React, {Component, useState, useEffect, startTransition} from "react"
 import { Link, StaticQuery, graphql } from 'gatsby'
 import { Button, Row, Col, Card} from 'reactstrap';
+import { getDateFormat } from '../utils/utils';
 import Layout from '../components/layout'
 import "../css/style.css"
 import "../css/mobile.css"
@@ -36,7 +37,7 @@ class Events extends Component {
           <br/>
           <p style={{paddingRight:"15vw"}}>
           NYU events are held in Meyer Hall (4 Washington Place), Room 636, 
-          from 17:00-18:00 Eastern, unless announced otherwise. 
+          from 17:00-18:00 ET, unless announced otherwise. 
           Graduate students, postdocs, research 
           assistants, undergraduates, faculty, and visitors are all 
           welcome (visitors need to be added to a security check list).  
@@ -48,9 +49,8 @@ class Events extends Component {
           </h4>
           <div className="desktop-only">
           <Row style={{paddingTop: "50px"}}>
-            <Col xs={4}><h4>Date</h4></Col>
+            <Col xs={2}><h4>Date</h4></Col>
             <Col xs={6}><h4>Event</h4></Col>
-            <Col xs={2}><h4>Location</h4></Col>
           </Row>
           </div>
           <hr style = {{height: 3}}/>
@@ -70,9 +70,8 @@ class Events extends Component {
                     <Link className = "event-outerlink" to={post.frontmatter.slug}>
                     <Card className = "event" style={{backgroundColor: "rgba(0, 0, 0, 0)", border: "none"}}>
                     <Row>
-                      <Col lg={4} xs={12}><h4>{post.frontmatter.date}</h4></Col>
+                      <Col lg={2} xs={12}><h4>{getDateFormat(post.frontmatter.date)}</h4></Col>
                       <Col lg={6} xs={12}><h4><Link className="event-link" to={post.frontmatter.slug}>{post.frontmatter.title}</Link></h4></Col>
-                      <Col lg={2} xs={12}><h4>{post.frontmatter.location}</h4></Col>
                     </Row>
                     </Card>
                     </Link>

@@ -12,7 +12,7 @@ class Index extends Component {
     render() {
       return (
         <Layout>
-              <div style={{backgroundColor: "rgb(230, 236, 240)"}}>
+              <div className = "page">
               <ParallaxProvider>
                   <Parallax translateY={['-200px', '200px']}>
                   <div className = "title" style={{color: "black", height: "130vh"}} />

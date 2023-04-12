@@ -4,7 +4,7 @@ date: "2022-10-26"
 title: "John Rinzel"
 tags: ["story", "event", "nyu"]
 location: Meyer 636
-time: 13:00 Eastern
+time: 13:00 ET
 video: JIXFUpvN_uc
 ---
 [[snippet]]

@@ -4,7 +4,7 @@ date: "2022-11-16"
 title: "David Sussillo"
 tags: ["story", "event", "nyu"]
 location: Meyer 636
-time: 13:00 Eastern
+time: 13:00 ET
 video: "_apxBpwVmME"
 ---
 [[snippet]]

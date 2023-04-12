@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import "../css/style.css"
 import "../css/mobile.css"
 import {Link, withPrefix} from "gatsby"
+import { Row, Col } from "reactstrap"
 import {Parallax} from "react-scroll-parallax"
 
 export default function About({children, style}) {
@@ -9,12 +10,16 @@ export default function About({children, style}) {
     <section id = "about">
       <Parallax>
         <div className = "light section" style = {style}>
-          <Parallax translateY={["200px", "-200px"]}>
+          <Parallax translateY={["-100px", "-200px"]}>
           <h1><span className="">ABOUT</span></h1>
+          <Row>
+          <Col md={6}>
+          <h3>
+            We highlight the human stories behind the science.
+          </h3>
           <p>
-          <br/>
-          <b><i>Have you ever wondered what your advisor struggled with as a graduate student? 
-          What they struggle with now?  </i></b>
+          Have you ever wondered what your advisor struggled with as a graduate student? 
+          What they struggle with now?
           Growing up in Science is a conversation series 
           featuring personal narratives of becoming and being a scientist.
           <br/><br/>
@@ -34,6 +39,30 @@ export default function About({children, style}) {
           universal undercurrents of working in academia but that 
           too often remain unspoken.
           </p>
+          </Col>
+          <Col md = {1}/>
+          <Col md = {5} style= {{textAlign: "center"}}>
+            <Row style= {{paddingTop: "30px"}}>
+              <Col md = {6}>
+                <h1>18</h1>
+                <h2>Chapters</h2>
+              </Col>
+              <Col md = {6}>
+                <h1>50+</h1>
+                <h2>Stories</h2>
+              </Col>
+            </Row>  
+            <Row style= {{paddingTop: "80px"}}>
+            <Col md = {6}>
+                <h1>5</h1>
+                <h2>Years</h2>
+              </Col>
+              <Col md = {6}>
+
+            </Col>
+            </Row>
+          </Col>
+          </Row>
           </Parallax>
         </div>
       </Parallax>

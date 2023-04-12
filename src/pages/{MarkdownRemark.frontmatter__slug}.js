@@ -43,7 +43,6 @@ export default function Template({
         <h3>{date}</h3>
         </div>
           {video}
-
           <div
             className="blog-post-content"
             dangerouslySetInnerHTML={{ __html: html }}
