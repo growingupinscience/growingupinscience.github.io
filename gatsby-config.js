@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: `GUIS site`,
+    title: `Growing Up in Science`,
     siteUrl: `https://www.yourdomain.tld`,
   },
   plugins: [
@@ -41,5 +41,5 @@ module.exports = {
       },
     },
   ],
-  pathPrefix: "/guis-site",
+  pathPrefix: "/guis",
 }
