@@ -4,7 +4,7 @@
     --bg: rgb(230, 236, 240);
     --textcolor: rgb(30, 30, 30);
     --btn: rgba(137, 168, 214);
-    --btnhover: rgba(230, 150, 90, 0.8);
+    --btn-select: rgba(230, 150, 90, 0.8);
 }
 
 body {
@@ -37,7 +37,7 @@ font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
 }
 
 .page .btn:hover{
-    background-color: var(--btnhover);
+    background-color: var(--btn-select);
 }
 
 .layout{

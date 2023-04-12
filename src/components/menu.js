@@ -45,10 +45,10 @@ class Menu extends Component {
             <Link to={"/#recent-events"}>Recent</Link>
           </NavItem>
           <NavItem>
-            <Link to={"/events/"}>Events</Link>
+            <Link to={"/#about"}>About</Link>
           </NavItem>
           <NavItem>
-            <Link to={"/#about"}>About</Link>
+            <Link to={"/events/"}>Events</Link>
           </NavItem>
           <NavItem>
             <Link to={"/chapters/"}>Chapters</Link>

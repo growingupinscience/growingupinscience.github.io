@@ -12,20 +12,54 @@ class Events extends Component {
     super(data, props);
     const { edges: eventdata } = data.allMarkdownRemark
     this.state = {
+      show_nyu: false, 
+      show_global: false, 
       events: eventdata, 
       eventdata: eventdata
     };
-
+    this.resetFilter = this.resetFilter.bind(this)
     this.showNYU = this.showNYU.bind(this);
+    this.showGlobal = this.showGlobal.bind(this)
     this.reset = this.reset.bind(this);
   }
 
+  resetFilter(){
+    this.setState(
+      {events:
+      this.state.eventdata.filter(e =>
+        {
+        if (!this.state.show_nyu && !this.state.show_global){
+          return true
+        }
+        else{
+            if (this.state.show_nyu && e.node.frontmatter.tags.includes("nyu")){
+              return true
+            }
+            else if (this.state.show_global && e.node.frontmatter.tags.includes("global")){
+              return true
+            }
+            return false
+          }
+        }
+    )}
+    ) 
+    console.log(this.state)
+  }
+
   showNYU(){
-    this.setState({events: this.state.events.filter(p => p.node.frontmatter.tags.includes("nyu"))})
+    this.state.show_nyu = !this.state.show_nyu
+    this.resetFilter()
+  }
+
+  showGlobal(){
+    this.state.show_global = !this.state.show_global
+    this.resetFilter()
   }
 
   reset(){
-    this.setState({events: this.state.eventdata})
+    this.state.show_global = false
+    this.state.show_nyu = false
+    this.resetFilter()
   }
 
   render() {
@@ -44,8 +78,14 @@ class Events extends Component {
           For questions please contact weijima dot nyu dot edu.
           </p>
           <h4>Filter by: 
-          <Button size="lg" onClick={() => this.showNYU()}>NYU Events</Button>
-          <Button size="lg" onClick={() => this.reset()}>Reset</Button>
+            <Button id="shownyu" size="lg" onClick={(e) => this.showNYU(e)}
+            style = {{backgroundColor: this.state.show_nyu ? "var(--btn-select)" : "var(--btn)"}}
+            >NYU</Button>
+
+            <Button id="showglobal" size="lg" onClick={(e) => this.showGlobal(e)}
+            style = {{backgroundColor: this.state.show_global ? "var(--btn-select)" : "var(--btn)"}}
+            >Global</Button>
+            <Button size="lg" onClick={() => this.reset()}>Reset</Button>
           </h4>
           <div className="desktop-only">
           <Row style={{paddingTop: "50px"}}>
