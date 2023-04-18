@@ -3,8 +3,8 @@
 :root{
     --bg: rgb(248, 249, 250);
     --textcolor: rgb(30, 30, 30);
-    --btn: rgb(194, 217, 236);
-    --btn-select: rgba(245, 211, 138, 0.8);
+    --btn: rgb(177, 208, 233);
+    --btn-select: rgb(243, 210, 148);
 }
 
 body {

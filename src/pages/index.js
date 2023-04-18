@@ -14,11 +14,11 @@ class Index extends Component {
         <Layout>
               <div className = "page">
               <ParallaxProvider>
-                  <Parallax translateY={['-200px', '200px']}>
+                  <Parallax translateY={['-800px', '800px']}>
                   <div className = "title" style={{color: "black", height: "130vh"}} />
                   </Parallax>
                   <div className = "namecard">
-                    <Parallax translateY={['500px', '-500px']}>
+                    {/* <Parallax translateY={['500px', '-500px']}> */}
                       <div className="desktop-only">
                         <h1>Growing<br/>up in<br/>Science</h1>
                         {/* <br/><br/> */}
@@ -33,7 +33,7 @@ class Index extends Component {
                           Sharing the unofficial, untold, and<br/>unconventional stories of people<br/>in science.
                         </h2>
                       </div>
-                    </Parallax>
+                    {/* </Parallax> */}
                     </div>
                   <RecentEvents/>
                   <About/>
