@@ -31,6 +31,9 @@ module.exports = {
                     snippet: {
                       classes: "snippet"
                     },
+                    snippetafter:{
+                      classes: "snippetafter"
+                    },
                     danger: {
                       classes: "danger",
                     },

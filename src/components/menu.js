@@ -38,7 +38,7 @@ class Menu extends Component {
     var menuitems = 
         [
           <NavItem>
-            <Link to={"/"}>Welcome</Link>
+            <Link to={"/"}>Home</Link>
           </NavItem>,
           <NavItem>
             <Link to={"/#recent-events"}>Recent</Link>

@@ -12,10 +12,10 @@ class Index extends Component {
     render() {
       return (
         <Layout>
-              <div className = "page">
+              <div className = "page" style={{zIndex: "-1 !important"}}>
               <ParallaxProvider>
-                  <Parallax translateY={['-800px', '800px']}>
-                  <div className = "title" style={{color: "black", height: "130vh"}} />
+                  <Parallax translateY={['-800px', '800px']} translateX={['-200px', '400px']}>
+                  <div className = "title" style={{color: "black", height: "130vh", marginBottom:"-30vh"}} />
                   </Parallax>
                   <div className = "namecard">
                     {/* <Parallax translateY={['500px', '-500px']}> */}
@@ -35,7 +35,9 @@ class Index extends Component {
                       </div>
                     {/* </Parallax> */}
                     </div>
+                  <Parallax translateY={['0px', '0px']}>
                   <RecentEvents/>
+                  </Parallax>
                   <About/>
               </ParallaxProvider>
               </div>
