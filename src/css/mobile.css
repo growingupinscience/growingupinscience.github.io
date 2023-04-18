@@ -7,7 +7,7 @@
         display: none;
     }
 
-    .topnav{
+    .mobilenav{
         font-family: 'Poppins', sans-serif;
         position: fixed;
         z-index: 1;
@@ -26,15 +26,17 @@
 
     .dropdown-menu a{
         text-decoration: none;
-        color: rgba(0, 0, 0, 0.5);
+        color: rgba(0, 0, 0, 0.8);
     }
 
     .namecard{
         top: 10vh;
+        margin-left:10%;
+        width: 60vw !important;
     }
 
     .namecard h1{
-        font-size: 80px;
+        font-size: 60px;
     }
 
     .title{
@@ -42,8 +44,8 @@
     }
 
     .section{
-        padding-left: 20%;
-        padding-right: 15%;
+        padding-left: 10%;
+        padding-right: 10%;
     }
 
     .section h2{

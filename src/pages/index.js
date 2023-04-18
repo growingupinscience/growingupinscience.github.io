@@ -21,7 +21,7 @@ class Index extends Component {
                     <Parallax translateY={['500px', '-500px']}>
                       <div className="desktop-only">
                         <h1>Growing<br/>up in<br/>Science</h1>
-                        <br/><br/>
+                        {/* <br/><br/> */}
                         <h2>
                           Sharing the unofficial, untold, and<br/>unconventional stories of people<br/>in science.
                         </h2>

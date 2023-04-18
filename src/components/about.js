@@ -10,7 +10,7 @@ export default function About({children, style}) {
     <section id = "about">
       <Parallax>
         <div className = "light section" style = {style}>
-          <Parallax translateY={["-100px", "-200px"]}>
+          {/* <Parallax translateY={["200px", "-200px"]}> */}
           <h1><span className="">ABOUT</span></h1>
           <Row>
           <Col lg={6}>
@@ -63,7 +63,7 @@ export default function About({children, style}) {
             </Row>
           </Col>
           </Row>
-          </Parallax>
+          {/* </Parallax> */}
         </div>
       </Parallax>
     </section>

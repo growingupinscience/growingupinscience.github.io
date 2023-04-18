@@ -106,10 +106,10 @@ const Layout = ({ pageTitle, children }) => {
     const recentevents = formatEvents(pastposts, false)
 
     return (
-      <section id="recent-events" style={{marginTop: "-30vh"}}>
-      <div className = "section" style={{paddingTop: "150px"}}>
+      <section id="recent-events">
+      <div className = "section">
 
-        <Parallax translateY={["0px", "-200px"]}>
+        {/* <Parallax translateY={["0px", "-200px"]}> */}
           
           <h1><span className="">COMING SOON</span></h1>
           {upcomingevents}
@@ -122,7 +122,7 @@ const Layout = ({ pageTitle, children }) => {
           <br/><br/>
           {recentevents}
           <br/><br/>
-        </Parallax>
+        {/* </Parallax> */}
       </div>
       </section>
     )
