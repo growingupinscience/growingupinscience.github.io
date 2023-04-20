@@ -14,8 +14,11 @@ class Index extends Component {
         <Layout>
               <div className = "page" style={{zIndex: "-1 !important"}}>
               <ParallaxProvider>
-                  <Parallax translateY={['-800px', '800px']}>
+                  <Parallax className = "desktop-only" translateY={['-800px', '800px']}>
                   <div className = "title" style={{color: "black", height: "130vh", marginBottom:"-30vh"}} />
+                  </Parallax>
+                  <Parallax className = "mobile-only"translateY={['-500px', '300px']}>
+                  <div className = "title" style={{color: "black", height: "80vh"}} />
                   </Parallax>
                   <div className = "namecard">
                     {/* <Parallax translateY={['500px', '-500px']}> */}

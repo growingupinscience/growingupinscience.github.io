@@ -62,7 +62,7 @@ class Menu extends Component {
       <div className = "mobile-only mobilenav">
           <UncontrolledDropdown nav inNavbar>
                 <DropdownToggle nav>
-                  <StaticImage src="../images/menu-button.png" style={{height: "30px", width:"30px"}}/>   
+                  <StaticImage src="../images/menu-button.png" style={{height: "30px", width:"30px", marginLeft: "-5px"}}/>   
                 </DropdownToggle>
                 <DropdownMenu right>
                   <Nav vertical>

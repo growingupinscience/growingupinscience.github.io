@@ -46,6 +46,11 @@
     .section{
         padding-left: 10%;
         padding-right: 10%;
+        overflow-wrap: break-word !important;
+    }
+
+    .section h1{
+        font-size: 40px;
     }
 
     .section h2{
@@ -80,5 +85,9 @@
 
     .section p{
         font-size: 18px;
+    }
+
+    .tagbtn{
+        margin-top: 10px !important;
     }
 }
