@@ -129,7 +129,7 @@ class Events extends Component {
                     <Card className = "event" style={{backgroundColor: "rgba(0, 0, 0, 0)", border: "none"}}>
                     <Row>
                       <Col lg={2} xs={12}><h4>{getDateFormat(post.frontmatter.date)}</h4></Col>
-                      <Col lg={4} xs={12}><h4><Link className="event-link" href={post.frontmatter.slug}>{post.frontmatter.title}</Link></h4></Col>
+                      <Col lg={4} xs={12}><h4><Link className="event-link" to={post.frontmatter.slug}>{post.frontmatter.title}</Link></h4></Col>
                       <Col lg={6}>{tags}</Col>
                     </Row>
                     </Card>
