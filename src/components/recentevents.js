@@ -46,6 +46,7 @@ function formatEvents(posts, upcoming){
               { upcoming ? 
                 <h4>
                 <i>{post.frontmatter.location}</i>
+                {post.frontmatter.snippet}
                 </h4> : <div/>
               }
 
@@ -74,7 +75,7 @@ const Layout = ({ pageTitle, children }) => {
         ){
         edges {
           node {
-            excerpt(pruneLength: 400 format:HTML)
+            excerpt(pruneLength: 350 format:HTML)
             frontmatter {
               slug
               title
@@ -108,9 +109,6 @@ const Layout = ({ pageTitle, children }) => {
     return (
       <section id="recent-events">
       <div className = "section">
-
-        {/* <Parallax translateY={["0px", "-200px"]}> */}
-          
           <h1><span className="">COMING SOON</span></h1>
           {upcomingevents}
           <br/><br/>
@@ -122,7 +120,6 @@ const Layout = ({ pageTitle, children }) => {
           <br/><br/>
           {recentevents}
           <br/><br/>
-        {/* </Parallax> */}
       </div>
       </section>
     )

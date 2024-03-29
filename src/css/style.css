@@ -124,7 +124,7 @@ font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
 }
 
 .title{
-    background-image: url("../images/purkinje.png");
+    background-image: url("../images/guis_purkinje.png");
     background-size:cover;
     background-position:fixed;
     z-index: -3;
