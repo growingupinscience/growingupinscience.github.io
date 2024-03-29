@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
     title: `Growing Up in Science`,
-    siteUrl: `https://www.yourdomain.tld`,
+    siteUrl: `https://www.growingupinscience.com`,
   },
   plugins: [
     `gatsby-plugin-image`,
@@ -44,5 +44,5 @@ module.exports = {
       },
     },
   ],
-  pathPrefix: "/guis",
+  pathPrefix: "/",
 }
