@@ -2,7 +2,7 @@
 slug: "/events/antiracist-recommendation-letters"
 date: "2022-11-30"
 title: "How to Write Antiracist Recommendation Letters"
-tags: ["event", "nyu", "global"]
+tags: ["event", "nyu", "global", "mentorship", "activism", "antiracism"]
 location: "Meyer 636"
 video: "8-PfJTS7tH8"
 ---

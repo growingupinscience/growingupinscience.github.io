@@ -11,12 +11,14 @@ class Events extends Component {
   constructor (data, props) {
     super(data, props);
     const { edges: eventdata } = data.allMarkdownRemark
-    this.filters = ["story", "nyu", "oxford", "global"]
+    this.filters = ["story", "nyu", "oxford", "global", "mentorship", "antiracism"]
     this.filtermap = {
       "nyu": "NYU", 
       "story": "Story",
       "global": "Global",
-      "oxford": "Oxford"
+      "oxford": "Oxford", 
+      "mentorship": "Mentorship",
+      "antiracism": "Anti-Racism",
     }
 
     this.state = {

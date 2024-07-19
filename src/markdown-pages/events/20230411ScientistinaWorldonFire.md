@@ -2,7 +2,7 @@
 slug: "/events/how-to-be-a-scientist-in-a-world-on-fire"
 date: "2023-04-11"
 title: "How to be a Scientist in a World on Fire?"
-tags: ["event", "nyu", "global"]
+tags: ["event", "nyu", "global", "activism"]
 location: "Meyer 636"
 video: "c1hDOtG-5mM"
 ---
