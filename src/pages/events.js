@@ -15,10 +15,10 @@ class Events extends Component {
     this.filtermap = {
       "nyu": "NYU", 
       "story": "Story",
-      "global": "Global",
-      "oxford": "Oxford", 
       "mentorship": "Mentorship",
       "antiracism": "Anti-Racism",
+      "global": "Global",
+      "oxford": "Oxford", 
     }
 
     this.state = {
