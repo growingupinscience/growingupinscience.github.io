@@ -109,11 +109,11 @@ const Layout = ({ pageTitle, children }) => {
     return (
       <section id="recent-events">
       <div className = "section">
-          <h1><span className="">COMING SOON</span></h1>
+          <h1><span className="">Coming Soon</span></h1>
           {upcomingevents}
           <br/><br/>
 
-          <h1><span className="">PAST EVENTS</span></h1>
+          <h1><span className="">Past Events</span></h1>
           <h3>
           <Link to={"/events/"}>See All Events &#8594;</Link>
           </h3>

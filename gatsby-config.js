@@ -24,22 +24,23 @@ module.exports = {
         gfm: true,
         // Plugins configs
         plugins: [
-          {
-            resolve: "gatsby-remark-custom-blocks",
-            options: {
-                blocks: {
-                    snippet: {
-                      classes: "snippet"
-                    },
-                    snippetafter:{
-                      classes: "snippetafter"
-                    },
-                    danger: {
-                      classes: "danger",
-                    },
-                },
-            },
-          }
+          // Remove gatsby-remark-custom-blocks plugin
+          // {
+          //   resolve: "gatsby-remark-custom-blocks",
+          //   options: {
+          //       blocks: {
+          //           snippet: {
+          //             classes: "snippet"
+          //           },
+          //           snippetafter:{
+          //             classes: "snippetafter"
+          //           },
+          //           danger: {
+          //             classes: "danger",
+          //           },
+          //       },
+          //   },
+          // }
         ],
       },
     },

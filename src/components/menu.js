@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { useState, useEffect } from 'react';
 import {
   Nav, 
   Navbar,
@@ -13,74 +13,100 @@ import {
   NavbarText,
   Collapse,
 } from 'reactstrap';
-import {Link, withPrefix} from "gatsby"
-import { StaticImage } from 'gatsby-plugin-image'
+import { Link } from "gatsby";
 import '../css/style.css';
-import "../css/mobile.css";
 
-class Menu extends Component {
-  constructor(props) {
-    super(props);
+function Menu() {
+  const [isOpen, setIsOpen] = useState(false);
+  const [isMobile, setIsMobile] = useState(false);
 
-    this.toggleNavbar = this.toggleNavbar.bind(this);
-    this.state = {
-      collapsed: true
+  useEffect(() => {
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth <= 768); 
     };
-  }
+    
+    checkMobile();
+    window.addEventListener('resize', checkMobile);
+    
+    return () => window.removeEventListener('resize', checkMobile);
+  }, []);
 
-  toggleNavbar() {
-    this.setState({
-      collapsed: !this.state.collapsed
-    });
-  }
+  const toggleMenu = () => {
+    setIsOpen(!isOpen);
+    if (!isOpen) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = 'auto';
+    }
+  };
 
-  render() {
-    var menuitems = 
-        [
-          <NavItem>
-            <Link to={"/"}>Home</Link>
-          </NavItem>,
-          <NavItem>
-            <Link to={"/#recent-events"}>Recent</Link>
-          </NavItem>,
-          <NavItem>
-            <Link to={"/#about"}>About</Link>
-          </NavItem>,
-          <NavItem>
-            <Link to={"/events/"}>Events</Link>
-          </NavItem>,
-          <NavItem>
-            <Link to={"/chapters/"}>Chapters</Link>
-          </NavItem>,
-          <NavItem>
-            <Link to={"/participate/"}>Participate</Link>
-          </NavItem>
-        ]
+  const closeMenu = () => {
+    setIsOpen(false);
+    document.body.style.overflow = 'auto';
+  };
 
-    return (
-      <div>
-      <div className = "mobile-only mobilenav">
-          <UncontrolledDropdown nav inNavbar>
-                <DropdownToggle nav>
-                  <StaticImage src="../images/menu-button.png" style={{height: "30px", width:"30px", marginLeft: "-5px"}}/>   
-                </DropdownToggle>
-                <DropdownMenu right>
-                  <Nav vertical>
-                  {menuitems}
-                  </Nav>
-                </DropdownMenu>
-          </UncontrolledDropdown>
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (isOpen && !event.target.closest('.mobileMenuContent') && 
+          !event.target.closest('.mobileMenuButton')) {
+        closeMenu();
+      }
+    };
+
+    document.addEventListener('mousedown', handleClickOutside);
+    return () => document.removeEventListener('mousedown', handleClickOutside);
+  }, [isOpen]);
+
+  const menuitems = [
+    { name: "Home", link: "/" },
+    { name: "Recent", link: "/#recent-events" },
+    { name: "About", link: "/#about" },
+    { name: "Events", link: "/events/" },
+    { name: "Chapters", link: "/chapters/" },
+    { name: "Participate", link: "/participate/" },
+  ];
+
+  return (
+    <>
+      <button 
+        className={`mobileMenuButton ${isOpen ? 'active' : ''} mobile-only`}
+        onClick={toggleMenu}
+        aria-label="Toggle menu"
+      >
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <div className={`mobileMenuOverlay ${isOpen ? 'active' : ''} mobile-only`}>
+        <div className="mobileMenuContent"> 
+          {menuitems.map((item, index) => (
+            <div key={index} className="mobileMenuItemContainer">
+              <Link 
+                to={item.link}
+                onClick={closeMenu}
+                className="mobileMenuItem"
+              >
+                {item.name}
+              </Link>
+            </div>
+          ))}
+        </div>
       </div>
-      <div className = "desktop-only topnav">
-        <Navbar light>
-          <Nav>
-          {menuitems}
+
+      <div className="menu desktop-only">
+        <Navbar expand="md" light>
+          <Nav navbar>
+            {menuitems.map((item, index) => (
+              <NavItem key={index} className="menuitem">
+                <Link to={item.link}>{item.name}</Link>
+              </NavItem>
+            ))}
           </Nav>
         </Navbar>
       </div>
-      </div>
-    );
-  }
+    </>
+  );
 }
 
 export default Menu;

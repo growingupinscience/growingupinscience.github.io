@@ -1,10 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?&family=Archivo&family=Poppins:wght@400;500;600;700;800;900&family=Plus+Jakarta+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Text&display=swap');
 
 :root{
     --bg: rgb(248, 249, 250);
-    --textcolor: rgb(30, 30, 30);
+    --textcolor: rgb(33, 99, 141);
     --btn: rgb(177, 208, 233);
     --btn-select: rgb(243, 210, 148);
+    --subtitle: rgb(80, 120, 150);
 }
 
 body {
@@ -19,14 +21,6 @@ body {
 code {
 font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
-}
-
-.mobile-only{
-    display: none;
-}
-
-.desktop-only{
-    display: block;
 }
 
 .page .btn{
@@ -53,6 +47,7 @@ font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     padding-right: 15%;
     padding-bottom: 5%;
     z-index: 1 !important;
+    color: var(--textcolor);
 }
 
 #recent-events .section{
@@ -88,6 +83,7 @@ font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
 }
 
 .section h4{
+    color: var(--textcolor);
     font-family: 'Poppins', 'sans-serif';
     font-size: 20px;
     font-weight: 500;
@@ -112,62 +108,20 @@ font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     font-weight: 400;
 }
 
-
-/* Front Page Header */
-.namecard{
-    position:absolute;
-    top:20vh;
-    left:0px;
-    float: left;
-    margin-bottom: 10%;
-    margin-left: 15%;
-}
-
-.title{
-    background-image: url("../images/guis_purkinje.png");
-    background-size:cover;
-    background-position:fixed;
-    z-index: -3;
-}
-
-.namecard h1{
-    font-family: 'Poppins', sans-serif;
-    font-weight: 600;
-    letter-spacing: 8px;
-    font-size: 10vh;
-}
-
-.topnav{
-    position: fixed;
-    z-index: 1;
-    padding-top: 10px;
-    padding-bottom: 40px;
-    padding-left: 50px;
-    width: 100%;
-    background-image: linear-gradient(var(--bg),rgba(0, 0, 0, 0))
-}
-
-.topnav a{
-    font-family: 'Poppins', sans-serif;
-    text-decoration: none;
-    font-size: 20px;
-    font-weight: 500;
-    color: rgb(20, 20, 20);
-    display: block;
-    margin-left: 40px;
-    margin-right: 20px;
-}
-
-
 /* Pages */
+
+.page{
+    color: var(--textcolor);
+}
+
 .page h1{
-    font-family: 'Poppins', sans-serif;
+    font-family: 'DM Serif Text', serif;
     padding-top: 60px;
-    letter-spacing: 2px !important;
+    letter-spacing: 1px !important;
 }
 
 .page{
-    padding-top: 30px;
+    padding-top: 80px;
     background-color: var(--bg);
     min-height: 100vh;
 }
@@ -182,6 +136,30 @@ font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
 .pagecode{
     padding: 10%;
     background-color: rgba(52, 124, 224, 0.1);
+}
+
+
+/* Front Page Header */
+.namecard{
+    position:absolute;
+    top:32vh;
+    left:-80px;
+    float: left;
+    margin-left: 15%;
+}
+
+.title{
+    background-image: url("../images/guis_purkinje.png");
+    background-size:cover;
+    background-position:fixed;
+    z-index: -3;
+}
+
+.namecard h1{
+    line-height: 0.8;
+    font-weight: 600;
+    letter-spacing: 8px;
+    font-size: 6em;
 }
 
 .dots{
@@ -206,18 +184,6 @@ font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
 .recent .snippet{
     display: none;
 }
-
-/* .event-outerlink{
-    pointer-events: none
-} */
-
-/* .event-outerlink .btn{
-    pointer-events: auto;
-} */
-
-/* .event-link{
-    pointer-events: auto;
-} */
 
 .event-monthday{
     text-align: center;
@@ -274,5 +240,187 @@ font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     width: 30vw;
 }
 
+/* === Styles migrated from menu.module.css === */
+
+/* Desktop Menu */
+.menu{
+  font-size: 19px;
+  margin-left: 12vw;
+  margin-top: 60px;
+  padding-left: 5vw;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  position:absolute; /* Consider changing to fixed if you want it always visible */
+  background-color: rgb(255, 255, 255);
+  border-radius: 30px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  z-index: 100;
+}
+
+.menuitem{
+  padding-right: 5vw;
+}
+
+.menuitem a{
+  text-decoration: none;
+  color: var(--textcolor); /* Mapped from --color */
+}
+
+.menuitem a:hover{
+  color: var(--btn); /* Mapped from --secondary-color */
+  text-decoration: none;
+}
+
+.mobile-only{
+    display: none !important;
+}
+
+.desktop-only{
+    display: block !important;
+}
+
+
+/* Mobile Menu Styles - wrapped in media query */
+@media only screen and (max-width: 768px) {
+    /* Mobile menu button */
+  .mobileMenuButton {
+    /* display: none;  <- Controlled by mobileonly/desktoponly */
+    position: fixed;
+    top: 2vh;
+    left: 5vw;
+    z-index: 1000;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+  }
+
+  .mobileMenuButton span {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background-color: var(--textcolor); /* Mapped from --color */
+    margin: 5px 0;
+    transition: 0.3s;
+  }
+
+  /* Mobile menu overlay */
+  .mobileMenuOverlay {
+    /* display: none; <- Handled by JS adding/removing 'active' class */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.98);
+    z-index: 999;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    pointer-events: none;
+  }
+
+  .mobileMenuOverlay.active {
+    /* display: block; <- Implied by opacity change */
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  .mobileMenuContent {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding: 80px 20px 20px;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .mobileMenuItem {
+    display: block;
+    padding: 0.5rem 0;
+    font-size: 1.1rem;
+    color: var(--textcolor); /* Mapped from --color */
+    text-decoration: none;
+    transition: color 0.3s;
+  }
+
+  .mobileMenuItem:hover {
+    color: var(--btn); /* Mapped from --secondary-color */
+  }
+
+  /* Styles for potential future dropdowns in mobile */
+  .mobileMenuTitle {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: var(--textcolor); /* Mapped from --color */
+    margin-bottom: 0.5rem;
+    padding-bottom: 0.25rem;
+    border-bottom: 1px solid var(--btn); /* Mapped from --secondary-color */
+  }
+
+  .mobileMenuSubitem {
+    display: block;
+    padding: 0.5rem 0 0.5rem 1rem;
+    font-size: 1rem;
+    color: var(--subtitle); /* Used defined --subtitle */
+    text-decoration: none;
+    transition: color 0.3s;
+  }
+
+  .mobileMenuSubitem:hover {
+    color: var(--btn); /* Mapped from --secondary-color */
+  }
+
+  /* Hide desktop menu, show mobile button (these might be redundant with mobileonly/desktoponly) */
+  .menu {
+    display: none;
+  }
+  
+  /* These are handled by mobileonly/desktoponly classes now
+  .mobileMenuButton {
+    display: block;
+  }
+  .mobileMenuOverlay {
+    display: block; 
+  }
+  */
+
+  /* Hamburger animation */
+  .mobileMenuButton.active span:nth-child(1) {
+    transform: rotate(45deg) translate(0, 11px);
+  }
+
+  .mobileMenuButton.active span:nth-child(2) {
+    opacity: 0;
+  }
+
+  .mobileMenuButton.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(0, -11.5px);
+  }
+
+  .mobile-only {
+    display: block !important; /* Show mobile elements */
+  }
+  .desktop-only {
+    display: none !important; /* Hide desktop elements */
+  }
+}
+
+/* Additional mobile breakpoint */
+@media only screen and (max-width: 480px) {
+  .mobileMenuTitle {
+    font-size: 1.1rem;
+  }
+
+  .mobileMenuSubitem {
+    font-size: 0.9rem;
+    padding: 0.4rem 0 0.4rem 1rem;
+  }
+
+  .mobileMenuItem {
+    padding: 0.4rem 0;
+  }
+}
 
   

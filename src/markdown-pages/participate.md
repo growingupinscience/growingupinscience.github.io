@@ -1,7 +1,7 @@
 ---
 slug: "/participate"
 date: ""
-title: "PARTICIPATE"
+title: "Participate"
 tags: ["page"]
 ---
 
