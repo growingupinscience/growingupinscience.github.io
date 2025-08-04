@@ -149,7 +149,7 @@ font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
 }
 
 .title{
-    background-image: url("../images/guis_purkinje.png");
+    background-image: url("../images/purkinje-new.svg");
     background-size:cover;
     background-position:fixed;
     z-index: -3;
@@ -163,7 +163,6 @@ font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
 }
 
 .dots{
-    background-image: url("../images/dots.svg");
     background-size:cover;
     background-position:fixed;
     background-repeat: no-repeat;
@@ -423,4 +422,92 @@ font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
   }
 }
 
+/* Event layout styles */
+.event-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-bottom: 30px;
+}
+
+.event-content {
+  display: flex;
+  flex: 1;
+  min-width: 300px;
+}
+
+.event-date {
+  flex: 0 0 120px;
+  padding-top: 2px;
+}
+
+.event-details {
+  flex: 1;
+}
+
+.video-container {
+  flex: 0 0 400px;
+  min-width: 300px;
+}
+
+/* About layout styles */
+.about-content {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+}
+
+.about-text {
+  flex: 1;
+  min-width: 300px;
+}
+
+.about-stats {
+  flex: 0 0 300px;
+  text-align: center;
+}
+
+.stats-row {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 20px;
+}
+
+.stat-item {
+  text-align: center;
+}
+
+/* Mobile responsive adjustments */
+@media only screen and (max-width: 768px) {
+  .event-row {
+    flex-direction: column;
+  }
   
+  .event-content {
+    flex-direction: column;
+  }
+  
+  .event-date {
+    flex: none;
+    margin-bottom: 10px;
+  }
+  
+  .video-container {
+    flex: none;
+    margin-top: 20px;
+  }
+  
+  .about-content {
+    flex-direction: column;
+  }
+  
+  .about-stats {
+    flex: none;
+    margin-top: 30px;
+  }
+  
+  .stats-row {
+    flex-direction: column;
+    gap: 20px;
+  }
+}

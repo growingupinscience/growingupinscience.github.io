@@ -155,7 +155,7 @@ const AllEvents = (props) =>
   query{
     allMarkdownRemark(
         filter: {frontmatter: {tags : {in: "event"}}}
-        sort: { order: DESC, fields: [frontmatter___date] }
+        sort: {frontmatter: {date: DESC}}
       ){
       edges {
         node {

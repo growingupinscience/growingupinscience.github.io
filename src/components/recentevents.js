@@ -1,7 +1,5 @@
 import React from "react"
 import { Link, useStaticQuery, graphql } from 'gatsby'
-import { Parallax } from "react-scroll-parallax"
-import { Row, Col } from "reactstrap"
 import "../css/style.css"
 import "../css/mobile.css"
 import YoutubeEmbed from "../components/youtubeembed.js";
@@ -14,51 +12,49 @@ function formatEvents(posts, upcoming){
     .map(({node: post}) => {
       var youtubevid = ""
       if (post.frontmatter.video){
-        youtubevid = <Col lg={5}>
+        youtubevid = <div className="video-container">
           <YoutubeEmbed embedId={post.frontmatter.video}/>
-        </Col>
+        </div>
       }
       console.log(post.frontmatter.date)
       return (
-        <Row style={{paddingTop: "30px"}}>
-          <Col lg={7}>
-            <Row>
-              <Col sm={4} className="event-monthday" style={{paddingTop: "2px"}}>
-                <h2>
-                  {getDayofWeek(post.frontmatter.date)}
-                </h2>
-                <h3>
-                {getMonthDayFormat(post.frontmatter.date)}<br/>
-                </h3>
-                { upcoming ?
-                  <h4>
-                  {post.frontmatter.time}
-                  </h4> :
-                  <div/>
-                }
-              </Col>
-
-              <Col sm={8}>
-              <div className="post-preview" key={post.id} style={{paddingBottom:"10px"}}>
+        <div className="event-row" style={{paddingTop: "30px"}}>
+          <div className="event-content">
+            <div className="event-date">
               <h2>
-                  <Link to={post.frontmatter.slug}>{post.frontmatter.title}</Link>
+                {getDayofWeek(post.frontmatter.date)}
               </h2>
-              { upcoming ? 
+              <h3>
+              {getMonthDayFormat(post.frontmatter.date)}<br/>
+              </h3>
+              { upcoming ?
                 <h4>
-                <i>{post.frontmatter.location}</i>
-                {post.frontmatter.snippet}
-                </h4> : <div/>
+                {post.frontmatter.time}
+                </h4> :
+                <div/>
               }
+            </div>
 
-              <div className="recent" dangerouslySetInnerHTML={{ __html: post.excerpt}} />
+            <div className="event-details">
+            <div className="post-preview" key={post.id} style={{paddingBottom:"10px"}}>
+            <h2>
+                <Link to={post.frontmatter.slug}>{post.frontmatter.title}</Link>
+            </h2>
+            { upcoming ? 
+              <h4>
+              <i>{post.frontmatter.location}</i>
+              {post.frontmatter.snippet}
+              </h4> : <div/>
+            }
 
-              </div>
-              </Col>
-            </Row>
-          </Col>
+            <div className="recent" dangerouslySetInnerHTML={{ __html: post.excerpt}} />
+
+            </div>
+            </div>
+          </div>
 
           {youtubevid}
-        </Row>
+        </div>
         
       )
     })
@@ -70,7 +66,7 @@ const Layout = ({ pageTitle, children }) => {
     query{
       allMarkdownRemark(
           filter: {frontmatter: {tags : {in: "event"}}}
-          sort: { order: DESC, fields: [frontmatter___date] }
+          sort: {frontmatter: {date: DESC}}
           limit: 5
         ){
         edges {

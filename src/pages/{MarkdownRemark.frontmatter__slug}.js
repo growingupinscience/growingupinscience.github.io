@@ -1,7 +1,6 @@
 import React from "react"
 import { graphql } from "gatsby"
 import Layout from "../components/layout.js";
-import {Parallax, ParallaxProvider} from "react-scroll-parallax";
 import YoutubeEmbed from "../components/youtubeembed.js";
 import "../css/style.css"
 import "../css/mobile.css"
@@ -31,7 +30,6 @@ export default function Template({
 
   return (
     <Layout>
-      <ParallaxProvider>
       <div className = "page">
       <div className = {mode} style = {{minHeight: "100vh"}}>
         <div>
@@ -49,7 +47,6 @@ export default function Template({
           />
       </div>
       </div>
-      </ParallaxProvider>
     </Layout>
   )
 }
