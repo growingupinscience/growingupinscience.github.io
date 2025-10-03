@@ -7,20 +7,14 @@ tags: ["page"]
 
 There are many ways to get involved in Growing up in Science. Below, we have a few ways to participate, from less to more work:
 
-
-### Forward the _Science_ &nbsp; article
-You can find it <a href="https://www.science.org/doi/10.1126/science.357.6354.942" target="_blank">here</a>. Thank you!
-
-
 ### Tweet your own story
 Use the hashtag #growingupinscience.
 
 ### Discuss your stories in a small group
-For example at a recurring student lunch.
-
+For example, at a recurring student lunch.
 
 ### Invite Wei Ji for a Growing up in Science talk
-I will consider all invitations for remote talks, especially from universities that lack mentorship resources.
+I will consider all invitations for remote talks, especially from universities that lack mentorship resources. You may contact me at weijima at nyu dot edu.
 
 
 ### Start your own series
