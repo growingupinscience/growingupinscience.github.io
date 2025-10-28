@@ -1,6 +1,6 @@
 ---
 slug: "/stories/stephenzhang"
-date: "2024-10-29"
+date: "2025-10-29"
 title: "Stephen Zhang"
 tags: ["story", "event", "nyu"]
 ---
