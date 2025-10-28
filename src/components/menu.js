@@ -1,18 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import {
-  Nav, 
-  Navbar,
-  NavLink,
-  NavItem, 
-  UncontrolledDropdown, 
-  DropdownToggle,
-  DropdownMenu,
-  NavbarToggler,
-  NavbarBrand,
-  DropdownItem,
-  NavbarText,
-  Collapse,
-} from 'reactstrap';
 import { Link } from "gatsby";
 import '../css/style.css';
 
@@ -94,17 +80,13 @@ function Menu() {
         </div>
       </div>
 
-      <div className="menu desktop-only">
-        <Navbar expand="md" light>
-          <Nav navbar>
-            {menuitems.map((item, index) => (
-              <NavItem key={index} className="menuitem">
-                <Link to={item.link}>{item.name}</Link>
-              </NavItem>
-            ))}
-          </Nav>
-        </Navbar>
-      </div>
+      <nav className="menu desktop-only">
+          {menuitems.map((item, index) => (
+            <span key={index} className="menuitem">
+              <Link to={item.link}>{item.name}</Link>
+            </span>
+          ))}
+      </nav>
     </>
   );
 }

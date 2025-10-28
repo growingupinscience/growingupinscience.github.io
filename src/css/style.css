@@ -2,8 +2,8 @@
 @import url('https://fonts.googleapis.com/css2?family=DM+Serif+Text&display=swap');
 
 :root{
-    --bg: rgb(248, 249, 250);
-    --textcolor: rgb(33, 99, 141);
+    --bg: rgb(255, 255, 255);
+    --textcolor: rgb(12, 81, 124);
     --btn: rgb(177, 208, 233);
     --btn-select: rgb(243, 210, 148);
     --subtitle: rgb(80, 120, 150);
@@ -121,7 +121,6 @@ font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
 }
 
 .page{
-    padding-top: 80px;
     background-color: var(--bg);
     min-height: 100vh;
 }

@@ -1,68 +1,66 @@
-# GUIS Website
-## Installation
+## Growing Up in Science website
+
+This repository contains the Gatsby site for Growing Up in Science (GUIS).
+
+## Tech stack
+- **Framework**: Gatsby 5 (React 18)
+- **Styling**: Plain CSS in `src/css`
+- **Content**: Markdown via `gatsby-transformer-remark`
+- **Hosting/Deploy**: Firebase Hosting
+
+## Project structure
+
+- `src/pages/`
+  - `index.js`, `events.js`, `stories.js`, `404.js`
+  - `{MarkdownRemark.frontmatter__slug}.js` template renders Markdown content from `src/markdown-pages`
+- `src/markdown-pages/`
+  - `events/`: Event markdown files (each file becomes a page)
+  - `stories/`: Story markdown files
+  - `chapters.md`, `participate.md`: Top-level content pages
+- `src/components/`: Reusable UI components (e.g., `layout.js`, `menu.js`)
+- `src/css/`: Stylesheets (`style.css`, `mobile.css`)
+- `src/images/`: Static images and icons
+- `public/`: Gatsby build output (committed here for hosting)
+- `gatsby-config.js`: Gatsby configuration and plugins
+- `firebase.json`: Firebase Hosting configuration
+
+## Scripts
+
 ```shell
-#install dependencies
+# install dependencies
 npm install --force
 
-#deploy
-npm run start
+# start local development server (http://localhost:8000)
+npm run develop
+
+# production build into ./public
+npm run build
+
+# serve the production build locally
+npm run serve
+
+# deploy (builds, then deploys to Firebase Hosting)
+npm run deploy
 ```
 
+## Content authoring
+
+- Add new stories under `src/markdown-pages/stories/`.
+- Add new events under `src/markdown-pages/events/`.
+- Frontmatter must include `slug`, `title`, and relevant metadata used by templates.
+
+## Common tasks
+
+- **Update browserslist data** (when warned during builds):
+  ```shell
+  npx update-browserslist-db@latest --yes
+  ```
+
 ## Deployment
-Deployment happens automatically from Github Actions.
 
+- Local deploy: `npm run deploy` (runs `gatsby build` then `firebase deploy --only hosting`).
+- CI: GitHub Actions may deploy automatically if configured.
 
-<p align="center">
-  <a href="https://www.gatsbyjs.com/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter">
-    <img alt="Gatsby" src="https://www.gatsbyjs.com/Gatsby-Monogram.svg" width="60" />
-  </a>
-</p>
-<h1 align="center">
-  Gatsby minimal starter
-</h1>
+## License
 
-## 🚀 Quick start
-
-1.  **Create a Gatsby site.**
-
-    Use the Gatsby CLI to create a new site, specifying the minimal starter.
-
-    ```shell
-    # create a new Gatsby site using the minimal starter
-    npm init gatsby
-    ```
-
-2.  **Start developing.**
-
-    Navigate into your new site’s directory and start it up.
-
-    ```shell
-    cd my-gatsby-site/
-    npm run develop
-    ```
-
-3.  **Open the code and start customizing!**
-
-    Your site is now running at http://localhost:8000!
-
-    Edit `src/pages/index.js` to see your site update in real-time!
-
-4.  **Learn more**
-
-    - [Documentation](https://www.gatsbyjs.com/docs/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
-
-    - [Tutorials](https://www.gatsbyjs.com/tutorial/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
-
-    - [Guides](https://www.gatsbyjs.com/tutorial/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
-
-    - [API Reference](https://www.gatsbyjs.com/docs/api-reference/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
-
-    - [Plugin Library](https://www.gatsbyjs.com/plugins?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
-
-    - [Cheat Sheet](https://www.gatsbyjs.com/docs/cheat-sheet/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
-
-## 🚀 Quick start (Gatsby Cloud)
-
-Deploy this starter with one click on [Gatsby Cloud](https://www.gatsbyjs.com/cloud/):
-
-[<img src="https://www.gatsbyjs.com/deploynow.svg" alt="Deploy to Gatsby Cloud">](https://www.gatsbyjs.com/dashboard/deploynow?url=https://github.com/gatsbyjs/gatsby-starter-minimal)
+Copyright © Growing Up in Science.
