@@ -1,0 +1,17 @@
+---
+slug: "/stories/stephenzhang"
+date: "2024-10-29"
+title: "Stephen Zhang"
+tags: ["story", "event", "nyu"]
+---
+### Official Story
+Stephen received his BA degree in Biochemistry from Grinnell College, where he stumbled upon neuroscience research by working with Clark Lindgren on the lizard neuromuscular junction. After finishing college, he briefly worked as a neuroscience lab TA before pursuing a PhD in neurobiology at Harvard University. In graduate school, Stephen joined the nascent labs of Dragana Rogulja and Mike Crickmore to study dopaminergic regulation of mating drive in Drosophila. He then conducted postdoctoral research with Mark Andermann at Beth Israel Deaconess Medical Center, where he began to investigate the roles of biochemical signaling in neural computation. In January 2025, Stephen started as an assistant professor in the Center for Neural Science. His work was recognized with and/or supported by a Weintraub Graduate Student Award, a CSHL Elkins Memorial Lecture Award, a Charles King Trust Fellowship, an NIH K99/R00, an Allison Doup Fellowship, a Whitehall Research Grant, and an NYU Whitehead Fellowship.
+
+### Unofficial Story
+I was born in China. I spent the best parts of my childhood running around at my parents’ workplaces—and the worst parts in crowded, squeaky, gasoline-scented, often-malfunctioning buses that were supposed to bring me to school. These experiences taught me how to appreciate simple solutions in life and how to entertain myself in my own head. At the age of sixteen, I relinquished any chance to live a life like my parents’ by hopping alone on an airplane to America to become an exchange student. The anxiety of flying for the first time and going to a country where I knew no one quickly dissipated when I was warmly welcomed into a Minnesota family, which has since become my American family.
+
+I discovered science by trying to make friends in nerdy science clubs in school. The idea that science means exploring new things, as opposed to doing homework on old things, suddenly occurred to me. The fact that there are professional scientists was also new to me. The idea that I needed to be a scientist was planted in my head, and that was the point of no return. After working in a neurophysiology lab early in college, my goal was refined into becoming a neuroscientist. I was ready to do whatever was needed to get on and stay on the scientific path. For some reason, starting from the day I took the risk to start a new life, I had the knack of running into exactly who I needed to run into at different points in life: mentors, friends, strangers of wisdom, and most importantly, my wife Michelle.
+
+Much of my experience so far has relied on lucky events involving a handful of people who took a chance on me. As a result, I am willing and able to take chances on new scientists, and I take immense pride in the people that I have trained.
+
+If useful, below are ten science-related books (in no particular order) that have made the most impact on me so far. The Man Who Mistook His Wife for a Hat and Other Clinical Tales (Oliver Sacks), Natural Obsessions: The Search for the Oncogene (Natalie Angier), Time, Love, Memory: A Great Biologist and His Quest for the Origins of Behavior (Jonathan Weiner), Robert Oppenheimer: His Life and Mind (Ray Monk), What Do You Care What Other People Think? (Richard Feynman), Thinking, Fast and Slow (Daniel Kahneman), The Idea Factory (Jon Gertner), Brave Genius (Sean Carroll), The Sense of Style (Steven Pinker), Against Method (Paul Feyerabend).
