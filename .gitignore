@@ -112,3 +112,5 @@ package-lock.json
 !themes/gatsby-starter-theme-workspace/package-lock.json
 
 .parcel-cache
+
+mayatodos.md

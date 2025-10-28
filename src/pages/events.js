@@ -89,12 +89,14 @@ class Events extends Component {
           <h1><span>GUIS Events</span></h1>
           <br/>
           <p style={{paddingRight:"15vw"}}>
-          NYU events are held in Meyer Hall (4 Washington Place), Room 636, 
-          from 17:00-18:00 ET, unless announced otherwise. 
-          Graduate students, postdocs, research 
-          assistants, undergraduates, faculty, and visitors are all 
-          welcome (visitors need to be added to a security check list).  
-          For questions please contact weijima dot nyu dot edu.
+          This page is an archive of past Growing up in Science events. 
+          While many follow the typical story format, some are panel discussions
+          and workshops on related themes that can be found by filtering for "mentorship" or "antiracism".
+          Many have video recordings linked on their event pages, which you can reach by 
+          clicking on the title page to reach the event-specific page.  
+        
+          If you are part of a GUIS chapter and would like to post your 
+          event in this archive, please contact maya dot malaviya at nyu dot edu.
           </p>
           <h4>Filter by:
             {filterButtons}
