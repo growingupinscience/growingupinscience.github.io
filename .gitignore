@@ -26,7 +26,6 @@ chrome-user-data
 
 
 .firebase/
-firebase.json
 .firebaserc
 firebase-debug.log
 
