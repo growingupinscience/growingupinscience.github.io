@@ -4,7 +4,7 @@ date: ""
 title: "GUIS Global Network"
 tags: ["page"]
 ---
-Across the world, many institutions have established their own Growing Up in Science series. Here is more information on how to [set up your own series](/participate/).
+Across the world, many institutions have established their own Growing Up in Science series! Here is more information on how to [set up your own series](/participate/).
 
 - <a href="https://www.facebook.com/GrowingUpInScience/">Growing up in Science Zürich</a> (Maria Landinez, Jacopo Marino, Greta Ebnicher, Pascal Rauher, Silvan Spiri)
 - <a href="https://www.aesthetics.mpg.de/en/the-institute/events/growing-up-in-science.html">Growing up in Academia at the Max Planck Institute for Empirical Aesthetics, Germany</a> (Lucia Melloni)

@@ -1,4 +1,4 @@
-name: Gatsby Publish
+name: Firebase Deploy
 
 on:
   push:
@@ -6,10 +6,27 @@ on:
       - main
 
 jobs:
-  build:
+  deploy:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
-      - uses: enriikke/gatsby-gh-pages-action@v2
+      
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
         with:
-          access-token: ${{ secrets.ACCESS_TOKEN }}
+          node-version: '18'
+          cache: 'npm'
+      
+      - name: Install dependencies
+        run: npm ci
+      
+      - name: Build
+        run: npm run build
+      
+      - name: Deploy to Firebase
+        uses: FirebaseExtended/action-hosting-deploy@v0
+        with:
+          repoToken: '${{ secrets.GITHUB_TOKEN }}'
+          firebaseServiceAccount: '${{ secrets.FIREBASE_SERVICE_ACCOUNT }}'
+          projectId: ${{ secrets.FIREBASE_PROJECT_ID }}
+          channelId: live
