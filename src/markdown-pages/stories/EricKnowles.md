@@ -1,5 +1,5 @@
 ---
-slug: "/stories/ericknowlese"
+slug: "/stories/ericknowles"
 date: "2026-03-11"
 title: "Eric Knowles"
 tags: ["story", "event", "nyu"]
