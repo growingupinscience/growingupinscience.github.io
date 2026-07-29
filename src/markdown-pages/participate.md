@@ -7,15 +7,11 @@ tags: ["page"]
 
 There are many ways to get involved in Growing up in Science. Below, we have a few ways to participate, from less to more work:
 
-### Tweet your own story
-Use the hashtag #growingupinscience.
-
 ### Discuss your stories in a small group
-For example, at a recurring student lunch.
+For example, at a recurring student lunch, or an affinity group.
 
 ### Invite Wei Ji for a Growing up in Science talk
 I will consider all invitations for remote talks, especially from universities that lack mentorship resources. You may contact me at weijima at nyu dot edu.
-
 
 ### Start your own series
 Starting your own series is not hard. Here are some pointers:
@@ -29,7 +25,7 @@ Dear [name],
 
 I would like to invite you to speak in "Growing up in science" this year. As you probably know, this series features one faculty member's story at a time, with a focus on doubts, struggles, detours, and failures throughout all stages of their career.
 
-The primary goal is not to offer boilerplate career advice, but to examine in some depth and in the context of a broader narrative the hidden human factors of working in academia. For more information, see http://growingupinscience.com
+The primary goal is not to offer boilerplate career advice, but to examine in some depth and in the context of a broader narrative the hidden human factors of working in academia. For more information, see http://growingupinscience.org
 
 If you are interested, please indicate on which of the following Fridays you would be available:
 
@@ -41,7 +37,7 @@ Thank you,
 
 </div>
 
-- In my invitations, I try to balance departments (at NYU, there are three involved), subareas (e.g. systems/computational and cellular/molecular neuroscience), and gender. I usually invite at least one guest a year who is also an administrator (e.g. Dean or Institute Director) and at least one who has chosen a non-academic path (e.g. data science). I also reserve one date a year for an open discussion about a topic that fits within the GUIS theme.
+- In my invitations, I try to balance departments (at NYU, there are three involved), subareas (e.g. systems/computational and cellular/molecular neuroscience), gender, and level of seniority. I usually invite at least one guest a year who is also an administrator (e.g. Dean or Institute Director) and at least one who has chosen a non-academic path (e.g. data science). I also reserve one date a year for an open discussion about a topic that fits within the GUIS theme.
 - About three weeks before the event, I send the following email to the guest:
 
 <div class = "pagecode">
