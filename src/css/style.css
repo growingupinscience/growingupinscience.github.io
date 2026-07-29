@@ -7,6 +7,10 @@
     --btn: rgb(177, 208, 233);
     --btn-select: rgb(243, 210, 148);
     --subtitle: rgb(80, 120, 150);
+    /* space the header pill occupies from the top of the page;
+       page content should clear this */
+    --header-top: 30px;
+    --header-clearance: 120px;
 }
 
 body {
@@ -116,8 +120,14 @@ font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
 
 .page h1{
     font-family: 'DM Serif Text', serif;
-    padding-top: 60px;
     letter-spacing: 1px !important;
+}
+
+/* interior pages: push content below the header pill.
+   (homepage sections are nested inside <section> wrappers, so this
+   only applies to the top-level .section on interior pages) */
+.page > .section{
+    padding-top: var(--header-clearance);
 }
 
 .page{
@@ -243,20 +253,22 @@ font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
 /* Desktop Menu */
 .menu{
   font-size: 19px;
-  margin-left: 12vw;
-  margin-top: 60px;
-  padding-left: 5vw;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  position:absolute; /* Consider changing to fixed if you want it always visible */
+  position: absolute; /* Consider changing to fixed if you want it always visible */
+  top: var(--header-top);
+  left: 50%;
+  transform: translateX(-50%);
+  white-space: nowrap;
+  padding: 10px 45px;
   background-color: rgb(255, 255, 255);
   border-radius: 30px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   z-index: 100;
 }
 
-.menuitem{
-  padding-right: 5vw;
+.menuitem + .menuitem{
+  /* .menu is forced to display:block by .desktop-only, so space the
+     inline items with margins rather than flex gap */
+  margin-left: clamp(20px, 4vw, 60px);
 }
 
 .menuitem a{
@@ -278,8 +290,10 @@ font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
 }
 
 
-/* Mobile Menu Styles - wrapped in media query */
-@media only screen and (max-width: 768px) {
+/* Mobile Menu Styles - wrapped in media query.
+   NB: keep this breakpoint in sync with mobile.css (992px) so the
+   hamburger appears at the same width the mobile layout kicks in */
+@media only screen and (max-width: 992px) {
     /* Mobile menu button */
   .mobileMenuButton {
     /* display: none;  <- Controlled by mobileonly/desktoponly */
@@ -477,7 +491,7 @@ font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
 }
 
 /* Mobile responsive adjustments */
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 992px) {
   .event-row {
     flex-direction: column;
   }
