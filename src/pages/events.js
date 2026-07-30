@@ -1,6 +1,6 @@
 import React, {Component, useState, useEffect, startTransition} from "react"
 import { Link, StaticQuery, graphql } from 'gatsby'
-import { Button, Row, Col, Card} from 'reactstrap';
+import { Button } from 'reactstrap';
 import { getDateFormat } from '../utils/utils';
 import Layout from '../components/layout'
 import "../css/style.css"
@@ -74,9 +74,8 @@ class Events extends Component {
   }
 
   render() {
-    console.log(this.filters)
     var filterButtons = this.filters.map(e => {
-      return <Button onClick={() => this.filterby(e)}
+      return <Button key={e} onClick={() => this.filterby(e)}
       style = {{backgroundColor: this.state[e] ? "var(--btn-select)" : "var(--btn)"}}
       >{this.filtermap[e]}</Button>
     })
@@ -86,14 +85,15 @@ class Events extends Component {
       <Layout>
       <div className = "page">
       <div className = "section" style = {{paddingRight: "5vw"}}>
-          <h1><span>GUIS Events</span></h1>
+          <h1><span>GUIS Event List</span></h1>
           <br/>
           <p style={{paddingRight:"15vw"}}>
           This page is an archive of past Growing up in Science events. 
           While many follow the typical story format, some are panel discussions
           and workshops on related themes that can be found by filtering for "mentorship" or "antiracism".
-          Many have video recordings linked on their event pages, which you can reach by 
-          clicking on the title page to reach the event-specific page.  
+          
+          <p><b>Many have video recordings linked on their event pages, which you can reach by 
+          clicking on the title page to reach the event-specific page.</b>  </p>
         
           If you are part of a GUIS chapter and would like to post your 
           event in this archive, please contact maya dot malaviya at nyu dot edu.
@@ -102,48 +102,41 @@ class Events extends Component {
             {filterButtons}
             <Button size="lg" onClick={() => this.reset()}>Reset</Button>
           </h4>
-          <div className="desktop-only">
-          <Row style={{paddingTop: "50px"}}>
-            <Col xs={2}><h4>Date</h4></Col>
-            <Col xs={6}><h4>Event</h4></Col>
-          </Row>
-          </div>
-          <hr style = {{height: 3}}/>
-          {
-            this.state.events.map(({node: post}) => {
-              if (post.frontmatter.tags.includes("year"))
-              {
-                return (<Row>
-                  <Col lg={3}>{post.frontmatter.title}</Col>
-                </Row>
-                )
-              }
-              else{
-                // filter by tags
-                var tags = post.frontmatter.tags.filter(e => this.filters.includes(e)).map(
-                  e =>{
-                    return <Button className="tagbtn" onClick={() => this.filterby(e)}
-                    style = {{backgroundColor: this.state[e] ? "var(--btn-select)" : "var(--btn)"}}
-                    >{this.filtermap[e]}</Button>
-                  }
-                )
-                return (
-                  <div>
-                    <div>
-                    <Card className = "event" style={{backgroundColor: "rgba(0, 0, 0, 0)", border: "none"}}>
-                    <Row>
-                      <Col lg={2} xs={12}><h4>{getDateFormat(post.frontmatter.date)}</h4></Col>
-                      <Col lg={4} xs={12}><h4><Link className="event-link" to={post.frontmatter.slug}>{post.frontmatter.title}</Link></h4></Col>
-                      <Col lg={6}>{tags}</Col>
-                    </Row>
-                    </Card>
-                    </div>
-                  </div>
-                )
+          <div className="listing">
+            <div className="listing-row listing-head">
+              <div>Date</div>
+              <div>Event</div>
+              <div className="listing-tags"></div>
+            </div>
+            {
+              this.state.events.map(({node: post}) => {
+                if (post.frontmatter.tags.includes("year"))
+                {
+                  return (
+                    <div className="listing-year" key={post.id}>{post.frontmatter.title}</div>
+                  )
                 }
-              }
-            )
-          }
+                else{
+                  // filter by tags
+                  var tags = post.frontmatter.tags.filter(e => this.filters.includes(e)).map(
+                    e =>{
+                      return <Button key={e} className="tagbtn" onClick={() => this.filterby(e)}
+                      style = {{backgroundColor: this.state[e] ? "var(--btn-select)" : "var(--btn)"}}
+                      >{this.filtermap[e]}</Button>
+                    }
+                  )
+                  return (
+                    <div className="listing-row" key={post.id}>
+                      <div className="listing-date">{getDateFormat(post.frontmatter.date)}</div>
+                      <div className="listing-title"><Link className="event-link" to={post.frontmatter.slug}>{post.frontmatter.title}</Link></div>
+                      <div className="listing-tags">{tags}</div>
+                    </div>
+                  )
+                  }
+                }
+              )
+            }
+          </div>
       </div>
       </div>
       </Layout>

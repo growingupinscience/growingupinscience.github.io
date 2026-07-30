@@ -1,6 +1,7 @@
 import React, {Component, useState, useEffect, startTransition} from "react"
 import { Link, StaticQuery, graphql } from 'gatsby'
-import { Button, Row, Col } from 'reactstrap';
+import { Button } from 'reactstrap';
+import { getDateFormat } from '../utils/utils';
 import Layout from '../components/layout'
 import "../css/style.css"
 import "../css/mobile.css"
@@ -45,36 +46,39 @@ class Stories extends Component {
           faculty and the public from around the world. With the speakers' help, 
           several of the stories below have now been republished in the journal.
           </p>
-          <h4>Filter by: 
+          <p>
+            <Button tag={Link} to="/all-stories/">You may also read all stories on one page by clicking here.</Button>
+          </p>
+          {/* <h4>Filter by:
           <Button size="lg" onClick={() => this.showNYU()}>NYU Events</Button>
           <Button size="lg" onClick={() => this.reset()}>Reset</Button>
-          </h4>
+          </h4> */}
 
-          <Row style={{paddingTop: "50px"}}>
-            <Col lg={4} xs={6}><h4>Date</h4></Col>
-            <Col lg={7} xs={6}><h4>Name</h4></Col>
-          </Row>
-          <hr style = {{height: 3}}/>
-          {
-            this.state.events.map(({node: post}) => {
-              if (post.frontmatter.tags.includes("year"))
-              {
-                return (<Row>
-                  <Col xs={3}>{post.frontmatter.title}</Col>
-                </Row>
-                )
-              }
-              else{
-                return (
-                  <Row>
-                    <Col lg={4} xs={6}><h4>{post.frontmatter.date}</h4></Col>
-                    <Col lg={7} xs={6}><h4><Link to={post.frontmatter.slug}>{post.frontmatter.title}</Link></h4></Col>
-                  </Row>
-                )
+          <div className="listing">
+            <div className="listing-row listing-head">
+              <div>Date</div>
+              <div>Name</div>
+            </div>
+            {
+              this.state.events.map(({node: post}) => {
+                if (post.frontmatter.tags.includes("year"))
+                {
+                  return (
+                    <div className="listing-year" key={post.id}>{post.frontmatter.title}</div>
+                  )
                 }
-              }
-            )
-          }
+                else{
+                  return (
+                    <div className="listing-row" key={post.id}>
+                      <div className="listing-date">{getDateFormat(post.frontmatter.date)}</div>
+                      <div className="listing-title"><Link to={post.frontmatter.slug}>{post.frontmatter.title}</Link></div>
+                    </div>
+                  )
+                  }
+                }
+              )
+            }
+          </div>
       </div>
       </div>
       </Layout>
