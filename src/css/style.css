@@ -11,6 +11,9 @@
        page content should clear this */
     --header-top: 30px;
     --header-clearance: 120px;
+    /* shared left margin for section content and the homepage hero,
+       so headings stay aligned */
+    --content-left: 10%;
 }
 
 body {
@@ -47,7 +50,7 @@ font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
 
 .section{
     /* padding-top: 5%; */
-    padding-left: 15%;
+    padding-left: var(--content-left);
     padding-right: 15%;
     padding-bottom: 5%;
     z-index: 1 !important;
@@ -151,10 +154,12 @@ font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
 /* Front Page Header */
 .namecard{
     position:absolute;
-    top:32vh;
-    left:-80px;
+    top:15vh;
+    /* left offset of 0 + shared margin lines the hero text up with the
+       section headings below */
+    left:0;
     float: left;
-    margin-left: 15%;
+    margin-left: var(--content-left);
 }
 
 .title{
@@ -251,24 +256,24 @@ font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
 /* === Styles migrated from menu.module.css === */
 
 /* Desktop Menu */
-.menu{
-  font-size: 19px;
+/* nav.menu (not just .menu) so the flex display can out-rank the
+   .desktop-only { display:block !important } rule */
+nav.menu{
+  font-size: 22px;
   position: absolute; /* Consider changing to fixed if you want it always visible */
   top: var(--header-top);
-  left: 50%;
-  transform: translateX(-50%);
+  /* stretch the pill between the same margins the content uses */
+  left: var(--content-left);
+  right: var(--content-left);
+  display: flex !important;
+  justify-content: space-between;
+  align-items: center;
   white-space: nowrap;
-  padding: 10px 45px;
+  padding: 16px 45px;
   background-color: rgb(255, 255, 255);
-  border-radius: 30px;
+  border-radius: 40px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   z-index: 100;
-}
-
-.menuitem + .menuitem{
-  /* .menu is forced to display:block by .desktop-only, so space the
-     inline items with margins rather than flex gap */
-  margin-left: clamp(20px, 4vw, 60px);
 }
 
 .menuitem a{
@@ -384,9 +389,10 @@ font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     color: var(--btn); /* Mapped from --secondary-color */
   }
 
-  /* Hide desktop menu, show mobile button (these might be redundant with mobileonly/desktoponly) */
-  .menu {
-    display: none;
+  /* Hide desktop menu, show mobile button. Needs !important + the
+     nav.menu specificity to beat the desktop flex rule above */
+  nav.menu {
+    display: none !important;
   }
   
   /* These are handled by mobileonly/desktoponly classes now
@@ -435,6 +441,169 @@ font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
   }
 }
 
+/* Compact listing tables (events & stories pages).
+   reactstrap Row/Col don't work here because bootstrap css is not
+   loaded, so these grids do the job instead */
+.listing{
+    margin-top: 40px;
+}
+
+.listing-row{
+    display: grid;
+    grid-template-columns: 130px minmax(0, 1fr) auto;
+    column-gap: 24px;
+    align-items: center;
+    padding: 8px 0;
+    border-bottom: 1px solid rgba(12, 81, 124, 0.15);
+    font-size: 18px;
+}
+
+.listing-row.listing-head{
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    font-size: 20px;
+    border-bottom: 2px solid var(--textcolor);
+}
+
+.listing-date{
+    white-space: nowrap;
+    font-variant-numeric: tabular-nums;
+}
+
+.listing-tags{
+    justify-self: end;
+    white-space: nowrap;
+}
+
+.listing-tags .tagbtn{
+    margin: 0 0 0 8px !important;
+}
+
+.listing-year{
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    font-size: 20px;
+    padding: 24px 0 4px 0;
+}
+
+@media only screen and (max-width: 992px) {
+    .listing-row{
+        grid-template-columns: 100px minmax(0, 1fr);
+        column-gap: 14px;
+        font-size: 16px;
+    }
+
+    /* no room for a third column: tags sit under the title, still
+       inside the same row */
+    .listing-tags{
+        grid-column: 2;
+        justify-self: start;
+        margin-top: 2px;
+        white-space: normal;
+    }
+
+    .listing-tags .tagbtn{
+        margin: 0 8px 4px 0 !important;
+    }
+}
+
+/* All-stories archive: condensed type since one page holds every story */
+.story-archive .story-entry{
+    border-top: 1px solid rgba(12, 81, 124, 0.25);
+    padding: 28px 0 12px 0;
+    margin-top: 16px;
+}
+
+.story-archive .story-entry h2{
+    font-size: 26px;
+    margin: 0;
+}
+
+.story-archive .story-entry-date{
+    color: var(--subtitle);
+    font-size: 15px;
+    margin: 2px 0 10px 0;
+}
+
+/* "Official Story" / "Unofficial Story" headings inside the markdown */
+.story-archive .story-entry h3{
+    font-size: 15px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: var(--subtitle);
+    margin: 18px 0 4px 0;
+}
+
+.story-archive .story-entry p,
+.story-archive .story-entry li{
+    font-size: 16px;
+    line-height: 1.55;
+    margin-bottom: 10px;
+}
+
+/* Link-styled buttons (e.g. "all stories" buttons): suppress the
+   underline-gradient that .section a applies */
+.section a.btn,
+.section a.btn:hover{
+    background-image: none;
+    text-decoration: none;
+}
+
+/* Upcoming-events banner above About Us — matches the nav pill's
+   width and rounded shape */
+.upcoming-banner{
+    position: relative;
+    z-index: 1; /* sits over the tail of the hero illustration */
+    margin: 50px var(--content-left) 60px;
+    padding: 20px 45px;
+    background-color: rgb(227, 239, 248);
+    border-radius: 40px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    color: var(--textcolor);
+}
+
+.upcoming-banner h4{
+    /* same serif face as the page headings, sized between them and
+       body text */
+    font-family: 'DM Serif Text', serif;
+    font-size: 48px;
+    font-weight: 400;
+    letter-spacing: 1px;
+    margin: 0 0 8px 0;
+    text-align: center;
+}
+
+.upcoming-banner p{
+    font-size: 28px;
+    margin: 0 0 10px 0;
+}
+
+.upcoming-banner a{
+    color: var(--textcolor);
+    font-weight: 600;
+}
+
+@media only screen and (max-width: 992px) {
+    .upcoming-banner{
+        padding: 16px 24px;
+        border-radius: 24px;
+    }
+}
+
+/* the first thing in an event row is the speaker name; drop its
+   default top margin so rows hug the section heading like the
+   upcoming-events note does */
+.post-preview h2{
+    margin-top: 0;
+}
+
+/* date line under the speaker name on the homepage event lists */
+.section .event-when {
+    color: var(--subtitle);
+    margin-top: -4px;
+}
+
 /* Event layout styles */
 .event-row {
   display: flex;
@@ -464,6 +633,12 @@ font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
 }
 
 /* About layout styles */
+/* pull the intro line up toward the About Us heading, matching the
+   heading-to-content gap of the event sections */
+.about-text h3 {
+    margin-top: 0;
+}
+
 .about-content {
   display: flex;
   flex-wrap: wrap;

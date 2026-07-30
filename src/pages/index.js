@@ -4,6 +4,7 @@ import "../css/style.css"
 import "../css/mobile.css"
 import About from "../components/about.js"
 import RecentEvents from "../components/recentevents.js"
+import UpcomingBanner from "../components/upcomingbanner.js"
 
 
 class Index extends Component {
@@ -27,6 +28,7 @@ class Index extends Component {
                         </h2>
                       </div>
                     </div>
+                  <UpcomingBanner/>
                   <About/>
                   <RecentEvents/>
               </div>
