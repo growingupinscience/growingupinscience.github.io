@@ -7,6 +7,9 @@ tags: ["page"]
 
 There are many ways to get involved in Growing up in Science. Below, we have a few ways to participate, from less to more work:
 
+### Attend events near you
+Growing up in Science has chapters in many institutions, check [here](/chapters) to see if any are near to you!
+
 ### Discuss your stories in a small group
 For example, at a recurring student lunch, or an affinity group.
 

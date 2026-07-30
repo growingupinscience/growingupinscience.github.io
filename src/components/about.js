@@ -1,9 +1,20 @@
 import React, { Component } from 'react';
 import "../css/style.css"
 import "../css/mobile.css"
-import {Link, withPrefix} from "gatsby"
+import {Link, withPrefix, useStaticQuery, graphql} from "gatsby"
 
 export default function About({children, style}) {
+  // stories only (events without a story are tagged "event" but not "story")
+  const data = useStaticQuery(graphql`
+    query {
+      allMarkdownRemark(filter: {frontmatter: {tags: {in: "story"}}}) {
+        totalCount
+      }
+    }
+  `)
+  const storyCount = data.allMarkdownRemark.totalCount
+  const years = new Date().getFullYear() - 2014
+
   return (
     <section id = "about">
         <div className = "light section" style = {style}>
@@ -38,24 +49,17 @@ export default function About({children, style}) {
           </p>
           </div>
           <div className="about-stats">
-            <div className="stats-row">
-              <div className="stat-item">
-                <h1>18</h1>
-                <h3>Chapters</h3>
-              </div>
-              <div className="stat-item">
-                <h1>50+</h1>
-                <h3>Stories</h3>
-              </div>
-            </div>  
-            <div className="stats-row">
-              <div className="stat-item">
-                <h1>11</h1>
-                <h3>Years</h3>
-              </div>
-              <div className="stat-item">
-
+            <div className="stat-circle stat-years">
+              <span className="stat-number">{years}</span>
+              <span className="stat-label">years</span>
             </div>
+            <div className="stat-circle stat-chapters">
+              <span className="stat-number">15+</span>
+              <span className="stat-label">chapters</span>
+            </div>
+            <div className="stat-circle stat-stories">
+              <span className="stat-number">{storyCount}+</span>
+              <span className="stat-label">stories</span>
             </div>
           </div>
           </div>
