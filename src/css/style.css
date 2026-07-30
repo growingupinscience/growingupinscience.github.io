@@ -531,16 +531,16 @@ nav.menu{
 .story-archive .story-entry h3{
     font-size: 15px;
     font-weight: 600;
-    text-transform: uppercase;
-    letter-spacing: 2px;
+    /* text-transform: uppercase; */
+    letter-spacing: 1px;
     color: var(--subtitle);
-    margin: 18px 0 4px 0;
+    /* margin: 18px 0 4px 0; */
 }
 
 .story-archive .story-entry p,
 .story-archive .story-entry li{
     font-size: 16px;
-    line-height: 1.55;
+    line-height: 1.25;
     margin-bottom: 10px;
 }
 
