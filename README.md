@@ -2,6 +2,12 @@
 
 This repository contains the Gatsby site for Growing Up in Science (GUIS).
 
+**Live site:** https://growingupinscience.web.app
+
+Custom domains (`growingupinscience.org` / `growingupinscience.com`) are being
+pointed at Firebase Hosting; until that DNS work lands, the `web.app` URL above
+is canonical.
+
 ## Tech stack
 - **Framework**: Gatsby 5 (React 18)
 - **Styling**: Plain CSS in `src/css`
@@ -58,8 +64,12 @@ npm run deploy
 
 ## Deployment
 
+Firebase Hosting is the only deploy target. GitHub Pages and the `gh-pages`
+branch were retired — do not re-enable them.
+
+- CI: `.github/workflows/gatsby_deploy.yml` builds and deploys to Firebase on
+  every push to `main`. This is the normal path.
 - Local deploy: `npm run deploy` (runs `gatsby build` then `firebase deploy --only hosting`).
-- CI: GitHub Actions may deploy automatically if configured.
 
 ## License
 
