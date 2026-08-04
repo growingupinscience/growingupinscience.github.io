@@ -1,116 +1,64 @@
-import React, {Component, useState, useEffect, startTransition} from "react"
-import { Link, StaticQuery, graphql } from 'gatsby'
-import { Button } from 'reactstrap';
-import { getDateFormat } from '../utils/utils';
-import Layout from '../components/layout'
+import React from "react"
+import { Link, graphql } from "gatsby"
+import Layout from "../components/layout"
 import "../css/style.css"
 import "../css/mobile.css"
 
+export default function Stories({ data }) {
+  // stub entries (event happened, but no written story yet) have an
+  // empty markdown body — keep them off this page until text is added
+  const stories = data.allMarkdownRemark.edges.filter(
+    ({ node }) => node.html && node.html.trim().length > 0
+  )
 
-class Stories extends Component {
-  constructor (data, props) {
-    super(data, props)
-    const { edges: eventdata } = data.allMarkdownRemark
-    this.state = {
-      events: eventdata, 
-      eventdata: eventdata
-    };
-
-    this.showNYU = this.showNYU.bind(this);
-    this.reset = this.reset.bind(this);
-  }
-
-  showNYU(){
-    this.setState({events: this.state.events.filter(p => p.node.frontmatter.tags.includes("nyu"))})
-  }
-
-  reset(){
-    this.setState({events: this.state.eventdata})
-  }
-
-  render() {
-    return (
-      <Layout>
-      <div className = "page">
-      <div className = "section dark" style = {{paddingRight: "5vw"}}>
-          <h1><span className="highlight">Unofficial Stories</span></h1>
+  return (
+    <Layout>
+      <div className="page">
+        <div className="section story-archive">
+          <h1><span className="highlight">All Stories</span></h1>
           <br/>
-          <p style={{paddingRight:"15vw"}}>
-          In lieu of abstracts, we ask speakers for "unofficial" stories. 
-          The following unofficial stories are shared here with 
-          the speakers' permission. GUIS is also partnering with
-          the <a href="https://storiesinscience.org/" target="__blank">
-            Journal of Stories in Science
-          </a>, 
-          which publishes stories about science from students, postdocs, 
-          faculty and the public from around the world. With the speakers' help, 
-          several of the stories below have now been republished in the journal.
+          <p>
+          In lieu of abstracts, we ask speakers for "unofficial" stories. The following unofficial stories are shared here with the speakers' permission.
+          GUIS also partners with the Journal of Stories in Science, which publishes stories about science from students, postdocs, faculty and the
+          public from around the world. With the speakers' help, several of the stories below have now been republished in the journal.
           </p>
           <p>
-            <Button tag={Link} to="/all-stories/">You may also read all stories on one page by clicking here.</Button>
+            You can find all official and unofficial stories on this page, newest
+            first. You may click a speaker's name to visit their story's own page
+            (with the video recording where available).
           </p>
-          {/* <h4>Filter by:
-          <Button size="lg" onClick={() => this.showNYU()}>NYU Events</Button>
-          <Button size="lg" onClick={() => this.reset()}>Reset</Button>
-          </h4> */}
-
-          <div className="listing">
-            <div className="listing-row listing-head">
-              <div>Date</div>
-              <div>Name</div>
-            </div>
-            {
-              this.state.events.map(({node: post}) => {
-                if (post.frontmatter.tags.includes("year"))
-                {
-                  return (
-                    <div className="listing-year" key={post.id}>{post.frontmatter.title}</div>
-                  )
-                }
-                else{
-                  return (
-                    <div className="listing-row" key={post.id}>
-                      <div className="listing-date">{getDateFormat(post.frontmatter.date)}</div>
-                      <div className="listing-title"><Link to={post.frontmatter.slug}>{post.frontmatter.title}</Link></div>
-                    </div>
-                  )
-                  }
-                }
-              )
-            }
-          </div>
+          {
+            stories.map(({ node: post }) => (
+              <article className="story-entry" key={post.id}>
+                <h2><Link to={post.frontmatter.slug}>{post.frontmatter.title}</Link></h2>
+                <div className="story-entry-date">{post.frontmatter.date}</div>
+                <div dangerouslySetInnerHTML={{ __html: post.html }} />
+              </article>
+            ))
+          }
+        </div>
       </div>
-      </div>
-      </Layout>
-    )
-    
-  }
+    </Layout>
+  )
 }
 
-const AllStories = (props) => 
-  <StaticQuery query={graphql`
-  query{
+export const pageQuery = graphql`
+  query {
     allMarkdownRemark(
-        filter: {frontmatter: {tags : {in: "story"}}}
-        sort: {frontmatter: {date: DESC}}
-      ){
+      filter: {frontmatter: {tags: {in: "story"}}}
+      sort: {frontmatter: {date: DESC}}
+    ) {
       edges {
         node {
-          excerpt(pruneLength: 250)
+          html
           id
           frontmatter {
             slug
             title
             date(formatString: "MMMM DD, YYYY")
-            tags
-            location
           }
         }
       }
     }
   }
-  `}
-  render = {data => <Stories{...data}{...props} />} 
-  />
-
-export default AllStories;
+`
