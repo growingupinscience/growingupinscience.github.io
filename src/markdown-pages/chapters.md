@@ -6,6 +6,8 @@ tags: ["page"]
 ---
 Across the world, many institutions have established their own Growing Up in Science series; here is more information on how to [set up your own series](/participate/).
 
+If you would like to add your chapter to this list, please email maya dot malaviya at nyu dot edu with the name of your institution and a link to where people can find out more. 
+
 - <a href="https://events.stanford.edu/event/growing_up_in_science">Growing up in Science at Stanford</a>
 - <a href="https://2026.ccneuro.org/growing-up-in-science/">Growing up in Science at the Computational Cognitive Neuroscience Conference</a>
 - <a href="https://www.maastrichtuniversity.nl/research/maastricht-young-academy/projects/growing-science-series#:~:text=Growing%20Up%20in%20Science%20is,and%20learn%20from%20each%20other.">Growing up in Science at Maastricht University</a>
