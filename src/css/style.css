@@ -1543,3 +1543,14 @@ nav.menu{
 .about-text h3{
     margin-bottom: .6em;
 }
+
+/* footnote under the events table: addressed to chapter organisers, so it
+   sits quieter than body copy and below the listing rather than above it */
+.listing-note{
+    margin-top: 28px;
+    padding-top: 16px;
+    border-top: 1px solid var(--rule);
+    font-size: 18px;
+    color: var(--subtitle);
+    max-width: var(--measure);
+}

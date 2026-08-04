@@ -69,31 +69,12 @@ class Events extends Component {
       <div className = "section">
           <h1><span>Events &amp; Stories</span></h1>
           <p>
-          This page is the full archive of Growing up in Science events. Most follow
-          the typical story format, where a speaker shares their unofficial story;
-          others are panel discussions and workshops on related themes. Filter by
-          "Story" to see only the personal narratives, or by "Mentorship" and
-          "Anti-Racism" for the thematic sessions.
-          </p>
-          <p>
-          Many events have video recordings on their individual pages &mdash; click
-          any row to open it. In lieu of abstracts, we ask speakers for "unofficial"
-          stories, shared here with their permission. GUIS also partners with the
-          Journal of Stories in Science, which publishes stories about science from
-          students, postdocs, faculty and the public around the world; several of
-          the stories below have been republished there.
-          </p>
-          <p>
-          If you are part of a GUIS chapter and would like to post your
-          event in this archive, please contact maya dot malaviya at nyu dot edu.
+          The full archive of Growing up in Science events. Most are personal
+          stories from a single speaker; others are panels and workshops. Click
+          any row for that event's page, with a video recording where one exists.
           </p>
           <p className="action-row">
             <Link className="btn" to="/stories/">Read all stories on one page</Link>
-            <a className="btn btn-external"
-               href="https://storiesinscience.org/"
-               target="_blank" rel="noopener noreferrer">
-              Journal of Stories in Science
-            </a>
           </p>
           <div className="filter-bar">
             <span className="filter-label">Filter by</span>
@@ -130,6 +111,12 @@ class Events extends Component {
               )
             }
           </div>
+          {/* for the handful of chapter organisers, not the many readers:
+              kept findable but out of the way of the listing */}
+          <p className="listing-note">
+            Running a GUIS chapter? Email maya dot malaviya at nyu dot edu to
+            add your events.
+          </p>
       </div>
       </div>
       </Layout>
