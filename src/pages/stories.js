@@ -85,7 +85,6 @@ export default function Stories({ data }) {
       <div className="page">
         <div className="section story-archive">
           <h1><span className="highlight">Unofficial Stories</span></h1>
-          <br/>
           <p>
             In lieu of abstracts, we ask speakers for "unofficial" stories. All
             {" " + stories.length} of them are collected here, listed alphabetically by

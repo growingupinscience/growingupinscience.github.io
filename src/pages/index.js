@@ -12,7 +12,9 @@ class Index extends Component {
       return (
         <Layout>
               <div className = "page" style={{zIndex: "-1 !important"}}>
-                  <div className = "title" style={{color: "black", height: "95vh", marginBottom:"-30vh"}} />
+                  {/* taller than the viewport and pulled back up, so the
+                      illustration carries on behind the About section */}
+                  <div className = "title" style={{color: "black", height: "150vh", marginBottom:"-85vh"}} />
                   <div className = "namecard">
                       <div className="desktop-only">
                         <h1>Growing<br/>up in<br/>Science</h1>

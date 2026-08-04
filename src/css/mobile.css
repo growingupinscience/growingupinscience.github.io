@@ -112,11 +112,11 @@
     }
 
     .upcoming-banner a.upcoming-name{
-        font-size: 16px;
+        font-size: 19px;
     }
 
     .upcoming-banner p.upcoming-empty{
-        font-size: 16px;
+        font-size: 18px;
     }
 
     /* ---- Recent events ---- */
@@ -128,7 +128,7 @@
        and location aligned with it */
     .section .event-when,
     .section .event-where{
-        font-size: 12px;
+        font-size: 18px;
         text-align: center;
     }
 
@@ -138,7 +138,7 @@
     }
 
     .stat-label{
-        font-size: 11px;
+        font-size: 18px;
         margin-top: 6px;
     }
 }

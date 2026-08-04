@@ -68,7 +68,6 @@ class Events extends Component {
       <div className = "page">
       <div className = "section">
           <h1><span>Events &amp; Stories</span></h1>
-          <br/>
           <p>
           This page is the full archive of Growing up in Science events. Most follow
           the typical story format, where a speaker shares their unofficial story;
