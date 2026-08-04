@@ -12,10 +12,13 @@ class Index extends Component {
       return (
         <Layout>
               <div className = "page" style={{zIndex: "-1 !important"}}>
-                  {/* taller than the viewport and pulled back up, so the
-                      illustration carries on behind the About section */}
-                  <div className = "title" style={{color: "black", height: "150vh", marginBottom:"-85vh"}} />
-                  <div className = "namecard">
+                  {/* the namecard sits in flow inside the title strip, so the
+                      hero grows with its text and the banner below can never
+                      overlap it. The strip's bottom padding minus its negative
+                      margin (see .title in style.css) keeps the illustration
+                      carrying on behind the About section. */}
+                  <div className = "title">
+                    <div className = "namecard">
                       <div className="desktop-only">
                         <h1>Growing<br/>up in<br/>Science</h1>
                         <h2>
@@ -30,6 +33,7 @@ class Index extends Component {
                         </h2>
                       </div>
                     </div>
+                  </div>
                   <UpcomingBanner/>
                   <About/>
                   <RecentEvents/>

@@ -30,8 +30,6 @@
     }
 
     .namecard{
-        top: 10vh;
-        left: 0; /* undo the desktop -80px offset so text isn't clipped */
         margin-left:10%;
         width: 80vw !important;
     }
@@ -42,11 +40,14 @@
         letter-spacing: -0.5px;
     }
 
-    /* the hero runs 150vh to sit behind desktop's About section; on a phone
-       that is a screen and a half of illustration before any content */
+    /* smaller paddings than desktop: less dead space before/after the hero
+       text, and a shorter illustration tail (30vh) behind the content below.
+       padding-bottom still exceeds the negative margin so the banner keeps
+       a guaranteed 8vh gap from the hero text. */
     .title{
-        height: 92vh !important;
-        margin-bottom: -30vh !important;
+        padding-top: 8vh;
+        padding-bottom: 38vh;
+        margin-bottom: -30vh;
         background-position: center top;
     }
 

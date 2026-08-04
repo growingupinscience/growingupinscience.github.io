@@ -40,7 +40,7 @@ export default function UpcomingBanner() {
 
   return (
     <div className="upcoming-banner">
-      <h4 className="upcoming-eyebrow">Upcoming</h4>
+      <h4 className="upcoming-eyebrow">Upcoming Events</h4>
       { upcoming.length > 0 ?
         <ul className="upcoming-list">
           {upcoming.map(({ node: post }) => (

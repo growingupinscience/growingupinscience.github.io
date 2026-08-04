@@ -93,10 +93,8 @@ export default function Stories({ data }) {
         <div className="section story-archive">
           <h1><span className="highlight">Unofficial Stories</span></h1>
           <p>
-            In lieu of abstracts, we ask speakers for "unofficial" stories. All
-            {" " + stories.length} of them are collected here, listed alphabetically by
-            surname and shared with the speakers' permission. Click a speaker's name
-            to open their own page, with the video recording where one exists.
+          In lieu of abstracts, we ask speakers for "unofficial" stories. 
+          The following unofficial stories are shared here with the speakers' permission.
           </p>
           <p>
             GUIS also partners with the Journal of Stories in Science, which publishes

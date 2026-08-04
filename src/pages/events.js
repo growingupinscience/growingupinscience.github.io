@@ -75,15 +75,21 @@ class Events extends Component {
       <Layout>
       <div className = "page">
       <div className = "section">
-          <h1><span>Events &amp; Stories</span></h1>
+          <h1><span>Events</span></h1>
           <p>
-          The full archive of Growing up in Science events. Most are personal
-          stories from a single speaker; others are panels and workshops. Click
-          any row for that event's page, with a video recording where one exists.
+          This page is an archive of Growing up in Science events. While many are personal
+          stories from a single speaker, some are panel discussions and workshops on related themes. 
+          You may click the title of any event to see its individual page and any further details about
+          the event, like the unofficial story or a video recording.
           </p>
-          <p className="action-row">
+
+          <p>
+            Running a GUIS event? Email maya dot malaviya at nyu dot edu to
+            add your event to the archive.
+          </p>
+          {/* <p className="action-row">
             <Link className="btn" to="/stories/">Read all stories on one page</Link>
-          </p>
+          </p> */}
           <div className={"filter-bar" + (this.state.filtersOpen ? " is-open" : "")}>
             <span className="filter-label">Filter by</span>
             {/* mobile-only trigger: seven pills wrap to three rows on a phone,
@@ -100,11 +106,11 @@ class Events extends Component {
             </div>
           </div>
           <div className="listing">
-            <div className="listing-row listing-head">
+            {/* <div className="listing-row listing-head">
               <div>Date</div>
               <div>Event</div>
               <div className="listing-tags"></div>
-            </div>
+            </div> */}
             {
               events.map(({node: post}, i) => {
                 // filter by tags
@@ -137,10 +143,7 @@ class Events extends Component {
           </div>
           {/* for the handful of chapter organisers, not the many readers:
               kept findable but out of the way of the listing */}
-          <p className="listing-note">
-            Running a GUIS chapter? Email maya dot malaviya at nyu dot edu to
-            add your events.
-          </p>
+          
       </div>
       </div>
       </Layout>
