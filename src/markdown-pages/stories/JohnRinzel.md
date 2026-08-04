@@ -3,14 +3,9 @@ slug: "/stories/johnrinzel"
 date: "2022-10-26"
 title: "John Rinzel"
 tags: ["story", "event", "nyu"]
-location: Meyer 636
-time: 13:00 ET
+location: "Meyer 636"
 video: JIXFUpvN_uc
 ---
-[[snippet]]
-| This event is part of the Growing up in Science "unofficial stories" series. <br/>
-| To attend online, please <a href="https://nyu.zoom.us/meeting/register/tJErdO6hrD0rG9OxqBCNCwkP35fkafCr-_5b" target="_blank">register here on zoom</a>
-
 ### Official Story
 I obtained a BS in Engineering Science (Univ of Florida, 1967) and participated in the co-op program, enabling me to work during alternate trimesters in Oak Ridge, TN where I learned and enjoyed scientific computing. My graduate career in Applied Math at NYU's Courant Institute was in two phases, MS, 1968 and PhD, 1973. It was interrupted by a two-year stint at the NIH (Division of Computer Research and Technology, DCRT) from 1968-1970. While at the NIH I came to know and collaborate with Dr Wilfrid Rall and developed an interest/passion of math/computational modeling of neurons. My PhD thesis was about analyzing models for nerve impulse propagation. After graduation I returned to the NIH/DCRT as an independent research mathematician but transferred after two years to the Mathematical Research Branch, NIDDK (Rall was a PI in the MRB). The directorship of NIDDK was very open-minded about basic research and I was well supported with postdoc positions, that would have been difficult in those days to obtain as a junior professor from either a neuroscience or mathematics department setting. The NIH was a terrific environment and I was able to pursue my own topics and establish several productive and satisfying collaborations for myself and postdocs, intramurally and extramurally, pursuing research in neuronal modeling, cell and circuit level. I also had adjunct teaching positions at the Univ of MD and Johns Hopkins in Baltimore. In the mid-90s I was recruited to NYU, with a joint appointment in the Center for Neural Science and the Courant Institute a perfect fit for me. Over these past 25 years my working group and I have collaborated with several different neuroscientists, many here at NYU, developing neuromechanistic models, especially in auditory processing. I teach in both departments. New opportunities arose here at NYU for my working group -- to carry out experiments -- both electrophysiology (auditory brain stem, in vitro, e-phys rig courtesy of Dan Sanes) and human behavior in auditory perception (psychophysics in our own sound booth).
 

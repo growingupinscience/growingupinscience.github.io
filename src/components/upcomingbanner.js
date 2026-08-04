@@ -2,7 +2,7 @@ import React from "react"
 import { Link, useStaticQuery, graphql } from 'gatsby'
 import "../css/style.css"
 import "../css/mobile.css"
-import { getLongDate } from "../utils/utils.js"
+import { getMonthDayFormat } from "../utils/utils.js"
 
 export default function UpcomingBanner() {
   const data = useStaticQuery(graphql`
@@ -40,18 +40,30 @@ export default function UpcomingBanner() {
 
   return (
     <div className="upcoming-banner">
-      <h4>Upcoming Events</h4>
+      <h4 className="upcoming-eyebrow">Upcoming</h4>
       { upcoming.length > 0 ?
-        upcoming.map(({ node: post }) => (
-          <p key={post.id}>
-            <Link to={post.frontmatter.slug}>{post.frontmatter.title}</Link>
-            {" — " + getLongDate(post.frontmatter.date)}
-            {post.frontmatter.time ? ", " + post.frontmatter.time : ""}
-            {post.frontmatter.location ? " · " + post.frontmatter.location : ""}
-          </p>
-        ))
+        <ul className="upcoming-list">
+          {upcoming.map(({ node: post }) => (
+            <li className="upcoming-item" key={post.id}>
+              <span className="upcoming-rail">
+                {getMonthDayFormat(post.frontmatter.date)}
+              </span>
+              <span className="upcoming-body">
+                <Link className="upcoming-name" to={post.frontmatter.slug}>
+                  {post.frontmatter.title}
+                </Link>
+                { (post.frontmatter.time || post.frontmatter.location) &&
+                  <span className="upcoming-meta">
+                    {[post.frontmatter.time, post.frontmatter.location]
+                      .filter(Boolean).join(" · ")}
+                  </span>
+                }
+              </span>
+            </li>
+          ))}
+        </ul>
         :
-        <p>
+        <p className="upcoming-empty">
           The NYU chapter of Growing up in Science is planning further
           events for the upcoming {semester} semester.
         </p>

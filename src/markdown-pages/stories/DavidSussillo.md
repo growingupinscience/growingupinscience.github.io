@@ -3,14 +3,9 @@ slug: "/stories/davidsussillo"
 date: "2022-11-16"
 title: "David Sussillo"
 tags: ["story", "event", "global"]
-location: Meyer 636
-time: 13:00 ET
+location: "Meyer 636"
 video: "_apxBpwVmME"
 ---
-[[snippet]]
-| This event is part of the Growing up in Science "unofficial stories" series. <br/>
-| To attend online, please <a href="https://nyu.zoom.us/meeting/register/tJErdO6hrD0rG9OxqBCNCwkP35fkafCr-_5b" target="_blank">register here on zoom</a>
-
 ### Official Story
 David Sussillo attended Carnegie Mellon University for a BS in Computer Science and received both an MS in Electrical Engineering and a Ph.D. in Neuroscience from Columbia University. While at Columbia, he trained under Prof. Larry Abbott in computational and theoretical neuroscience. Afterward, David did his postdoctoral work at Stanford University with Prof. Krishna Shenoy, applying his Ph.D. work to complex neurophysiological data.
 After his postdoctoral research, David became a scientist in the Google Brain AI research group for six years focused on understanding how artificial neural networks function and applying those lessons to neural data. Now David is an adjunct professor at Stanford University and works at Meta Reality Labs.

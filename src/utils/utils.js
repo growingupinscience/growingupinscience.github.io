@@ -24,8 +24,11 @@ export function getLongDate(datestr){
     return months[date.getMonth()] + " " + day + suffix + ", " + date.getFullYear()
 }
 
+// Short, human-readable date for listing tables, e.g. "Aug 5, 2026".
 export function getDateFormat(datestr){
     const date = new Date(datestr)
-    return date.getFullYear() + "\t" + String(date.getMonth() + 1).padStart(2, "0") + "\t" + String(date.getDate()).padStart(2, "0")
+    const months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun",
+        "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"]
+    return months[date.getMonth()] + " " + date.getDate() + ", " + date.getFullYear()
 }
 

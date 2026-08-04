@@ -3,14 +3,9 @@ slug: "/stories/roozbehkiani"
 date: "2022-05-31"
 title: "Roozbeh Kiani"
 tags: ["story", "event", "nyu"]
-location: Meyer 636
-time: 13:00 ET
+location: "Meyer 636"
 video: kzW_aRneDYM
 ---
-[[snippet]]
-| This event is part of the Growing up in Science "unofficial stories" series. <br/>
-| To attend online, please <a href="https://nyu.zoom.us/meeting/register/tJErdO6hrD0rG9OxqBCNCwkP35fkafCr-_5b" target="_blank">register here on zoom</a>
-
 ### Official Story
 Roozbeh Kiani is an Associate Professor of Neural Science and Psychology at New York University. He received his PhD from the University of Washington and performed his post-doctoral research at Stanford before joining NYU in 2013. Prior to starting his PhD, he completed his medical training in Iran. Kiani investigates the neural computations that underlie visual perception, perceptual decision making, and cognitive control. His research is supported by the National Institutes of Health and the Simons Collaboration on the Global Brain. For his scientific achievements, he has received a number of awards and honors, including the Donald B. Lindsley Prize in Behavioral Neuroscience, the Alfred P. Sloan Research Fellowship, the McKnight Scholar Award, the Pew Scholarship in Biomedical Sciences, and most recently the Troland Award from the National Academy of Sciences. Kiani is also a member of the Board of Scientific Counselors at the National Eye Institute.
 

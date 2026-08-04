@@ -31,12 +31,17 @@ export default function About({children, style}) {
           Growing up in Science is a conversation series 
           featuring personal narratives of becoming and being a scientist.
           <br/><br/>
-          Growing up in Science was started in 2014 at New York University by 
-          professors Wei Ji Ma and Cristina Alberini, and is now worldwide. 
-          <a href = "https://www.science.org/doi/10.1126/science.357.6354.942" target = "_blank">
-            This article
-          </a> describes the origin and impact of the series. 
-          
+          Growing up in Science was started in 2014 at New York University by
+          professors Wei Ji Ma and Cristina Alberini, and is now worldwide.
+          A 2017 article in <i>Science</i> describes the origin and impact of the series.
+          <br/>
+          <a className="btn btn-external"
+             href="https://www.science.org/doi/10.1126/science.357.6354.942"
+             target="_blank" rel="noopener noreferrer">
+            Read the article in Science
+          </a>
+          <br/><br/>
+
           At a typical Growing up in Science event, one faculty member 
           shares their life story, with a focus on struggles, failures, doubts, 
           detours, and weaknesses. Common topics include dealing with expectations, 

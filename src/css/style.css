@@ -14,6 +14,18 @@
     /* shared left margin for section content and the homepage hero,
        so headings stay aligned */
     --content-left: 10%;
+
+    /* accent + long-form reading tokens (added, existing names unchanged) */
+    --rust: #b8552f;          /* complement of the 203deg brand blue */
+    --rust-soft: #f2e0d6;
+    --rust-ink: #8c3f20;
+    --ink-body: #26404f;      /* softer than --textcolor for long copy */
+    --rule: rgba(12, 81, 124, .14);
+    --rule-strong: rgba(12, 81, 124, .30);
+    --measure: 68ch;          /* reading measure for long-form text */
+    /* gutters for page content. the hero/title keeps --content-left so it
+       stays anchored against the purkinje illustration */
+    --gutter: 20%;
 }
 
 body {
@@ -30,11 +42,12 @@ font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
 
+/* base look for page buttons; the pill/border treatment lives in the
+   "buttons, chips & listing" block at the end of this file */
 .page .btn{
     margin: 5px;
     background-color: var(--btn);
-    border: none;
-    color: var(--textcolor)
+    color: var(--textcolor);
 }
 
 .page .btn:hover{
@@ -50,10 +63,8 @@ font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
 
 .section{
     /* padding-top: 5%; */
-    padding-left: var(--content-left);
-    /* slightly tighter than the left margin so the stat circles and
-       other right-edge content get breathing room */
-    padding-right: 4%;
+    padding-left: var(--gutter);
+    padding-right: var(--gutter);
     padding-bottom: 5%;
     z-index: 1 !important;
     color: var(--textcolor);
@@ -63,58 +74,76 @@ font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     padding-right: 10%;
 }
 
+/* titles sit on the page plainly; the old half-height gradient behind
+   them read as a stray highlighter mark */
 .highlight{
-    background: linear-gradient(180deg,rgba(255,255,255,0) 60%, var(--btn) 40%);
+    background: none;
 }
 
 .light{
     color: var(--textcolor)
 }
 
+/* modular type scale: display serif for h1, Poppins for the rest,
+   with differentiated weights so the levels read hierarchically */
 .section h1{
-    font-family: 'Poppins', 'sans-serif';
-    letter-spacing: 3px;
-    font-size: 60px;
-    font-weight:500;
+    font-family: 'DM Serif Text', serif;
+    letter-spacing: .5px;
+    font-size: 52px;
+    font-weight: 400;
+    line-height: 1.12;
+    text-wrap: balance;
 }
 
 .section h2{
     font-family: 'Poppins', 'sans-serif';
-    font-size: 40px;
-    font-weight: 500;
-
+    font-size: 30px;
+    font-weight: 600;
+    line-height: 1.25;
+    text-wrap: balance;
 }
 
 .section h3{
     font-family: 'Poppins', 'sans-serif';
-    font-size: 30px;
-    font-weight: 500;
+    font-size: 22px;
+    font-weight: 600;
+    line-height: 1.3;
+    text-wrap: balance;
 }
 
 .section h4{
     color: var(--textcolor);
     font-family: 'Poppins', 'sans-serif';
-    font-size: 20px;
-    font-weight: 500;
+    font-size: 18px;
+    font-weight: 600;
+    letter-spacing: .01em;
+    text-wrap: balance;
 }
 
+/* prose links: coloured rather than highlighted. the underline only
+   appears on hover so body copy stays calm, but the rust colour keeps
+   them distinguishable from surrounding text at rest. */
 .section a{
-    background: linear-gradient(180deg,rgba(255,255,255,0) 60%, var(--btn) 40%);
-    color:inherit;
-    text-decoration:none;
+    background: none;
+    color: var(--rust);
+    text-decoration: none;
 }
 
 .section a:hover{
-    background: linear-gradient(180deg,rgba(255,255,255,0) 60%, var(--btn-select) 40%);
-    color:inherit;
+    background: none;
+    color: var(--rust-ink);
+    text-decoration: underline;
+    text-underline-offset: 3px;
 }
 
 .section p{
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
         "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-        sans-serif; 
-    font-size: 20px;
+        sans-serif;
+    font-size: 18px;
     font-weight: 400;
+    line-height: 1.72;
+    color: var(--ink-body);
 }
 
 /* Pages */
@@ -143,8 +172,10 @@ font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
 .page li{
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
         "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-        sans-serif; 
-    font-size: 20px;
+        sans-serif;
+    font-size: 18px;
+    line-height: 1.72;
+    color: var(--ink-body);
 }
 
 .pagecode{
@@ -171,11 +202,15 @@ font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     z-index: -3;
 }
 
+/* Hero title: same serif face as the section headings, one step up the
+   scale from them (52px -> 72px). The old 6em/8px-tracking setting was
+   off the scale and crowded the fixed Purkinje illustration. */
 .namecard h1{
-    line-height: 0.8;
-    font-weight: 600;
-    letter-spacing: 8px;
-    font-size: 6em;
+    font-family: 'DM Serif Text', serif;
+    font-size: 72px;
+    font-weight: 400;
+    line-height: 1.03;
+    letter-spacing: -0.5px;
 }
 
 .dots{
@@ -210,14 +245,11 @@ font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     font-size: 20px !important;
 }
 
+/* .tagbtn geometry is defined in the "buttons, chips & listing" block at
+   the end of this file; the old `padding: 0 !important` here was what made
+   tags render as bare highlighted text rather than chips. */
 .tagbtn{
-    font-size: 18px !important;
-    padding: 0!important;
-    padding-left: 10px !important;
-    padding-right: 10px !important;
     margin-left: 10px;
-    margin-top: -8px !important;
-    margin-bottom: 0 !important;
 }
 
 
@@ -452,24 +484,53 @@ nav.menu{
 
 .listing-row{
     display: grid;
-    grid-template-columns: 130px minmax(0, 1fr) auto;
+    grid-template-columns: 150px minmax(0, 1fr) auto;
     column-gap: 24px;
     align-items: center;
-    padding: 8px 0;
-    border-bottom: 1px solid rgba(12, 81, 124, 0.15);
+    padding: 14px 8px;
+    border-bottom: 1px solid var(--rule);
     font-size: 18px;
+    transition: background-color .15s ease;
 }
 
+/* 88 rows need a hover target to track across the row */
+.listing-row:hover{
+    background-color: rgba(12, 81, 124, .05);
+}
+
+/* the header is a label, not a row of content: small, quiet, uppercase */
 .listing-row.listing-head{
     font-family: 'Poppins', sans-serif;
     font-weight: 600;
-    font-size: 20px;
-    border-bottom: 2px solid var(--textcolor);
+    font-size: 12px;
+    letter-spacing: .08em;
+    text-transform: uppercase;
+    color: var(--subtitle);
+    padding: 0 8px 8px 8px;
+    border-bottom: 1.5px solid var(--rule-strong);
+}
+
+.listing-row.listing-head:hover{
+    background-color: transparent;
 }
 
 .listing-date{
     white-space: nowrap;
     font-variant-numeric: tabular-nums;
+    font-size: 15px;
+    color: var(--subtitle);
+}
+
+/* the name is what people scan for, so it carries the weight */
+.listing-title{
+    font-size: 17px;
+    font-weight: 600;
+    line-height: 1.35;
+}
+
+.listing-head .listing-title{
+    font-size: inherit;
+    font-weight: inherit;
 }
 
 .listing-tags{
@@ -537,11 +598,11 @@ nav.menu{
     /* margin: 18px 0 4px 0; */
 }
 
+/* the markdown body now carries .blog-post-content, which sets the shared
+   reading measure; only the vertical rhythm is tightened here */
 .story-archive .story-entry p,
 .story-archive .story-entry li{
-    font-size: 16px;
-    line-height: 1.25;
-    margin-bottom: 10px;
+    margin-bottom: 12px;
 }
 
 /* Link-styled buttons (e.g. "all stories" buttons): suppress the
@@ -552,45 +613,122 @@ nav.menu{
     text-decoration: none;
 }
 
-/* Upcoming-events banner above About Us — matches the nav pill's
-   width and rounded shape */
+/* Upcoming-events card above About Us. Deliberately the only white,
+   square-cornered, rust-topped surface on a page of soft blue panels —
+   it has to read as the most time-sensitive thing here. */
 .upcoming-banner{
     position: relative;
     z-index: 1; /* sits over the tail of the hero illustration */
-    margin: 50px var(--content-left) 60px;
-    padding: 20px 45px;
-    background-color: rgb(227, 239, 248);
-    border-radius: 40px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin: 50px var(--gutter) 60px;
+    padding: 22px 32px 24px;
+    background-color: #ffffff;
+    border: 1px solid var(--rule);
+    border-top: 4px solid var(--rust);
+    border-radius: 10px;
+    box-shadow: 0 6px 22px rgba(12, 81, 124, .07);
     color: var(--textcolor);
 }
 
-.upcoming-banner h4{
-    /* same serif face as the page headings, sized between them and
-       body text */
-    font-family: 'DM Serif Text', serif;
-    font-size: 48px;
-    font-weight: 400;
-    letter-spacing: 1px;
-    margin: 0 0 8px 0;
-    text-align: center;
+/* small uppercase eyebrow replaces the old 48px serif heading */
+.upcoming-banner h4.upcoming-eyebrow{
+    font-family: 'Poppins', sans-serif;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: .15em;
+    text-transform: uppercase;
+    color: var(--rust);
+    text-align: left;
+    margin: 0 0 16px 0;
+    display: flex;
+    align-items: center;
+    gap: 8px;
 }
 
-.upcoming-banner p{
-    font-size: 28px;
-    margin: 0 0 10px 0;
+.upcoming-banner h4.upcoming-eyebrow::before{
+    content: "";
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background-color: var(--rust);
+    flex: 0 0 auto;
+}
+
+.upcoming-list{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.upcoming-item{
+    display: flex;
+    align-items: baseline;
+    gap: 20px;
+    padding: 12px 0;
+    border-top: 1px solid var(--rule);
+}
+
+.upcoming-item:first-child{
+    border-top: none;
+    padding-top: 0;
+}
+
+.upcoming-item:last-child{
+    padding-bottom: 0;
+}
+
+/* compact left date rail */
+.upcoming-rail{
+    flex: 0 0 74px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+    color: var(--rust);
+    white-space: nowrap;
+}
+
+.upcoming-body{
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+    min-width: 0;
+}
+
+.upcoming-banner a.upcoming-name{
+    font-family: 'Poppins', sans-serif;
+    font-size: 17px;
+    font-weight: 600;
+    line-height: 1.35;
+    color: var(--textcolor);
+    text-decoration: none;
+    background-image: none;
+}
+
+.upcoming-banner a.upcoming-name:hover{
+    color: var(--rust-ink);
+    text-decoration: underline;
+    background-image: none;
+}
+
+.upcoming-meta{
+    font-family: 'Poppins', sans-serif;
+    font-size: 13.5px;
+    font-weight: 400;
+    line-height: 1.5;
+    color: var(--subtitle);
+}
+
+.upcoming-banner p.upcoming-empty{
+    font-size: 16px;
+    line-height: 1.6;
+    color: var(--ink-body);
+    margin: 0;
 }
 
 .upcoming-banner a{
     color: var(--textcolor);
     font-weight: 600;
-}
-
-@media only screen and (max-width: 992px) {
-    .upcoming-banner{
-        padding: 16px 24px;
-        border-radius: 24px;
-    }
 }
 
 /* the first thing in an event row is the speaker name; drop its
@@ -600,18 +738,45 @@ nav.menu{
     margin-top: 0;
 }
 
-/* date line under the speaker name on the homepage event lists */
+/* date line under the speaker name on the homepage event lists —
+   demoted to a small uppercase label so the title leads */
 .section .event-when {
+    font-family: 'Poppins', sans-serif;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: .1em;
+    text-transform: uppercase;
     color: var(--subtitle);
-    margin-top: -4px;
+    margin: 4px 0 10px 0;
 }
 
-/* Event layout styles */
+.section .event-where {
+    font-size: 15px;
+    font-weight: 400;
+    color: var(--subtitle);
+    margin: -6px 0 10px 0;
+}
+
+/* Event layout styles: each past event gets its own separated band */
 .event-row {
   display: flex;
   flex-wrap: wrap;
-  gap: 20px;
-  margin-bottom: 30px;
+  gap: 28px;
+  padding: 28px 0;
+  border-top: 1px solid var(--rule);
+}
+
+.event-row:first-of-type {
+  border-top: none;
+  padding-top: 6px;
+}
+
+.event-row:last-of-type {
+  padding-bottom: 6px;
+}
+
+.post-preview {
+  padding-bottom: 0;
 }
 
 .event-content {
@@ -652,7 +817,8 @@ nav.menu{
   min-width: 300px;
 }
 
-/* stats as three overlapping circles, light to dark blue */
+/* stats as three overlapping circles: two quiet blue outlines plus one
+   filled rust circle, so a single number carries the emphasis */
 .about-stats {
   flex: 0 0 400px;
   position: relative;
@@ -671,23 +837,30 @@ nav.menu{
 
 .stat-number {
   font-family: 'DM Serif Text', serif;
-  font-size: 52px;
+  font-size: 54px;
+  font-weight: 400;
   line-height: 1;
+  letter-spacing: -.01em;
 }
 
 .stat-label {
   font-family: 'Poppins', 'sans-serif';
-  font-size: 20px;
-  font-weight: 500;
-  margin-top: 4px;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  margin-top: 8px;
+  opacity: .82;
 }
 
+/* quiet outline circles */
 .stat-years {
   width: 210px;
   height: 210px;
   top: 0;
-  left: 20;
-  background-color: var(--btn);
+  left: 20px; /* was a unitless `20`, which the browser dropped */
+  background-color: var(--blue-tint, rgb(227, 239, 248));
+  border: 1px solid var(--rule);
   color: var(--textcolor);
 }
 
@@ -696,18 +869,20 @@ nav.menu{
   height: 200px;
   top: 65px;
   left: 175px;
-  background-color: var(--subtitle);
-  color: var(--bg);
+  background-color: var(--btn);
+  color: var(--textcolor);
   z-index: 1;
 }
 
+/* the one filled accent — the live story count */
 .stat-stories {
   width: 215px;
   height: 215px;
   top: 180px;
   left: 45px;
-  background-color: var(--textcolor);
-  color: var(--bg);
+  background-color: var(--rust);
+  color: #fff;
+  box-shadow: 0 8px 26px rgba(184, 85, 47, .22);
   z-index: 2;
 }
 
@@ -741,4 +916,498 @@ nav.menu{
     max-width: 100%;
     margin: 10px auto 0;
   }
+}
+
+/* ============================================================
+   Long-form reading (Agent 1)
+   Scoped strictly to .blog-post-content, the markdown body
+   rendered by {MarkdownRemark.frontmatter__slug}.js, plus the
+   post title/eyebrow. Deliberately NOT applied to .section p
+   or .listing*, so /events/ and /stories/ tables keep full width.
+   ============================================================ */
+
+.blog-post-content{
+    max-width: var(--measure);
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 1.72;
+    color: var(--ink-body);
+}
+
+/* the markdown body ships its own <p>/<li>; re-state so these win
+   over the generic .section p / .page li rules */
+.section .blog-post-content p,
+.page .blog-post-content p,
+.page .blog-post-content li{
+    max-width: var(--measure);
+    font-size: 18px;
+    line-height: 1.72;
+    color: var(--ink-body);
+}
+
+.blog-post-content > * + *{
+    margin-top: 1.1em;
+}
+
+.blog-post-content h2,
+.blog-post-content h3,
+.blog-post-content h4{
+    max-width: var(--measure);
+    margin-top: 1.9em;
+    margin-bottom: .4em;
+    text-wrap: balance;
+}
+
+.blog-post-content blockquote{
+    max-width: var(--measure);
+    margin-left: 0;
+    padding-left: 1.1em;
+    border-left: 3px solid var(--rust);
+    color: var(--ink-body);
+    font-style: italic;
+}
+
+.blog-post-content hr{
+    max-width: var(--measure);
+    margin-left: 0;
+    border: 0;
+    border-top: 1px solid var(--rule);
+}
+
+.blog-post-content img{
+    max-width: 100%;
+    height: auto;
+}
+
+/* constrain the post title to the same column so the headline
+   and the body share one left-aligned measure */
+.page .blog-post-title{
+    max-width: var(--measure);
+}
+
+/* date demoted from <h3> to a small uppercase eyebrow above the title */
+.page .post-eyebrow,
+.section .post-eyebrow{
+    display: block;
+    margin: 0 0 .55rem;
+    font-family: 'Poppins', 'sans-serif';
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: .14em;
+    text-transform: uppercase;
+    color: var(--rust);
+}
+
+/* ==========================================================================
+   Buttons, chips & listing controls  (agent 2)
+   Buttons previously had no border-radius and .tagbtn zeroed its padding, so
+   filter controls rendered as highlighted text rather than as controls.
+   Everything below gives them an explicit affordance: pill shape, border,
+   pointer cursor, and a selected state that inverts instead of merely
+   tinting. Selected state is carried by [aria-pressed="true"], so the
+   markup is semantic and the styling follows from it.
+   ========================================================================== */
+
+.page .btn,
+.page a.btn{
+    display: inline-block;
+    padding: 7px 16px;
+    border-radius: 999px;
+    border: 1.5px solid var(--rule-strong);
+    background-color: transparent;
+    color: var(--textcolor);
+    font-size: 16px !important;
+    line-height: 1.2;
+    cursor: pointer;
+    transition: background-color .15s ease, color .15s ease, border-color .15s ease;
+}
+
+.page .btn:hover,
+.page a.btn:hover{
+    background-color: var(--btn);
+    border-color: var(--textcolor);
+    color: var(--textcolor);
+}
+
+/* selected inverts to solid ink — unmistakable at a glance, unlike the
+   old background-tint-only signal */
+.page .btn[aria-pressed="true"]{
+    background-color: var(--textcolor);
+    border-color: var(--textcolor);
+    color: #fff;
+}
+
+.page .btn[aria-pressed="true"]:hover{
+    background-color: var(--rust);
+    border-color: var(--rust);
+    color: #fff;
+}
+
+/* "Clear" is a different kind of action from the filters, so it reads as
+   dashed and unfilled rather than as another selectable option */
+.page .btn.clearbtn{
+    border-style: dashed;
+    color: var(--subtitle);
+    font-weight: 500 !important;
+}
+
+.page .btn.clearbtn:hover{
+    background-color: transparent;
+    border-color: var(--rust);
+    color: var(--rust);
+}
+
+.page .btn:focus-visible,
+.page .tagbtn:focus-visible,
+.page a.btn:focus-visible{
+    outline: 2.5px solid var(--rust);
+    outline-offset: 2px;
+}
+
+/* --- table tags: labels that happen to be clickable ---------------------
+   Squarish, small and uppercase so they read as metadata chips, clearly a
+   different species from the pill-shaped filter controls above. */
+.page .tagbtn{
+    display: inline-block;
+    padding: 3px 8px;
+    border-radius: 5px;
+    border: 1px solid transparent;
+    background-color: var(--btn);
+    color: var(--textcolor);
+    font-family: 'Poppins', 'sans-serif';
+    font-size: 11px !important;
+    font-weight: 600;
+    line-height: 1.4;
+    letter-spacing: .05em;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: background-color .15s ease, border-color .15s ease;
+}
+
+.page .tagbtn.tag-story{
+    background-color: var(--rust-soft);
+    color: var(--rust-ink);
+}
+
+.page .tagbtn:hover{
+    border-color: var(--textcolor);
+}
+
+.page .tagbtn.tag-story:hover{
+    border-color: var(--rust-ink);
+}
+
+/* a chip whose filter is currently on gets the same inversion as the pills,
+   so the table shows you why it is filtered */
+.page .tagbtn[aria-pressed="true"]{
+    background-color: var(--textcolor);
+    border-color: var(--textcolor);
+    color: #fff;
+}
+
+.page .tagbtn.tag-story[aria-pressed="true"]{
+    background-color: var(--rust-ink);
+    border-color: var(--rust-ink);
+    color: #fff;
+}
+
+/* the filter row: give the controls room to breathe under the heading */
+.page h4 .btn{
+    margin: 6px 6px 0 0;
+}
+
+/* ============================================================
+   Link affordances + gutters
+   Inline prose links are promoted to labelled buttons so it is
+   obvious what is clickable; navigation links (menu, table rows,
+   story titles) stay as links so listings remain scannable.
+   ============================================================ */
+
+/* a row of one or more action buttons under a block of copy */
+.action-row{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    align-items: center;
+    margin-top: 1.1em;
+    max-width: none;
+}
+
+/* anchors styled as buttons need the same reset the <button> gets,
+   since .section a sets its own colour/underline */
+.section a.btn,
+.section a.btn:hover,
+.page a.btn{
+    display: inline-block;
+    text-decoration: none;
+}
+
+/* external links announce themselves with a trailing arrow */
+.page a.btn-external::after{
+    content: " \2197";           /* north-east arrow */
+    font-size: .9em;
+    line-height: 1;
+}
+
+/* "Read more" is a quieter, secondary action than the filter pills */
+.page a.btn-readmore{
+    font-size: 15px !important;
+    padding: 6px 14px;
+}
+
+/* ---- listing rows read as clickable ---- */
+.listing-row:not(.listing-head){
+    cursor: pointer;
+}
+
+/* stronger than the previous .05 tint so the row visibly responds */
+.listing-row:not(.listing-head):hover{
+    background-color: var(--btn);
+}
+
+/* the underline wraps an inner span so it tracks the text, not the
+   full-width block */
+.listing-row:not(.listing-head):hover .listing-title a span{
+    text-decoration: underline;
+    text-underline-offset: 3px;
+}
+
+/* keyboard parity: focusing the row's link highlights the whole row */
+.listing-row:focus-within{
+    background-color: var(--btn);
+    outline: 2px solid var(--rust);
+    outline-offset: -2px;
+}
+
+/* make the whole row clickable, not just the title text.
+   these are navigation links inside .section, so they must opt out of the
+   prose-link colour/underline treatment — with display:block the inherited
+   background stretched the full column as a long bar. */
+.listing-title a,
+.section .listing-title a{
+    display: block;
+    background: none;
+    color: var(--textcolor);
+    text-decoration: none;
+}
+
+.section .listing-title a:hover{
+    background: none;
+    color: var(--textcolor);
+}
+
+/* between the mobile breakpoint and full desktop, 20% gutters leave too
+   little room for the listing tables; ease them in */
+@media only screen and (min-width: 993px) and (max-width: 1400px){
+    :root{
+        --gutter: 12%;
+    }
+}
+
+/* ---- filter bar ----
+   was an <h4> with inline buttons, which gave no control over the gap
+   between the label and the pills or how they wrapped on narrow screens */
+.filter-bar{
+    display: flex;
+    align-items: baseline;
+    flex-wrap: wrap;
+    gap: 8px 16px;
+    margin: 34px 0 26px;
+}
+
+.filter-label{
+    font-family: 'Poppins', sans-serif;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: .13em;
+    text-transform: uppercase;
+    color: var(--subtitle);
+    white-space: nowrap;
+}
+
+.filter-options{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    align-items: center;
+}
+
+/* the pills carry their own gap now, so drop the stray margin that was
+   making the spacing look uneven */
+.filter-options .btn{
+    margin: 0;
+}
+
+/* ============================================================
+   Stories page: sticky table-of-contents sidebar
+   70 stories on one page, so the sidebar lets you page through
+   speakers and tracks which story is currently in view.
+   ============================================================ */
+.story-layout{
+    display: grid;
+    grid-template-columns: 250px minmax(0, 1fr);
+    gap: 48px;
+    align-items: start;
+    margin-top: 40px;
+}
+
+.story-toc{
+    position: sticky;
+    /* clear the floating header pill */
+    top: calc(var(--header-clearance) + 10px);
+    max-height: calc(100vh - var(--header-clearance) - 40px);
+    display: flex;
+    flex-direction: column;
+    min-height: 0;
+}
+
+.story-toc-inner{
+    display: flex;
+    flex-direction: column;
+    min-height: 0;
+    border-left: 2px solid var(--rule);
+    padding-left: 18px;
+}
+
+.story-toc-label{
+    font-family: 'Poppins', sans-serif;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: .14em;
+    text-transform: uppercase;
+    color: var(--subtitle);
+    margin-bottom: 12px;
+    flex: none;
+}
+
+.story-toc-list{
+    list-style: none;
+    margin: 0;
+    padding: 0 8px 0 0;
+    overflow-y: auto;
+    min-height: 0;
+    scrollbar-width: thin;
+}
+
+.story-toc-list li{
+    font-size: inherit;
+    line-height: inherit;
+    color: inherit;
+}
+
+/* these are jump links, not prose links — opt out of the rust treatment */
+.section .story-toc-list a{
+    display: block;
+    padding: 7px 10px 7px 12px;
+    margin-left: -14px;
+    border-left: 2px solid transparent;
+    border-radius: 0 6px 6px 0;
+    background: none;
+    color: var(--textcolor);
+    text-decoration: none;
+    transition: background-color .12s ease, border-color .12s ease;
+}
+
+.section .story-toc-list a:hover{
+    background-color: var(--btn);
+    color: var(--textcolor);
+    text-decoration: none;
+}
+
+.section .story-toc-list a.is-active{
+    border-left-color: var(--rust);
+    background-color: var(--rust-soft);
+    color: var(--rust-ink);
+}
+
+.section .story-toc-list a:focus-visible{
+    outline: 2px solid var(--rust);
+    outline-offset: -2px;
+}
+
+.story-toc-name{
+    display: block;
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 1.3;
+}
+
+.story-toc-date{
+    display: block;
+    font-size: 11.5px;
+    color: var(--subtitle);
+    margin-top: 2px;
+    font-variant-numeric: tabular-nums;
+}
+
+.section .story-toc-list a.is-active .story-toc-date{
+    color: var(--rust-ink);
+    opacity: .8;
+}
+
+/* anchor targets sit under the sticky header when jumped to */
+.story-stream .story-entry{
+    scroll-margin-top: calc(var(--header-clearance) + 10px);
+}
+
+.story-stream .story-entry:first-child{
+    border-top: none;
+    margin-top: 0;
+    padding-top: 0;
+}
+
+/* the story titles are navigation, not prose */
+.section .story-stream .story-entry h2 a{
+    background: none;
+    color: var(--textcolor);
+    text-decoration: none;
+}
+
+.section .story-stream .story-entry h2 a:hover{
+    background: none;
+    color: var(--rust);
+    text-decoration: underline;
+    text-underline-offset: 3px;
+}
+
+/* the sidebar already eats horizontal room, so give the stream more of it */
+.story-archive .story-stream .blog-post-content p,
+.story-archive .story-stream .blog-post-content li{
+    max-width: none;
+}
+
+@media only screen and (max-width: 992px){
+    /* stack: the TOC becomes a collapsed scroll strip above the stories */
+    .story-layout{
+        grid-template-columns: minmax(0, 1fr);
+        gap: 20px;
+    }
+
+    .story-toc{
+        position: static;
+        max-height: none;
+    }
+
+    .story-toc-inner{
+        border-left: none;
+        border-bottom: 1px solid var(--rule);
+        padding-left: 0;
+        padding-bottom: 12px;
+    }
+
+    .story-toc-list{
+        max-height: 220px;
+    }
+
+    .section .story-toc-list a{
+        margin-left: 0;
+        border-left: none;
+        border-radius: 6px;
+        padding-left: 10px;
+    }
+
+    .section .story-toc-list a.is-active{
+        border-left: none;
+    }
 }

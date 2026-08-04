@@ -55,8 +55,10 @@ class Events extends Component {
     var events = this.visibleEvents()
 
     var filterButtons = this.filters.map(e => {
-      return <button key={e} type="button" className="btn" onClick={() => this.filterby(e)}
-      style = {{backgroundColor: this.state[e] ? "var(--btn-select)" : "var(--btn)"}}
+      // state lives in aria-pressed rather than an inline background colour, so
+      // it is announced to screen readers and styleable from css
+      return <button key={e} type="button" className="btn filterbtn"
+      aria-pressed={this.state[e]} onClick={() => this.filterby(e)}
       >{this.filtermap[e]}</button>
     })
 
@@ -64,24 +66,43 @@ class Events extends Component {
     return (
       <Layout>
       <div className = "page">
-      <div className = "section" style = {{paddingRight: "5vw"}}>
-          <h1><span>GUIS Event List</span></h1>
+      <div className = "section">
+          <h1><span>Events &amp; Stories</span></h1>
           <br/>
-          <p style={{paddingRight:"15vw"}}>
-          This page is an archive of past Growing up in Science events. 
-          While many follow the typical story format, some are panel discussions
-          and workshops on related themes that can be found by filtering for "mentorship" or "antiracism".
-          
-          <p><b>Many have video recordings linked on their event pages, which you can reach by 
-          clicking on the title page to reach the event-specific page.</b>  </p>
-        
-          If you are part of a GUIS chapter and would like to post your 
+          <p>
+          This page is the full archive of Growing up in Science events. Most follow
+          the typical story format, where a speaker shares their unofficial story;
+          others are panel discussions and workshops on related themes. Filter by
+          "Story" to see only the personal narratives, or by "Mentorship" and
+          "Anti-Racism" for the thematic sessions.
+          </p>
+          <p>
+          Many events have video recordings on their individual pages &mdash; click
+          any row to open it. In lieu of abstracts, we ask speakers for "unofficial"
+          stories, shared here with their permission. GUIS also partners with the
+          Journal of Stories in Science, which publishes stories about science from
+          students, postdocs, faculty and the public around the world; several of
+          the stories below have been republished there.
+          </p>
+          <p>
+          If you are part of a GUIS chapter and would like to post your
           event in this archive, please contact maya dot malaviya at nyu dot edu.
           </p>
-          <h4>Filter by:
-            {filterButtons}
-            <button type="button" className="btn" onClick={() => this.reset()}>Reset</button>
-          </h4>
+          <p className="action-row">
+            <Link className="btn" to="/stories/">Read all stories on one page</Link>
+            <a className="btn btn-external"
+               href="https://storiesinscience.org/"
+               target="_blank" rel="noopener noreferrer">
+              Journal of Stories in Science
+            </a>
+          </p>
+          <div className="filter-bar">
+            <span className="filter-label">Filter by</span>
+            <div className="filter-options">
+              {filterButtons}
+              <button type="button" className="btn clearbtn" onClick={() => this.reset()}>Clear</button>
+            </div>
+          </div>
           <div className="listing">
             <div className="listing-row listing-head">
               <div>Date</div>
@@ -93,15 +114,16 @@ class Events extends Component {
                 // filter by tags
                 var tags = post.frontmatter.tags.filter(e => this.filters.includes(e)).map(
                   e =>{
-                    return <button key={e} type="button" className="btn tagbtn" onClick={() => this.filterby(e)}
-                    style = {{backgroundColor: this.state[e] ? "var(--btn-select)" : "var(--btn)"}}
+                    // a label first, a control second: chip styling, not a pill button
+                    return <button key={e} type="button" className={"tagbtn tag-" + e}
+                    aria-pressed={this.state[e]} onClick={() => this.filterby(e)}
                     >{this.filtermap[e]}</button>
                   }
                 )
                 return (
                   <div className="listing-row" key={post.id}>
                     <div className="listing-date">{getDateFormat(post.frontmatter.date)}</div>
-                    <div className="listing-title"><Link className="event-link" to={post.frontmatter.slug}>{post.frontmatter.title}</Link></div>
+                    <div className="listing-title"><Link className="event-link" to={post.frontmatter.slug}><span>{post.frontmatter.title}</span></Link></div>
                     <div className="listing-tags">{tags}</div>
                   </div>
                 )

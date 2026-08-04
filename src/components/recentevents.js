@@ -17,25 +17,29 @@ function formatEvents(posts, upcoming){
         </div>
       }
       return (
-        <div className="event-row" style={{paddingTop: "2px"}} key={post.id}>
+        <div className="event-row" key={post.id}>
           <div className="event-content">
             <div className="event-details">
-            <div className="post-preview" style={{paddingBottom:"10px"}}>
-            <h2>
-                <Link to={post.frontmatter.slug}>{post.frontmatter.title}</Link>
-            </h2>
+            <div className="post-preview">
+            {/* plain text: the "Read more" button below is the only
+                affordance, so the whole block does not read as a link */}
+            <h2>{post.frontmatter.title}</h2>
             <h4 className="event-when">
               {getLongDate(post.frontmatter.date)}
               { upcoming && post.frontmatter.time ? ", " + post.frontmatter.time : "" }
             </h4>
-            { upcoming ?
-              <h4>
-              <i>{post.frontmatter.location}</i>
-              {post.frontmatter.snippet}
-              </h4> : <div/>
+            { upcoming && post.frontmatter.location ?
+              <h4 className="event-where"><i>{post.frontmatter.location}</i></h4>
+              : null
             }
 
             <div className="recent" dangerouslySetInnerHTML={{ __html: post.excerpt}} />
+
+            <p className="action-row">
+              <Link className="btn btn-readmore" to={post.frontmatter.slug}>
+                Read more
+              </Link>
+            </p>
 
             </div>
             </div>

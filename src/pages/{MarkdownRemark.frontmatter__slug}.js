@@ -33,12 +33,12 @@ export default function Template({
       <div className = "page">
       <div className = {mode} style = {{minHeight: "100vh"}}>
         <div>
-        <h1>
+        {date && <p className="post-eyebrow">{date}</p>}
+        <h1 className="blog-post-title">
             <span className="highlight">
             {frontmatter.title}
             </span>
           </h1>
-        <h3>{date}</h3>
         </div>
           {video}
           <div

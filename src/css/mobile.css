@@ -37,7 +37,9 @@
     }
 
     .namecard h1{
-        font-size: 60px;
+        font-size: 46px;
+        line-height: 1.05;
+        letter-spacing: -0.5px;
     }
 
     .title{
@@ -90,5 +92,53 @@
 
     .tagbtn{
         margin-top: 10px !important;
+    }
+
+    /* ---- Upcoming events card ---- */
+    .upcoming-banner{
+        padding: 18px 20px 20px;
+    }
+
+    /* the date rail stacks above the speaker name on narrow screens
+       rather than eating horizontal room beside it */
+    .upcoming-item{
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 4px;
+    }
+
+    .upcoming-rail{
+        flex: none;
+    }
+
+    .upcoming-banner a.upcoming-name{
+        font-size: 16px;
+    }
+
+    .upcoming-banner p.upcoming-empty{
+        font-size: 16px;
+    }
+
+    /* ---- Recent events ---- */
+    .event-row{
+        padding: 20px 0;
+    }
+
+    /* .post-preview is centered on mobile; keep the demoted date label
+       and location aligned with it */
+    .section .event-when,
+    .section .event-where{
+        font-size: 12px;
+        text-align: center;
+    }
+
+    /* ---- About stats ---- */
+    .stat-number{
+        font-size: 44px;
+    }
+
+    .stat-label{
+        font-size: 11px;
+        margin-top: 6px;
     }
 }
