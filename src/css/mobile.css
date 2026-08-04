@@ -42,8 +42,12 @@
         letter-spacing: -0.5px;
     }
 
+    /* the hero runs 150vh to sit behind desktop's About section; on a phone
+       that is a screen and a half of illustration before any content */
     .title{
-        background-position: center;
+        height: 92vh !important;
+        margin-bottom: -30vh !important;
+        background-position: center top;
     }
 
     .section{

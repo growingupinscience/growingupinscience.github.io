@@ -32,3 +32,8 @@ export function getDateFormat(datestr){
     return months[date.getMonth()] + " " + date.getDate() + ", " + date.getFullYear()
 }
 
+
+// Year only, for grouping listings into sections.
+export function getYear(datestr){
+    return new Date(datestr).getFullYear()
+}

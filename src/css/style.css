@@ -841,8 +841,12 @@ nav.menu{
   /* the overlapping trio, kept — but sized from a single --d variable and
      positioned in percentages, so the whole cluster scales with the space
      left over instead of demanding a fixed 400x430 box */
-  --d: clamp(96px, 10.5vw, 172px);
-  flex: 1 1 calc(var(--d) * 1.85);
+  /* the old clamp topped out at 172px, stranding the cluster at ~21% of the
+     content width on wide screens while it took 57% on a phone. a wider vw
+     band with a higher ceiling holds it near a third across the range.
+     (container units would be circular here: flex-basis derives from --d.) */
+  --d: clamp(92px, 12vw, 215px);
+  flex: 0 1 calc(var(--d) * 1.85);
   position: relative;
   min-width: calc(var(--d) * 1.7);
   /* tall enough for the stacked composition: two rows of circles plus the
@@ -1553,4 +1557,213 @@ nav.menu{
     font-size: 18px;
     color: var(--subtitle);
     max-width: var(--measure);
+}
+
+/* ============================================================
+   Mobile: the stories index
+   Desktop shows the full read-through with its sticky sidebar. On a phone
+   that is ~47,000 words / ~113 screens with a nested scroll box for
+   navigation, so the page becomes a tappable A-Z index instead. Each name
+   links to the story's own page, which already exists.
+   ============================================================ */
+.story-index{
+    display: none;
+}
+
+@media only screen and (max-width: 992px){
+    .story-index{
+        display: block;
+        margin-top: 24px;
+    }
+
+    /* the stream and its sidebar are desktop-only */
+    .story-layout{
+        display: none;
+    }
+
+    .story-index-letter{
+        position: sticky;
+        top: 0;
+        z-index: 2;
+        background: var(--bg);
+        font-family: 'Poppins', sans-serif;
+        font-size: 18px;
+        font-weight: 700;
+        letter-spacing: .06em;
+        color: var(--rust);
+        padding: 10px 0 6px;
+        border-bottom: 2px solid var(--rust-soft);
+        margin-top: 18px;
+    }
+
+    /* 44px min height: a reliable tap target */
+    .section .story-index-item{
+        display: flex;
+        align-items: baseline;
+        justify-content: space-between;
+        gap: 12px;
+        min-height: 44px;
+        padding: 12px 2px;
+        border-bottom: 1px solid var(--rule);
+        background: none;
+        color: var(--textcolor);
+        text-decoration: none;
+    }
+
+    .section .story-index-item:hover,
+    .section .story-index-item:active{
+        background: var(--blue-tint);
+        color: var(--textcolor);
+    }
+
+    .story-index-name{
+        font-family: 'Poppins', sans-serif;
+        font-size: 18px;
+        font-weight: 600;
+        line-height: 1.3;
+    }
+
+    .story-index-date{
+        font-size: 18px;
+        color: var(--subtitle);
+        white-space: nowrap;
+        font-variant-numeric: tabular-nums;
+    }
+}
+
+/* ---- year headings on the events listing (desktop + mobile) ---- */
+.listing-year{
+    position: sticky;
+    top: 0;
+    z-index: 2;
+    background: var(--bg);
+    font-family: 'Poppins', sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+    letter-spacing: .06em;
+    color: var(--rust);
+    padding: 14px 0 6px;
+    border-bottom: 2px solid var(--rust-soft);
+    margin-top: 22px;
+}
+
+.listing-year:first-of-type{
+    margin-top: 6px;
+}
+
+/* ---- filter toggle: mobile only ---- */
+.filter-toggle{
+    display: none;
+}
+
+@media only screen and (max-width: 992px){
+    /* seven pills wrap to ~3 rows on a phone, a third of the first screen on
+       a page whose job is the listing. collapse them behind one control. */
+    .filter-toggle{
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        min-height: 44px;
+        padding: 8px 18px;
+        border: 1.5px solid var(--rule-strong);
+        border-radius: 999px;
+        background: none;
+        font-family: 'Poppins', sans-serif;
+        font-size: 18px;
+        font-weight: 600;
+        color: var(--textcolor);
+        cursor: pointer;
+    }
+
+    .filter-count{
+        background: var(--rust);
+        color: #fff;
+        border-radius: 999px;
+        padding: 1px 9px;
+        font-size: 15px;
+        font-weight: 700;
+    }
+
+    .filter-label{
+        display: none;
+    }
+
+    .filter-options{
+        display: none;
+        width: 100%;
+    }
+
+    .filter-bar.is-open .filter-options{
+        display: flex;
+        margin-top: 10px;
+        padding-top: 12px;
+        border-top: 1px solid var(--rule);
+    }
+
+    .filter-options .btn{
+        min-height: 44px;
+    }
+
+    /* ---- events rows become cards ---- */
+    .listing-row{
+        display: block;
+        border: 1px solid var(--rule);
+        border-radius: 9px;
+        padding: 12px 14px;
+        margin-bottom: 8px;
+        background: #fff;
+    }
+
+    .listing-row.listing-head{
+        display: none;
+    }
+
+    .listing-date{
+        font-size: 18px;
+        font-weight: 700;
+        letter-spacing: .05em;
+        text-transform: uppercase;
+        color: var(--rust);
+        margin-bottom: 4px;
+    }
+
+    .listing-title{
+        font-size: 19px;
+        margin-bottom: 6px;
+    }
+
+    .listing-tags{
+        display: flex;
+        flex-wrap: wrap;
+        gap: 6px;
+        justify-self: auto;
+    }
+
+    .listing-tags .tagbtn{
+        margin: 0 !important;
+        min-height: 30px;
+    }
+
+    /* ---- homepage stat bubbles: the overlap needs ~2x its width in height,
+       which is most of a phone screen. one row of three instead. ---- */
+    .about-stats{
+        --d: clamp(84px, 26vw, 118px);
+        position: static;
+        display: flex;
+        justify-content: flex-start;
+        gap: 10px;
+        height: auto;
+        min-width: 0;
+        flex: 1 1 100%;
+        margin-top: 20px;
+    }
+
+    .stat-circle{
+        position: static;
+        flex: 0 0 var(--d);
+    }
+
+    .about-content{
+        gap: 8px;
+    }
 }

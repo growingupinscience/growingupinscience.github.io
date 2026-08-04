@@ -36,6 +36,13 @@ function byLastName(a, b) {
     .localeCompare(lastNameKey(b.node.frontmatter.title), "en")
 }
 
+// initial of the surname, with accents folded so Ripollés files under R
+function initialOf(title) {
+  return lastNameKey(title)
+    .normalize("NFD").replace(/[\u0300-\u036f]/g, "")
+    .charAt(0).toUpperCase()
+}
+
 // highlights whichever story is currently in view so the sidebar tracks
 // the reader's position
 function useActiveStory(ids) {
@@ -105,6 +112,28 @@ export default function Stories({ data }) {
               Journal of Stories in Science
             </a>
           </p>
+
+          {/* mobile: an A-Z index of links rather than ~47,000 words of
+              inlined prose. every story already has its own page; on a phone
+              the stream is ~113 screens of scrolling with no way to navigate. */}
+          <nav className="story-index" aria-label="All stories">
+            {
+              stories.map(({ node: post }, i) => {
+                const letter = initialOf(post.frontmatter.title)
+                const prev = i > 0 ? initialOf(stories[i - 1].node.frontmatter.title) : null
+                return (
+                  <React.Fragment key={post.id}>
+                    { letter !== prev &&
+                      <div className="story-index-letter">{letter}</div> }
+                    <Link className="story-index-item" to={post.frontmatter.slug}>
+                      <span className="story-index-name">{post.frontmatter.title}</span>
+                      <span className="story-index-date">{post.frontmatter.date}</span>
+                    </Link>
+                  </React.Fragment>
+                )
+              })
+            }
+          </nav>
 
           <div className="story-layout">
             <nav className="story-toc" aria-label="Stories">
