@@ -1,12 +1,9 @@
 module.exports = {
   siteMetadata: {
     title: `Growing Up in Science`,
-    siteUrl: `https://www.growingupinscience.com`,
+    siteUrl: `https://growingupinscience.org`,
   },
   plugins: [
-    `gatsby-plugin-image`,
-    `gatsby-plugin-sharp`,
-    `gatsby-transformer-sharp`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {

@@ -1,6 +1,5 @@
 import React, {Component, useState, useEffect, startTransition} from "react"
 import { Link, StaticQuery, graphql } from 'gatsby'
-import { Button } from 'reactstrap';
 import { getDateFormat } from '../utils/utils';
 import Layout from '../components/layout'
 import "../css/style.css"
@@ -21,63 +20,44 @@ class Events extends Component {
       "oxford": "Oxford", 
     }
 
-    this.state = {
-      show_nyu: false, 
-      show_global: false, 
-      events: eventdata, 
-      eventdata: eventdata
-    };
+    this.eventdata = eventdata
+
+    // one boolean per filter; the visible list is derived from these at render
+    this.state = {}
     this.filters.forEach(e => this.state[e] = false)
 
     this.reset = this.reset.bind(this);
-    this.refresh = this.refresh.bind(this)
     this.filterby = this.filterby.bind(this)
   }
 
-  refresh(){
-    this.setState(
-      {events: 
-        // for each element in the event data
-        this.state.eventdata.filter(e=> {
-
-          // if all the filters are off, return true
-          var allFalse = true
-          this.filters.forEach(j => 
-            allFalse = allFalse && !this.state[j]
-          )
-          var someTrue = false
-          // filter by each filter listed in this.filters
-          this.filters.forEach(j => 
-            {someTrue = someTrue || (this.state[j] && e.node.frontmatter.tags.includes(j))}
-          )
-
-          if (allFalse || someTrue){
-            return true
-          }
-          return false
-        }
-        )
-      }
+  // events matching the active filters; with none active, everything shows
+  visibleEvents(){
+    const active = this.filters.filter(f => this.state[f])
+    if (active.length === 0){
+      return this.eventdata
+    }
+    return this.eventdata.filter(e =>
+      active.some(f => e.node.frontmatter.tags.includes(f))
     )
   }
 
   filterby(f){
-    this.state[f] = !this.state[f]
-    this.refresh()
+    this.setState(prev => ({[f]: !prev[f]}))
   }
 
   reset(){
-    this.filters.forEach(f => 
-      this.state[f] = false
-    )
-    this.refresh()
+    const cleared = {}
+    this.filters.forEach(f => cleared[f] = false)
+    this.setState(cleared)
   }
 
   render() {
+    var events = this.visibleEvents()
+
     var filterButtons = this.filters.map(e => {
-      return <Button key={e} onClick={() => this.filterby(e)}
+      return <button key={e} type="button" className="btn" onClick={() => this.filterby(e)}
       style = {{backgroundColor: this.state[e] ? "var(--btn-select)" : "var(--btn)"}}
-      >{this.filtermap[e]}</Button>
+      >{this.filtermap[e]}</button>
     })
 
 
@@ -100,7 +80,7 @@ class Events extends Component {
           </p>
           <h4>Filter by:
             {filterButtons}
-            <Button size="lg" onClick={() => this.reset()}>Reset</Button>
+            <button type="button" className="btn" onClick={() => this.reset()}>Reset</button>
           </h4>
           <div className="listing">
             <div className="listing-row listing-head">
@@ -109,30 +89,22 @@ class Events extends Component {
               <div className="listing-tags"></div>
             </div>
             {
-              this.state.events.map(({node: post}) => {
-                if (post.frontmatter.tags.includes("year"))
-                {
-                  return (
-                    <div className="listing-year" key={post.id}>{post.frontmatter.title}</div>
-                  )
-                }
-                else{
-                  // filter by tags
-                  var tags = post.frontmatter.tags.filter(e => this.filters.includes(e)).map(
-                    e =>{
-                      return <Button key={e} className="tagbtn" onClick={() => this.filterby(e)}
-                      style = {{backgroundColor: this.state[e] ? "var(--btn-select)" : "var(--btn)"}}
-                      >{this.filtermap[e]}</Button>
-                    }
-                  )
-                  return (
-                    <div className="listing-row" key={post.id}>
-                      <div className="listing-date">{getDateFormat(post.frontmatter.date)}</div>
-                      <div className="listing-title"><Link className="event-link" to={post.frontmatter.slug}>{post.frontmatter.title}</Link></div>
-                      <div className="listing-tags">{tags}</div>
-                    </div>
-                  )
+              events.map(({node: post}) => {
+                // filter by tags
+                var tags = post.frontmatter.tags.filter(e => this.filters.includes(e)).map(
+                  e =>{
+                    return <button key={e} type="button" className="btn tagbtn" onClick={() => this.filterby(e)}
+                    style = {{backgroundColor: this.state[e] ? "var(--btn-select)" : "var(--btn)"}}
+                    >{this.filtermap[e]}</button>
                   }
+                )
+                return (
+                  <div className="listing-row" key={post.id}>
+                    <div className="listing-date">{getDateFormat(post.frontmatter.date)}</div>
+                    <div className="listing-title"><Link className="event-link" to={post.frontmatter.slug}>{post.frontmatter.title}</Link></div>
+                    <div className="listing-tags">{tags}</div>
+                  </div>
+                )
                 }
               )
             }

@@ -100,8 +100,8 @@ scripts/.env
 # lock files
 yarn.lock
 package-lock.json
-# ignore any lock file other than main lock file
-!/yarn.lock
+# this project uses npm; the root package-lock.json is the source of truth
+!/package-lock.json
 
 # starters are special; we want to persist the lock files
 !starters/*/package-lock.json
