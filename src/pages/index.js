@@ -3,7 +3,6 @@ import Layout from "../components/layout.js";
 import "../css/style.css"
 import "../css/mobile.css"
 import About from "../components/about.js"
-import RecentEvents from "../components/recentevents.js"
 import UpcomingBanner from "../components/upcomingbanner.js"
 
 
@@ -36,7 +35,6 @@ class Index extends Component {
                   </div>
                   <UpcomingBanner/>
                   <About/>
-                  <RecentEvents/>
               </div>
         </Layout>
       );

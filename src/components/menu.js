@@ -34,7 +34,6 @@ function Menu() {
   const menuitems = [
     { name: "Home", link: "/" },
     { name: "About", link: "/#about" },
-    { name: "Recent", link: "/#recent-events" },
     { name: "Events", link: "/events/" },
     { name: "Stories", link: "/stories/" },
     { name: "Chapters", link: "/chapters/" },
