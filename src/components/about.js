@@ -33,17 +33,16 @@ export default function About({children, style}) {
           being a scientist.
           </p>
           <p>
-          Growing up in Science was started in 2014 at New York University by
-          professors Wei Ji Ma and Cristina Alberini, and is now worldwide.
-          A 2017 article in <i>Science</i> describes the origin and impact of the series.
+          Growing up in Science was started by professor Wei Ji Ma in 2014 at New York University, and is now worldwide.
+          An <a href="https://www.science.org/doi/10.1126/science.357.6354.942">article in <i>Science</i></a> describes the origin and impact of the series.
           </p>
-          <p className="action-row">
+          {/* <p className="action-row">
           <a className="btn btn-external"
              href="https://www.science.org/doi/10.1126/science.357.6354.942"
              target="_blank" rel="noopener noreferrer">
             Read the article in Science
           </a>
-          </p>
+          </p> */}
           </div>
           <div className="about-stats">
             <div className="stat-circle stat-years">
