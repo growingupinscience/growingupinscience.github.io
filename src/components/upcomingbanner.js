@@ -27,8 +27,13 @@ export default function UpcomingBanner() {
     }
   `)
 
+  // compare against midnight today, not the current moment — an event's
+  // date parses to midnight, so it should stay "upcoming" through its
+  // whole day rather than dropping off at 12:00 AM
+  const startOfToday = new Date()
+  startOfToday.setHours(0, 0, 0, 0)
   const upcoming = data.allMarkdownRemark.edges.filter(({ node: post }) => {
-    return new Date(post.frontmatter.date) >= new Date()
+    return new Date(post.frontmatter.date) >= startOfToday
   })
 
   // the semester the next events would fall in: Spring starts after
