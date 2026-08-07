@@ -817,7 +817,10 @@ nav.menu{
 
 .about-content {
   display: flex;
-  flex-wrap: wrap;
+  /* nowrap: the circle cluster must never drop to its own line beside-text
+     layouts shrink instead, and below 992px the column + one-row-of-circles
+     layout takes over */
+  flex-wrap: nowrap;
   gap: 48px;
   align-items: center;
 }
@@ -930,7 +933,13 @@ nav.menu{
   .about-content {
     flex-direction: column;
   }
-  
+
+  /* in the column direction the 34em flex-basis would set the text block's
+     HEIGHT, stranding the circles far below the prose */
+  .about-text {
+    flex: none;
+  }
+
   .about-stats {
     flex: none;
     width: 360px;
@@ -1749,7 +1758,9 @@ nav.menu{
         gap: 10px;
         height: auto;
         min-width: 0;
-        flex: 1 1 100%;
+        /* parent is a column now, so a 100% flex-basis would resolve against
+           its height; natural size keeps the row snug under the prose */
+        flex: none;
         margin-top: 20px;
     }
 
